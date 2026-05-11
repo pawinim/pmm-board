@@ -381,8 +381,8 @@
     "owners": "@msousa @ahecht @madisonh @tcosta @pawinim @slevay",
     "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAB",
     "date": "May 12",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "May 11, 2026 at 03:03 PM",
     "note": ""
   },
   "m8": {
