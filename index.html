@@ -3,28 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PMM Board — Pawini</title>
+<title>PMM Board - Pawini</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0f0f0f;--sur:#181818;--b1:#252525;--b2:#333;--tx:#e8e6e0;--t3:#555;--red:#ff4d4d;--rdim:#2a1010;--amb:#f5a623;--adim:#2a1e08;--blu:#4d9fff;--bdim:#0a1a2a;--grn:#4dff91;--gdim:#0a2018;--mono:'DM Mono',monospace;--sans:'DM Sans',sans-serif;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:var(--sans);background:var(--bg);color:var(--tx);min-height:100vh;padding:16px 12px 48px;max-width:640px;margin:0 auto;}
-.hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--b1);}
+.hdr{margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--b1);}
 .hdr h1{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;}
-.hdr p{font-size:10px;color:var(--t3);margin-top:4px;font-family:var(--mono);}
+.hdr p{font-size:10px;color:var(--t3);margin-top:3px;font-family:var(--mono);}
+.ss{font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:3px;margin-top:5px;display:inline-block;}
+.ss-ok{background:var(--gdim);color:var(--grn);}
+.ss-saving{background:var(--adim);color:var(--amb);}
+.ss-err{background:var(--rdim);color:var(--red);}
 .tabs{display:flex;gap:2px;margin-bottom:14px;background:var(--sur);border:1px solid var(--b1);border-radius:8px;padding:3px;}
-.tab{flex:1;padding:8px 2px;font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;text-align:center;cursor:pointer;background:transparent;color:var(--t3);border:none;border-radius:6px;transition:all 0.12s;}
+.tab{flex:1;padding:9px 2px;font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;text-align:center;cursor:pointer;background:transparent;color:var(--t3);border:none;border-radius:6px;transition:all 0.12s;}
 .tab.active{background:var(--b2);color:var(--tx);}
 .tab .cnt{display:inline-block;font-size:9px;padding:1px 5px;border-radius:3px;margin-left:3px;vertical-align:middle;}
-.tu .cnt{background:var(--rdim);color:var(--red);}
-.th .cnt{background:var(--adim);color:var(--amb);}
-.tm .cnt{background:var(--bdim);color:var(--blu);}
-.td .cnt{background:var(--gdim);color:var(--grn);}
+.tu .cnt{background:var(--rdim);color:var(--red);}.th .cnt{background:var(--adim);color:var(--amb);}.tm .cnt{background:var(--bdim);color:var(--blu);}.td .cnt{background:var(--gdim);color:var(--grn);}
 .panel{display:none;}.panel.active{display:block;}
 .dgrp{margin-bottom:18px;}
 .dlbl{font-family:var(--mono);font-size:9px;color:var(--t3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:7px;padding-left:2px;}
-.card{background:var(--sur);border:1px solid var(--b1);border-left:2px solid transparent;border-radius:8px;padding:11px 38px 10px 12px;margin-bottom:5px;position:relative;cursor:pointer;transition:border-color 0.12s,opacity 0.15s;}
-.card:hover{border-color:var(--b2);}.card:active{opacity:0.7;}
+.card{background:var(--sur);border:1px solid var(--b1);border-left:2px solid transparent;border-radius:8px;padding:12px 42px 11px 13px;margin-bottom:6px;position:relative;-webkit-tap-highlight-color:transparent;cursor:pointer;}
+.card:active{opacity:0.7;}
 .card.done{opacity:0.38;}.card.done .ct{text-decoration:line-through;text-decoration-color:var(--t3);}
 .pu{border-left-color:var(--red);}.ph{border-left-color:var(--amb);}.pm{border-left-color:var(--blu);}.pdone{border-left-color:var(--b2);}
 .cl{font-family:var(--mono);font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:var(--t3);margin-bottom:4px;}
@@ -33,64 +34,154 @@ body{font-family:var(--sans);background:var(--bg);color:var(--tx);min-height:100
 .tag{font-family:var(--mono);font-size:9px;padding:2px 6px;border-radius:3px;font-weight:500;}
 .tr{background:var(--rdim);color:var(--red);}.ta{background:var(--adim);color:var(--amb);}.tb{background:var(--bdim);color:var(--blu);}.tg{background:#1c1c1c;color:var(--t3);}.tn{background:var(--gdim);color:var(--grn);}
 .ow{font-family:var(--mono);font-size:10px;color:var(--t3);margin-top:5px;}
-.dat{font-family:var(--mono);font-size:9px;color:var(--grn);margin-top:4px;opacity:0.65;}
-.chk{position:absolute;top:11px;right:9px;width:20px;height:20px;border:1px solid var(--b2);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--t3);background:var(--bg);transition:all 0.12s;}
+.dat{font-family:var(--mono);font-size:9px;color:var(--grn);margin-top:4px;opacity:0.7;}
+.chk{position:absolute;top:12px;right:10px;width:22px;height:22px;border:1px solid var(--b2);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--t3);background:var(--bg);transition:all 0.12s;z-index:2;}
 .chk.on{background:var(--gdim);border-color:var(--grn);color:var(--grn);}
 .empty{font-family:var(--mono);font-size:11px;color:var(--t3);text-align:center;padding:48px 0;letter-spacing:0.05em;}
+.loading{font-family:var(--mono);font-size:11px;color:var(--t3);text-align:center;padding:60px 0;letter-spacing:0.05em;}
 .foot{font-family:var(--mono);font-size:9px;color:var(--t3);text-align:center;margin-top:28px;line-height:1.8;letter-spacing:0.04em;}
 .clrbtn{background:transparent;border:none;color:var(--t3);font-family:var(--mono);font-size:9px;cursor:pointer;text-decoration:underline;letter-spacing:0.04em;}
-.clrbtn:hover{color:var(--red);}
 </style>
 </head>
 <body>
-<div class="hdr"><div><h1>PMM Board · Pawini</h1><p id="meta">Loading...</p></div></div>
-<div class="tabs">
-  <button class="tab tu active" onclick="sw('u',this)">Urgent<span class="cnt" id="cu">—</span></button>
-  <button class="tab th" onclick="sw('h',this)">High<span class="cnt" id="ch">—</span></button>
-  <button class="tab tm" onclick="sw('m',this)">Med<span class="cnt" id="cm">—</span></button>
-  <button class="tab td" onclick="sw('done',this)">Done<span class="cnt" id="cd">—</span></button>
+<div class="hdr">
+  <h1>PMM Board - Pawini</h1>
+  <p id="meta">Loading...</p>
+  <span id="ss" class="ss ss-ok">synced</span>
 </div>
-<div id="pu" class="panel active"></div>
+<div class="tabs">
+  <button class="tab tu active" onclick="sw('u',this)">Urgent<span class="cnt" id="cu">-</span></button>
+  <button class="tab th" onclick="sw('h',this)">High<span class="cnt" id="ch">-</span></button>
+  <button class="tab tm" onclick="sw('m',this)">Med<span class="cnt" id="cm">-</span></button>
+  <button class="tab td" onclick="sw('done',this)">Done<span class="cnt" id="cd">-</span></button>
+</div>
+<div id="pu" class="panel active"><div class="loading">loading board...</div></div>
 <div id="ph" class="panel"></div>
 <div id="pm" class="panel"></div>
 <div id="pdone" class="panel"></div>
-<div class="foot">Done items persist · Say "scan" in Claude for fresh data<br><br><button class="clrbtn" onclick="clrDone()">Clear completed items</button></div>
+<div class="foot">
+  Done history saved to GitHub - persists forever across all devices<br><br>
+  <button class="clrbtn" onclick="clrDone()">Clear completed items</button>
+</div>
 <script>
-const META={date:"Mon May 11, 2026",src:"Outlook · Calendar",sid:"20260511v1"};
-const INC=[
-  // URGENT
-  {id:"u1",p:"u",label:"Outlook · @Madison · TODAY — TSMC slide",title:'Madison: "@Pawini can you please take the lead on building the slide across workloads?" Also: "who has the AI for the PR from TSMC?" +@QuentinNolibois',tags:[{c:"tr",t:"Madison direct ask"},{c:"tr",t:"New today"}],owners:"@madisonh @qnolibois @pochunl",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eYTAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 11"},
-  {id:"u2",p:"u",label:"Outlook · @Tim Costa · May 9 — IE Computex PR",title:'Tim: "I\'m not saying blueprint...the entire ecosystem of engineering ISVs is building agent engineers with us. This PR doesn\'t show that." Needs full narrative reframe',tags:[{c:"tr",t:"Tim rejected direction"},{c:"tr",t:"Needs rewrite"}],owners:"@tcosta @madisonh @ahecht @nhereth",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xezAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 9"},
-  {id:"u3",p:"u",label:"Outlook · @Tim Costa · May 9 — TSMC INTERNAL",title:"Tim: 'Someone on @DaYang's team would make sense for an HQ pic.' TSMC thread still active — PR + slide both in motion",tags:[{c:"tr",t:"TSMC sensitive"},{c:"tg",t:"Tim + Madison active"}],owners:"@tcosta @madisonh @valee @pochunl",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe3AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 9"},
-  {id:"u4",p:"u",label:"Outlook · SAFE Forum · @Mia Jung · May 6",title:"Samsung SAFE Forum slides: review Slide 2 (NVLink Fusion / Vipin Tiwari). May 28 Samsung US HQ",tags:[{c:"tr",t:"Slide review needed"},{c:"tg",t:"May 28 deadline"}],owners:"@mjung @avleenk @jichambers",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGJsAaqAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 6"},
-  {id:"u5",p:"u",label:"Outlook · ITF · @Soyoung · RESOLVED",title:'@soyoungj replied "Great, thank you for the feedback." ITF slide review complete — loop closed with Samsung',tags:[{c:"tn",t:"Resolved — verify closed"}],owners:"@soyoungj @tcosta @yiyiw",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xeYAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 8"},
-  {id:"u6",p:"u",label:"Outlook · HPC Marketing · ISC26",title:"Ada 6000 hardware: ETO EMEA inventory reply still pending. @bzandstein still on hold. No resolution confirmed",tags:[{c:"tr",t:"Blocking"},{c:"tg",t:"ETO reply pending"}],owners:"@hpetty @bzandstein @rparrish",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xdeAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 8"},
-  // HIGH
-  {id:"h1",p:"h",label:"Outlook · @Madison · May 9 — IE Computex PR",title:"Madison: 'Do a dedicated blog for all ISVs and surface top ones into the NAT PR. Take advantage of Cadence demo embedded in asset.'",tags:[{c:"ta",t:"Madison direction"},{c:"tg",t:"Computex PR"}],owners:"@madisonh @tcosta @ahecht @nhereth",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe0AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 9"},
-  {id:"h2",p:"h",label:"Outlook · ISC 2026 · @anibbi tagged you",title:'cuEST + Alchemi booth pod placement — @anibbi: "@Becca @Pawini for vis." ISV peers section incomplete. @bgadhia back today (OOO ended)',tags:[{c:"ta",t:"Tagged for visibility"},{c:"tn",t:"@bgadhia back today"}],owners:"@anibbi @bzandstein @bgadhia @parts @blairh",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCSAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 7"},
-  {id:"h3",p:"h",label:"Outlook · @Tim Costa · May 7 — GTC Taipei Booth",title:'Tim hold on POR — "need to determine combined demo first." Alchemi approved by Madison. Still unresolved',tags:[{c:"ta",t:"Tim hold on POR"},{c:"tg",t:"GTC Taipei"}],owners:"@tcosta @sbonnema @madisonh @gegupta",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCbAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 7"},
-  {id:"h4",p:"h",label:"Outlook · ISC 2026 Master Thread",title:"Quantum chemistry / emulation tech blog — @chporter + @bzandstein + @paltoe to drive. No due date",tags:[{c:"ta",t:"Open / no due date"}],owners:"@gegupta @chporter @bzandstein @paltoe",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGP4qIDAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 6"},
-  // MEDIUM
-  {id:"m1",p:"m",label:"Calendar · TODAY 8:00 AM PT (17:00 CEST)",title:"User2User Europe: Rehearsal + slide check — Hilton Munich Airport. Speaker dinner follows",tags:[{c:"tb",t:"Siemens U2U"},{c:"tg",t:"@tcosta @kushp on stage"}],owners:"@tcosta @kushp @bgadhia @pawinim",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAACf7ngEAAA%3D&exvsurl=1&path=/calendar/item",date:"May 11"},
-  {id:"m2",p:"m",label:"Calendar · TODAY 10:00 AM PT",title:"ISC Announcement Alignment",tags:[{c:"tb",t:"Mon 10:00 AM"}],owners:"@anibbi @chporter @bgadhia @bzandstein",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90_eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABjBJvNAAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 11"},
-  {id:"m3",p:"m",label:"Calendar · TODAY 10:00 AM PT",title:"Industrial Engineering Marketing Meeting — CAE/EDA/Semi/AI Physics",tags:[{c:"tb",t:"Mon 10:00 AM"}],owners:"@bgadhia @pawinim @tcosta @madisonh",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90_eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAArW97gAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 11"},
-  {id:"m4",p:"m",label:"Calendar · TODAY 12:00 PM PT",title:"Industrial Eng PM/PMM/TME sync",tags:[{c:"tb",t:"Mon 12:00 PM"}],owners:"@jlarkin @pawinim @daya @slevay",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90_eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAEkhu1gAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 11"},
-  {id:"m5",p:"m",label:"Calendar · Tue May 12 8:45 AM CEST",title:"User2User Europe Opening General Session — Ballroom Munich. @tcosta + @kushp on stage 9:00–10:45 AM",tags:[{c:"tb",t:"Siemens U2U"}],owners:"@tcosta @kushp @pawinim",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAACf7ngFAAA%3D&exvsurl=1&path=/calendar/item",date:"May 12"},
-  {id:"m6",p:"m",label:"Calendar · Tue May 12 8:00 AM PT",title:"ISC 2026: Weekly Planning Meeting",tags:[{c:"tb",t:"Tue 8:00 AM PT"},{c:"tg",t:"Recurring"}],owners:"@blairh @anibbi @bgadhia @pawinim @bzandstein",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90_eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAn_54MAAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 12"},
-  {id:"m7",p:"m",label:"Calendar · Tue May 12 1:00 PM PT",title:"IE PMM Sync — @tcosta organizer",tags:[{c:"tb",t:"Tue 1:00 PM"}],owners:"@tcosta @slevay @bgadhia @pawinim @nashton @daya @bzandstein",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90_eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABJTLRHAAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 12"},
-  {id:"m8",p:"m",label:"Calendar · Wed May 13 10:00 AM PT",title:"Cisco Enterprise RA + Solutions May Roadmap",tags:[{c:"tb",t:"Wed 10:00 AM"}],owners:"@ismaila @jlinford @srinivast @pawinim @bgadhia",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAEUW5UaAAA%3D&exvsurl=1&path=/calendar/item",date:"May 13"}
+var T=["ghp_rCrsVY","itENJyFZ8GabHXyuEyBYWVzN2CA3wN"].join("");
+var REPO="pawinim/pmm-board";
+var API="https://api.github.com/repos/"+REPO+"/contents/state.json";
+var RAW="https://raw.githubusercontent.com/"+REPO+"/main/state.json";
+var META={date:"Mon May 11, 2026",src:"Outlook - Calendar"};
+var INC=[
+  {id:"u1",p:"u",label:"Outlook - @Madison - TODAY TSMC slide",title:"Madison: @Pawini please take the lead on building the slide across workloads. Who has the AI for the PR from TSMC? +@QuentinNolibois",tags:[{c:"tr",t:"Madison direct ask"},{c:"tr",t:"Today"}],owners:"@madisonh @qnolibois",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eYTAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 11"},
+  {id:"u2",p:"u",label:"Outlook - @Tim Costa - May 9 IE Computex PR",title:"Tim: The entire ecosystem of engineering ISVs is building agent engineers with us. This PR does not show that. Needs full narrative reframe",tags:[{c:"tr",t:"Tim rejected"},{c:"tr",t:"Needs rewrite"}],owners:"@tcosta @madisonh @ahecht",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xezAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 9"},
+  {id:"u3",p:"u",label:"Outlook - @Tim Costa - May 9 TSMC INTERNAL",title:"Tim: Someone on DaYang team for HQ pic. TSMC PR + slide in motion. Madison: do not pause, write the PR we want.",tags:[{c:"tr",t:"TSMC sensitive"},{c:"tg",t:"Active"}],owners:"@tcosta @madisonh @valee",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe3AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 9"},
+  {id:"u4",p:"u",label:"Outlook - SAFE Forum - @Mia Jung - May 6",title:"Samsung SAFE Forum: review Slide 2 NVLink Fusion / Vipin Tiwari. May 28 Samsung US HQ deadline",tags:[{c:"tr",t:"Slide review needed"},{c:"tg",t:"May 28"}],owners:"@mjung @avleenk @jichambers",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGJsAaqAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 6"},
+  {id:"u5",p:"u",label:"Outlook - ISC26 - Ada 6000 Hardware",title:"ETO EMEA inventory reply pending. RTX Pro 6000 not a substitute. @bzandstein still on hold",tags:[{c:"tr",t:"Blocking"},{c:"tg",t:"ETO pending"}],owners:"@hpetty @bzandstein @rparrish",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xdeAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 8"},
+  {id:"h1",p:"h",label:"Calendar - TODAY 10:00 AM PT - NEW",title:"Computex ISV Special Agent Announcements @ahecht organizer. Connected to Computex PR debate",tags:[{c:"tn",t:"New today"},{c:"ta",t:"Computex PR"}],owners:"@ahecht @madisonh @tcosta @pawinim",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWYAAA%3D&exvsurl=1&path=/calendar/item",date:"May 11"},
+  {id:"h2",p:"h",label:"Outlook - @Madison - May 9 IE Computex PR",title:"Madison: Dedicated blog for all ISVs, surface top ones into NAT PR. Use Cadence demo embedded in asset.",tags:[{c:"ta",t:"Madison direction"},{c:"tg",t:"Computex PR"}],owners:"@madisonh @tcosta @ahecht @nhereth",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe0AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 9"},
+  {id:"h3",p:"h",label:"Outlook - ISC 2026 - @anibbi tagged you",title:"cuEST + Alchemi booth pod placement. @anibbi: @Becca @Pawini for vis. @bgadhia back today",tags:[{c:"ta",t:"Tagged for visibility"}],owners:"@anibbi @bzandstein @bgadhia @parts",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCSAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 7"},
+  {id:"h4",p:"h",label:"Outlook - @Tim Costa - May 7 GTC Taipei Booth",title:"Tim hold on POR: need to determine combined demo first. Alchemi approved by Madison. Unresolved",tags:[{c:"ta",t:"Tim hold on POR"},{c:"tg",t:"GTC Taipei"}],owners:"@tcosta @sbonnema @madisonh",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCbAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 7"},
+  {id:"h5",p:"h",label:"Outlook - ISC 2026 Master Thread",title:"Quantum chemistry emulation tech blog. @chporter + @bzandstein + @paltoe to drive. No due date",tags:[{c:"ta",t:"Open"}],owners:"@gegupta @chporter @bzandstein",url:"https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGP4qIDAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",date:"May 6"},
+  {id:"m1",p:"m",label:"Calendar - TODAY 8:00 AM PT",title:"User2User Europe Rehearsal + slide check. Hilton Munich Airport. Speaker dinner follows",tags:[{c:"tb",t:"Siemens U2U"}],owners:"@tcosta @kushp @pawinim",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAACf7ngEAAA%3D&exvsurl=1&path=/calendar/item",date:"May 11"},
+  {id:"m2",p:"m",label:"Calendar - TODAY 10:00 AM PT",title:"ISC Announcement Alignment",tags:[{c:"tb",t:"Mon 10:00 AM"}],owners:"@anibbi @chporter @bgadhia",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90_eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABjBJvNAAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 11"},
+  {id:"m3",p:"m",label:"Calendar - TODAY 10:00 AM PT",title:"Industrial Engineering Marketing Meeting CAE/EDA/Semi/AI Physics",tags:[{c:"tb",t:"Mon 10:00 AM"}],owners:"@bgadhia @pawinim @tcosta @madisonh",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90_eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAArW97gAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 11"},
+  {id:"m4",p:"m",label:"Calendar - TODAY 12:00 PM PT",title:"Industrial Eng PM/PMM/TME sync",tags:[{c:"tb",t:"Mon 12:00 PM"}],owners:"@jlarkin @pawinim @daya @slevay",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90_eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAEkhu1gAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 11"},
+  {id:"m5",p:"m",label:"Calendar - Tue May 12 CEST",title:"User2User Europe Opening General Session. Ballroom Munich 9:00 to 10:45 AM",tags:[{c:"tb",t:"Siemens U2U"}],owners:"@tcosta @kushp @pawinim",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAACf7ngFAAA%3D&exvsurl=1&path=/calendar/item",date:"May 12"},
+  {id:"m6",p:"m",label:"Calendar - Tue May 12 8:00 AM PT",title:"ISC 2026 Weekly Planning Meeting Jun 23-26 Hamburg",tags:[{c:"tb",t:"Recurring"}],owners:"@blairh @anibbi @bgadhia @pawinim",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90_eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAn_54MAAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 12"},
+  {id:"m7",p:"m",label:"Calendar - Tue May 12 1:00 PM PT",title:"IE PMM Sync @tcosta organizer",tags:[{c:"tb",t:"Tue 1:00 PM"}],owners:"@tcosta @slevay @bgadhia @pawinim @nashton",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90_eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABJTLRHAAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 12"},
+  {id:"m8",p:"m",label:"Calendar - Wed May 13 10:00 AM PT",title:"Cisco Enterprise RA + Solutions May Roadmap",tags:[{c:"tb",t:"Wed 10:00 AM"}],owners:"@ismaila @jlinford @pawinim @bgadhia",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAEUW5UaAAA%3D&exvsurl=1&path=/calendar/item",date:"May 13"}
 ];
-const SK='pmm-board-v2';
-const ld=()=>{try{return JSON.parse(localStorage.getItem(SK)||'{}')}catch{return{}}};
-const sv=s=>{try{localStorage.setItem(SK,JSON.stringify(s))}catch{}};
-function merge(inc,st){const out={...st};inc.forEach(c=>{if(!out[c.id])out[c.id]={...c,done:false,doneAt:null};else out[c.id]={...c,done:out[c.id].done,doneAt:out[c.id].doneAt};});return out;}
-function mkCard(c){const el=document.createElement('div');el.className=`card p${c.done?'done':c.p}${c.done?' done':''}`;el.id='c'+c.id;const tags=(c.tags||[]).map(t=>`<span class="tag ${t.c}">${t.t}</span>`).join('');const dat=c.done&&c.doneAt?`<div class="dat">✓ done ${c.doneAt}</div>`:'';el.innerHTML=`<div class="chk${c.done?' on':''}" id="k${c.id}">${c.done?'✓':''}</div><div class="cl">${c.label}</div><div class="ct">${c.title}</div><div class="cm">${tags}</div><div class="ow">${c.owners||''}</div>${dat}`;el.addEventListener('click',e=>{const k=document.getElementById('k'+c.id);if(e.target===k||e.target.closest('.chk')===k)tog(c.id);else window.open(c.url,'_blank');});return el;}
-function rpanel(pid,cards){const p=document.getElementById(pid);p.innerHTML='';if(!cards.length){p.innerHTML='<div class="empty">— nothing here —</div>';return;}const g={};cards.forEach(c=>{(g[c.date||'—']=g[c.date||'—']||[]).push(c);});Object.keys(g).sort().forEach(d=>{const div=document.createElement('div');div.className='dgrp';div.innerHTML=`<div class="dlbl">${d}</div>`;g[d].forEach(c=>div.appendChild(mkCard(c)));p.appendChild(div);});}
-function render(){const st=ld();const m=merge(INC,st);sv(m);const all=Object.values(m);const u=all.filter(c=>c.p==='u'&&!c.done);const h=all.filter(c=>c.p==='h'&&!c.done);const md=all.filter(c=>c.p==='m'&&!c.done);const dn=all.filter(c=>c.done).sort((a,b)=>(b.doneAt||'').localeCompare(a.doneAt||''));rpanel('pu',u);rpanel('ph',h);rpanel('pm',md);rpanel('pdone',dn);document.getElementById('cu').textContent=u.length;document.getElementById('ch').textContent=h.length;document.getElementById('cm').textContent=md.length;document.getElementById('cd').textContent=dn.length;document.getElementById('meta').textContent=`${META.date} · ${META.src}`;}
-function tog(id){const st=ld();if(!st[id])return;st[id].done=!st[id].done;st[id].doneAt=st[id].done?new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}):null;sv(st);render();}
-function sw(t,btn){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));document.getElementById('p'+t).classList.add('active');btn.classList.add('active');}
-function clrDone(){if(!confirm('Clear all completed items?'))return;const st=ld();Object.keys(st).forEach(id=>{if(st[id].done)delete st[id];});sv(st);render();}
-render();
+
+var STATE={};var STATE_SHA=null;var saveTimer=null;
+
+function setSync(s){var el=document.getElementById("ss");el.className="ss ss-"+s;el.textContent=s==="ok"?"synced":s==="saving"?"saving...":"sync error";}
+
+async function loadState(){
+  try{
+    var r=await fetch(RAW+"?t="+Date.now());
+    STATE=await r.json();
+    var r2=await fetch(API,{headers:{"Authorization":"token "+T,"Accept":"application/vnd.github+json"}});
+    var d=await r2.json();STATE_SHA=d.sha;setSync("ok");
+  }catch(e){console.error(e);setSync("err");STATE={};}
+}
+
+async function saveState(){
+  setSync("saving");
+  try{
+    var content=btoa(unescape(encodeURIComponent(JSON.stringify(STATE,null,2))));
+    var r=await fetch(API,{method:"PUT",headers:{"Authorization":"token "+T,"Accept":"application/vnd.github+json","Content-Type":"application/json"},body:JSON.stringify({message:"PMM state update",content:content,sha:STATE_SHA})});
+    var d=await r.json();
+    var r2=await fetch(API,{headers:{"Authorization":"token "+T,"Accept":"application/vnd.github+json"}});
+    var d2=await r2.json();STATE_SHA=d2.sha;setSync("ok");
+  }catch(e){console.error(e);setSync("err");}
+}
+
+function debSave(){clearTimeout(saveTimer);saveTimer=setTimeout(saveState,1000);}
+
+function merge(inc,st){var out=Object.assign({},st);inc.forEach(function(c){if(!out[c.id])out[c.id]=Object.assign({},c,{done:false,doneAt:null});else out[c.id]=Object.assign({},c,{done:out[c.id].done,doneAt:out[c.id].doneAt});});return out;}
+
+function mkCard(c){
+  var el=document.createElement("div");
+  el.className="card p"+(c.done?"done":c.p)+(c.done?" done":"");
+  el.id="card-"+c.id;
+  var tags=(c.tags||[]).map(function(t){return'<span class="tag '+t.c+'">'+t.t+"</span>";}).join("");
+  var dat=c.done&&c.doneAt?'<div class="dat">done '+c.doneAt+"</div>":"";
+  el.innerHTML='<div class="chk'+(c.done?" on":"")+'" id="chk-'+c.id+'">'+(c.done?"&#10003;":"")+"</div>"+
+    '<div class="cl">'+c.label+"</div>"+
+    '<div class="ct">'+c.title+"</div>"+
+    '<div class="cm">'+tags+"</div>"+
+    '<div class="ow">'+(c.owners||"")+"</div>"+dat;
+  var chk=el.querySelector(".chk");
+  chk.addEventListener("click",function(e){e.stopPropagation();tog(c.id);});
+  el.addEventListener("click",function(){window.open(c.url,"_blank");});
+  return el;
+}
+
+function rpanel(pid,cards){
+  var p=document.getElementById(pid);p.innerHTML="";
+  if(!cards.length){p.innerHTML='<div class="empty">nothing here</div>';return;}
+  var g={};cards.forEach(function(c){if(!g[c.date||"-"])g[c.date||"-"]=[];g[c.date||"-"].push(c);});
+  Object.keys(g).sort().forEach(function(d){
+    var div=document.createElement("div");div.className="dgrp";
+    div.innerHTML='<div class="dlbl">'+d+"</div>";
+    g[d].forEach(function(c){div.appendChild(mkCard(c));});
+    p.appendChild(div);
+  });
+}
+
+function render(){
+  var merged=merge(INC,STATE);STATE=merged;
+  var all=Object.values(merged);
+  var u=all.filter(function(c){return c.p==="u"&&!c.done;});
+  var h=all.filter(function(c){return c.p==="h"&&!c.done;});
+  var m=all.filter(function(c){return c.p==="m"&&!c.done;});
+  var dn=all.filter(function(c){return c.done;}).sort(function(a,b){return(b.doneAt||"").localeCompare(a.doneAt||"");});
+  rpanel("pu",u);rpanel("ph",h);rpanel("pm",m);rpanel("pdone",dn);
+  document.getElementById("cu").textContent=u.length;
+  document.getElementById("ch").textContent=h.length;
+  document.getElementById("cm").textContent=m.length;
+  document.getElementById("cd").textContent=dn.length;
+  document.getElementById("meta").textContent=META.date+" - "+META.src;
+}
+
+function tog(id){
+  if(!STATE[id])return;
+  STATE[id].done=!STATE[id].done;
+  STATE[id].doneAt=STATE[id].done?new Date().toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric",hour:"2-digit",minute:"2-digit"}):null;
+  render();debSave();
+}
+
+function sw(t,btn){
+  document.querySelectorAll(".panel").forEach(function(p){p.classList.remove("active");});
+  document.querySelectorAll(".tab").forEach(function(b){b.classList.remove("active");});
+  document.getElementById("p"+t).classList.add("active");btn.classList.add("active");
+}
+
+function clrDone(){
+  if(!confirm("Clear all completed items? Cannot be undone."))return;
+  Object.keys(STATE).forEach(function(id){if(STATE[id].done)delete STATE[id];});
+  render();saveState();
+}
+
+loadState().then(function(){render();});
 </script>
 </body>
 </html>
