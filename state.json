@@ -323,8 +323,8 @@
     "owners": "@jlarkin @pawinim @daya @slevay",
     "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAB",
     "date": "May 11",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "May 11, 2026 at 01:44 PM",
     "note": ""
   },
   "m5": {
