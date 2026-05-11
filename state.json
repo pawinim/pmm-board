@@ -15,7 +15,7 @@
       }
     ],
     "owners": "@madisonh @qnolibois",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eYTAAA%3D",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eYTAAA%3D&exvsurl=1",
     "date": "May 11",
     "done": false,
     "doneAt": null,
@@ -25,7 +25,7 @@
     "id": "u0",
     "p": "u",
     "label": "Outlook - Synopsys OIP - Tim: PASS - Action needed",
-    "title": "Tim replied: \"Recommend we pass.\" You must now reply to Arvind (Synopsys) declining the joint paper. Close the loop politely.",
+    "title": "Tim replied: \"Recommend we pass.\" Reply to Arvind (Synopsys) declining the joint paper — draft ready, use warm or brief variant.",
     "tags": [
       {
         "c": "tr",
@@ -37,10 +37,10 @@
       }
     ],
     "owners": "@tcosta @daya @yiyiw @bgadhia",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eY7AAA%3D",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eY7AAA%3D&exvsurl=1",
     "date": "May 11",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "May 11, 2026 at 04:23 PM",
     "note": "Tim replied May 11 3:00 PM: \"Recommend we pass\" — ACTION: Reply to Arvind (Synopsys) declining the joint paper. Close the loop politely."
   },
   "u2": {
@@ -59,7 +59,7 @@
       }
     ],
     "owners": "@tcosta @madisonh @ahecht",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xezAAA%3D",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xezAAA%3D&exvsurl=1",
     "date": "May 9",
     "done": false,
     "doneAt": null,
@@ -81,7 +81,7 @@
       }
     ],
     "owners": "@tcosta @madisonh @valee",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe3AAA%3D",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe3AAA%3D&exvsurl=1",
     "date": "May 9",
     "done": true,
     "doneAt": "May 11, 2026 at 01:44 PM",
@@ -103,7 +103,7 @@
       }
     ],
     "owners": "@mjung @avleenk @jichambers",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGJsAaqAAA%3D",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGJsAaqAAA%3D&exvsurl=1",
     "date": "May 6",
     "done": true,
     "doneAt": "May 11, 2026 at 01:44 PM",
@@ -125,7 +125,7 @@
       }
     ],
     "owners": "@hpetty @bzandstein @rparrish",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xdeAAA%3D",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xdeAAA%3D&exvsurl=1",
     "date": "May 8",
     "done": false,
     "doneAt": null,
@@ -147,7 +147,7 @@
       }
     ],
     "owners": "@ahecht @madisonh @tcosta @pawinim",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWYAAA%3D",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWYAAA%3D&exvsurl=1",
     "date": "May 11",
     "done": false,
     "doneAt": null,
@@ -169,7 +169,7 @@
       }
     ],
     "owners": "@slevay @pawinim @jmabry",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWdAAA%3D",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWdAAA%3D&exvsurl=1",
     "date": "May 11",
     "done": false,
     "doneAt": null,
@@ -191,7 +191,7 @@
       }
     ],
     "owners": "@madisonh @tcosta @ahecht @nhereth",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe0AAA%3D",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe0AAA%3D&exvsurl=1",
     "date": "May 9",
     "done": false,
     "doneAt": null,
@@ -209,7 +209,7 @@
       }
     ],
     "owners": "@anibbi @bzandstein @bgadhia @parts",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCSAAA%3D",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCSAAA%3D&exvsurl=1",
     "date": "May 7",
     "done": false,
     "doneAt": null,
@@ -231,7 +231,7 @@
       }
     ],
     "owners": "@tcosta @sbonnema @madisonh",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCbAAA%3D",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCbAAA%3D&exvsurl=1",
     "date": "May 7",
     "done": false,
     "doneAt": null,
@@ -249,7 +249,7 @@
       }
     ],
     "owners": "@gegupta @chporter @bzandstein",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGP4qIDAAA%3D",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGP4qIDAAA%3D&exvsurl=1",
     "date": "May 6",
     "done": false,
     "doneAt": null,
@@ -267,7 +267,7 @@
       }
     ],
     "owners": "@tcosta @kushp @pawinim",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAACf7ngEAAA%3D",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAACf7ngEAAA%3D&exvsurl=1",
     "date": "May 11",
     "done": true,
     "doneAt": "May 11, 2026 at 01:44 PM",
@@ -285,7 +285,7 @@
       }
     ],
     "owners": "@anibbi @chporter @bgadhia",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAA",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAA&exvsurl=1",
     "date": "May 11",
     "done": false,
     "doneAt": null,
@@ -303,7 +303,7 @@
       }
     ],
     "owners": "@bgadhia @pawinim @tcosta @madisonh",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAA",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAA&exvsurl=1",
     "date": "May 11",
     "done": false,
     "doneAt": null,
@@ -321,7 +321,7 @@
       }
     ],
     "owners": "@jlarkin @pawinim @daya @slevay",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAB",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAB&exvsurl=1",
     "date": "May 11",
     "done": true,
     "doneAt": "May 11, 2026 at 01:44 PM",
@@ -339,7 +339,7 @@
       }
     ],
     "owners": "@tcosta @kushp @pawinim",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAACf7ngFAAA%3D",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAACf7ngFAAA%3D&exvsurl=1",
     "date": "May 12",
     "done": true,
     "doneAt": "May 11, 2026 at 01:45 PM",
@@ -357,7 +357,7 @@
       }
     ],
     "owners": "@blairh @anibbi @bgadhia @pawinim",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA&exvsurl=1",
     "date": "May 12",
     "done": false,
     "doneAt": null,
@@ -379,7 +379,7 @@
       }
     ],
     "owners": "@msousa @ahecht @madisonh @tcosta @pawinim @slevay",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAB",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAB&exvsurl=1",
     "date": "May 12",
     "done": true,
     "doneAt": "May 11, 2026 at 03:03 PM",
@@ -397,7 +397,183 @@
       }
     ],
     "owners": "@tcosta @slevay @bgadhia @pawinim @nashton",
-    "url": "https://outlook.office.com/mail/deeplink/open?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAC",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAC&exvsurl=1",
+    "date": "May 12",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u6": {
+    "id": "u6",
+    "p": "u",
+    "label": "Slack - @nashton @jmabry @slevay Group DM - TODAY",
+    "title": "@jmabry done with JHH_Computex2026_v2agents.pptx. @nashton: no HPC cluster needed, just agent/tool/skills. You + @slevay need to abstract the simpler Computex slide",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Action: abstract slide"
+      },
+      {
+        "c": "tn",
+        "t": "New today"
+      }
+    ],
+    "owners": "@pawinim @slevay @jmabry @nashton",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0B33NPBZFU/p1778529678616009",
+    "date": "May 11",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u7": {
+    "id": "u7",
+    "p": "u",
+    "label": "Slack - @nashton @slevay DM - TODAY CPTX demo script",
+    "title": "Tim+@nashton aligned: Cadence is the hero, NVIDIA as LHA. @slevay shared script link (Google Sheet). YOU said: I'll do some thinking tonight - need dummy codes, b-roll direction. DELIVERABLE STILL OPEN.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "You said you'd work on it"
+      },
+      {
+        "c": "tr",
+        "t": "VO track already being produced"
+      }
+    ],
+    "owners": "@pawinim @slevay @nashton @jmabry",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0B33C2R8UR/p1778537422393999",
+    "date": "May 11",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u8": {
+    "id": "u8",
+    "p": "u",
+    "label": "Slack - @bzandstein @tcosta @yiyiw DM - TODAY cuEST TSMC demo",
+    "title": "@bzandstein: 4-4.5x RTX Pro 6000 acceleration ready. Wants you to ask TSMC about cuEST demo for GTC Taipei. You replied: will await Vanessa feedback then reach out. @tcosta: Vanessa should answer if this is valuable to TSMC - Becca adding her.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "You said: will await Vanessa"
+      },
+      {
+        "c": "ta",
+        "t": "Vanessa feedback pending"
+      }
+    ],
+    "owners": "@pawinim @bzandstein @valee @yiyiw @tcosta",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0B37A9N0QY/p1778540062953989",
+    "date": "May 11",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h7": {
+    "id": "h7",
+    "p": "h",
+    "label": "Slack - Esther Lee DM - TODAY",
+    "title": "Esther Lee confirmed TSMC slide brainstorm tomorrow. You reached out for help on rough ideas.",
+    "tags": [
+      {
+        "c": "ta",
+        "t": "Tomorrow"
+      },
+      {
+        "c": "tg",
+        "t": "TSMC slide"
+      }
+    ],
+    "owners": "@pawinim @estherlee",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0A8NGS7KC6/p1778530293736379",
+    "date": "May 11",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h8": {
+    "id": "h8",
+    "p": "h",
+    "label": "Outlook - @Madison - TODAY UNREAD - GTC Taipei HQ pic",
+    "title": "Madison: @Jennifer Chen @Demy Huang ensure groups tour both booths on @Deepu Talla calendar. Context: GTC-CPTX26 physical AI HQ meeting requests - booth tours coordination",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "New unread"
+      },
+      {
+        "c": "ta",
+        "t": "GTC Taipei"
+      }
+    ],
+    "owners": "@madisonh @avleenk @jenniferc @demyh",
+    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eZYAAA%3D&exvsurl=1",
+    "date": "May 11",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m9": {
+    "id": "m9",
+    "p": "m",
+    "label": "Calendar - Tue May 12 11:00 AM PT - NEW",
+    "title": "TSMC Slide Brainstorm with Esther Lee (eluh@nvidia.com) - you are organizer",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "New - you organized"
+      },
+      {
+        "c": "tb",
+        "t": "TSMC slide"
+      }
+    ],
+    "owners": "@pawinim @eluh",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWhAAA%3D&exvsurl=1",
+    "date": "May 12",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m10": {
+    "id": "m10",
+    "p": "m",
+    "label": "Calendar - Tue May 12 12:00 PM PT - NEW",
+    "title": "26GTC/CPTX - JHH Keynote Demo: Cadence Autonomous Agents review (@jblodgett organizer, @madisonh @slevay @nashton @jmabry @pawinim)",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "New"
+      },
+      {
+        "c": "tb",
+        "t": "CPTX Cadence demo"
+      }
+    ],
+    "owners": "@jblodgett @madisonh @slevay @nashton @jmabry @pawinim",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWkAAA%3D&exvsurl=1",
+    "date": "May 12",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m11": {
+    "id": "m11",
+    "p": "m",
+    "label": "Calendar - Tue May 12 4:30 PM PT - NEW",
+    "title": "GTC Taipei 26 - NV Booth Showcase and Demo Planning weekly sync",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "GTC Taipei"
+      },
+      {
+        "c": "tg",
+        "t": "Recurring"
+      }
+    ],
+    "owners": "@ssprinkles @sbonnema @slevay @nashton @pawinim @bgadhia",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFmgAAEA%3D%3D&exvsurl=1",
     "date": "May 12",
     "done": false,
     "doneAt": null,
