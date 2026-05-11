@@ -85,6 +85,6 @@ function tog(id){const st=ld();if(!st[id])return;st[id].done=!st[id].done;st[id]
 function sw(t,btn){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));document.getElementById('p'+t).classList.add('active');btn.classList.add('active');}
 function clrDone(){if(!confirm('Clear all completed items?'))return;const st=ld();Object.keys(st).forEach(id=>{if(st[id].done)delete st[id];});sv(st);render();}
 render();
-<\/script>
+<</script>
 </body>
 </html>
