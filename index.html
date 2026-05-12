@@ -54,6 +54,22 @@ body{font-family:var(--sans);background:var(--bg);color:var(--tx);min-height:100
 .foot{font-family:var(--mono);font-size:9px;color:var(--t3);text-align:center;margin-top:28px;line-height:1.8;letter-spacing:0.04em;}
 .clrbtn{background:transparent;border:none;color:var(--t3);font-family:var(--mono);font-size:9px;cursor:pointer;text-decoration:underline;letter-spacing:0.04em;}
 .err-msg{font-family:var(--mono);font-size:9px;color:var(--red);background:var(--rdim);padding:6px 10px;border-radius:4px;margin-bottom:10px;display:none;}
+
+.fab{position:fixed;bottom:24px;right:20px;width:48px;height:48px;border-radius:50%;background:var(--red);border:none;color:#fff;font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:100;box-shadow:0 4px 12px rgba(255,77,77,0.4);transition:transform 0.15s;}
+.fab:active{transform:scale(0.9);}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:200;display:none;align-items:flex-end;justify-content:center;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--sur);border:1px solid var(--b2);border-radius:14px 14px 0 0;padding:20px 16px 32px;width:100%;max-width:640px;}
+.modal h2{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--tx);margin-bottom:16px;}
+.field{margin-bottom:12px;}
+.field label{font-family:var(--mono);font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:var(--t3);display:block;margin-bottom:5px;}
+.field input,.field textarea,.field select{width:100%;background:#111;border:1px solid var(--b2);border-radius:4px;color:var(--tx);font-family:var(--sans);font-size:13px;padding:8px 10px;outline:none;}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--t2);}
+.field textarea{min-height:70px;resize:vertical;line-height:1.5;}
+.field select option{background:var(--sur);}
+.modal-btns{display:flex;gap:8px;margin-top:16px;}
+.btn-add{flex:1;background:var(--red);border:none;color:#fff;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:11px;border-radius:6px;cursor:pointer;}
+.btn-cancel{background:transparent;border:1px solid var(--b2);color:var(--t3);font-family:var(--mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;padding:11px 16px;border-radius:6px;cursor:pointer;}
 </style>
 </head>
 <body>
@@ -228,7 +244,80 @@ function clrDone(){
   Object.keys(STATE).forEach(function(id){if(STATE[id].done)delete STATE[id];});
   render();saveState();
 }
+
+function openModal(){
+  document.getElementById("modal-overlay").classList.add("open");
+  setTimeout(function(){document.getElementById("new-title").focus();},100);
+}
+function closeModal(e){
+  if(!e||e.target===document.getElementById("modal-overlay")){
+    document.getElementById("modal-overlay").classList.remove("open");
+    document.getElementById("new-title").value="";
+    document.getElementById("new-label").value="";
+    document.getElementById("new-owners").value="";
+    document.getElementById("new-url").value="";
+    document.getElementById("new-priority").value="m";
+  }
+}
+function addTask(){
+  var title=document.getElementById("new-title").value.trim();
+  if(!title){document.getElementById("new-title").focus();return;}
+  var label=document.getElementById("new-label").value.trim()||"Manual task - "+new Date().toLocaleDateString("en-US",{month:"short",day:"numeric"});
+  var p=document.getElementById("new-priority").value;
+  var owners=document.getElementById("new-owners").value.trim();
+  var url=document.getElementById("new-url").value.trim()||"#";
+  var id="manual-"+Date.now();
+  var today=new Date().toLocaleDateString("en-US",{month:"short",day:"numeric"});
+  STATE[id]={id:id,p:p,label:label,title:title,tags:[{c:"tg",t:"Manual"}],owners:owners,url:url,date:today,done:false,doneAt:null,note:""};
+  render();
+  debSave();
+  closeModal();
+  // Switch to the right tab
+  var tabMap={u:0,h:1,m:2};
+  var tabs=document.querySelectorAll(".tab");
+  var panels=document.querySelectorAll(".panel");
+  tabs.forEach(function(b){b.classList.remove("active");});
+  panels.forEach(function(p){p.classList.remove("active");});
+  tabs[tabMap[p]].classList.add("active");
+  panels[tabMap[p]].classList.add("active");
+}
+
 loadState().then(function(){render();});
 </script>
+
+<button class="fab" onclick="openModal()" title="Add task">+</button>
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal">
+    <h2>Add Task</h2>
+    <div class="field">
+      <label>Title</label>
+      <input type="text" id="new-title" placeholder="What needs to be done?" />
+    </div>
+    <div class="field">
+      <label>Source / Context</label>
+      <input type="text" id="new-label" placeholder="e.g. Slack - @tcosta - May 12" />
+    </div>
+    <div class="field">
+      <label>Priority</label>
+      <select id="new-priority">
+        <option value="u">Urgent</option>
+        <option value="h">High</option>
+        <option value="m" selected>Medium</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Owners (optional)</label>
+      <input type="text" id="new-owners" placeholder="@person @person2" />
+    </div>
+    <div class="field">
+      <label>Link (optional)</label>
+      <input type="text" id="new-url" placeholder="https://..." />
+    </div>
+    <div class="modal-btns">
+      <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+      <button class="btn-add" onclick="addTask()">Add to Board</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
