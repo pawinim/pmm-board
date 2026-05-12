@@ -2,20 +2,20 @@
   "u1": {
     "id": "u1",
     "p": "u",
-    "label": "Outlook - @Madison - TODAY TSMC slide",
-    "title": "Madison: @Pawini please take the lead on building the slide across workloads. Who has the AI for the PR from TSMC? +@QuentinNolibois",
+    "label": "Outlook - @Madison - TSMC slide across workloads",
+    "title": "Madison: @Pawini please take the lead on building the slide across workloads. You replied: Yes will start. TSMC slide brainstorm with Esther Lee tomorrow 11:00 AM PT.",
     "tags": [
       {
         "c": "tr",
-        "t": "Madison direct ask"
+        "t": "Deliverable open"
       },
       {
-        "c": "tr",
-        "t": "Today"
+        "c": "tg",
+        "t": "Brainstorm Tue 11am"
       }
     ],
-    "owners": "@madisonh @qnolibois",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eYTAAA%3D&exvsurl=1",
+    "owners": "@madisonh @qnolibois @eluh",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eYTAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eYTAAA%3D&exvsurl=1",
     "date": "May 11",
     "done": false,
     "doneAt": null,
@@ -25,7 +25,7 @@
     "id": "u0",
     "p": "u",
     "label": "Outlook - Synopsys OIP - Tim: PASS - Action needed",
-    "title": "Tim replied: \"Recommend we pass.\" Reply to Arvind (Synopsys) declining the joint paper — draft ready, use warm or brief variant.",
+    "title": "Tim replied: Recommend we pass. Reply to Arvind (Synopsys) declining the joint paper. Draft ready - use warm or brief variant.",
     "tags": [
       {
         "c": "tr",
@@ -36,8 +36,8 @@
         "t": "Tim decided: pass"
       }
     ],
-    "owners": "@tcosta @daya @yiyiw @bgadhia",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eY7AAA%3D&exvsurl=1",
+    "owners": "@tcosta @yiyiw",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eZFAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eZFAAA%3D&exvsurl=1",
     "date": "May 11",
     "done": true,
     "doneAt": "May 11, 2026 at 04:23 PM",
@@ -47,7 +47,7 @@
     "id": "u2",
     "p": "u",
     "label": "Outlook - @Tim Costa - May 9 IE Computex PR",
-    "title": "Tim: The entire ecosystem of engineering ISVs is building agent engineers with us. This PR does not show that. Full narrative reframe needed",
+    "title": "Tim: The entire ecosystem of engineering ISVs is building agent engineers with us. This PR does not show that. Full narrative reframe needed.",
     "tags": [
       {
         "c": "tr",
@@ -59,7 +59,7 @@
       }
     ],
     "owners": "@tcosta @madisonh @ahecht",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xezAAA%3D&exvsurl=1",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xezAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xezAAA%3D&exvsurl=1",
     "date": "May 9",
     "done": false,
     "doneAt": null,
@@ -81,7 +81,7 @@
       }
     ],
     "owners": "@tcosta @madisonh @valee",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe3AAA%3D&exvsurl=1",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe3AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe3AAA%3D&exvsurl=1",
     "date": "May 9",
     "done": true,
     "doneAt": "May 11, 2026 at 01:44 PM",
@@ -91,7 +91,7 @@
     "id": "u4",
     "p": "u",
     "label": "Outlook - SAFE Forum - @Mia Jung - May 6",
-    "title": "Samsung SAFE Forum: review Slide 2 NVLink Fusion / Vipin Tiwari. May 28 Samsung US HQ",
+    "title": "Samsung SAFE Forum: review Slide 2 NVLink Fusion / Vipin Tiwari. May 28 Samsung US HQ deadline.",
     "tags": [
       {
         "c": "tr",
@@ -99,11 +99,11 @@
       },
       {
         "c": "tg",
-        "t": "May 28"
+        "t": "May 28 deadline"
       }
     ],
     "owners": "@mjung @avleenk @jichambers",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGJsAaqAAA%3D&exvsurl=1",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGJsAaqAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGJsAaqAAA%3D&exvsurl=1",
     "date": "May 6",
     "done": true,
     "doneAt": "May 11, 2026 at 01:44 PM",
@@ -113,7 +113,7 @@
     "id": "u5",
     "p": "u",
     "label": "Outlook - ISC26 - Ada 6000 Hardware",
-    "title": "ETO EMEA inventory reply still pending. RTX Pro 6000 not a substitute. @bzandstein still on hold",
+    "title": "ETO EMEA inventory reply still pending. RTX Pro 6000 not a substitute. @bzandstein still on hold.",
     "tags": [
       {
         "c": "tr",
@@ -125,7 +125,7 @@
       }
     ],
     "owners": "@hpetty @bzandstein @rparrish",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xdeAAA%3D&exvsurl=1",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xdeAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xdeAAA%3D&exvsurl=1",
     "date": "May 8",
     "done": false,
     "doneAt": null,
@@ -134,52 +134,8 @@
   "h1": {
     "id": "h1",
     "p": "h",
-    "label": "Calendar - TODAY 10:00 AM PT",
-    "title": "Computex ISV Special Agent Announcements @ahecht organizer. Connected to Computex PR debate",
-    "tags": [
-      {
-        "c": "tn",
-        "t": "New"
-      },
-      {
-        "c": "ta",
-        "t": "Computex PR"
-      }
-    ],
-    "owners": "@ahecht @madisonh @tcosta @pawinim",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWYAAA%3D&exvsurl=1",
-    "date": "May 11",
-    "done": false,
-    "doneAt": null,
-    "note": ""
-  },
-  "h2": {
-    "id": "h2",
-    "p": "h",
-    "label": "Calendar - TODAY 1:00 PM PT - NEW",
-    "title": "Working Session: Revise Cadence Slide - @slevay organizer. You + @jmabry",
-    "tags": [
-      {
-        "c": "tn",
-        "t": "New today"
-      },
-      {
-        "c": "ta",
-        "t": "Cadence slide"
-      }
-    ],
-    "owners": "@slevay @pawinim @jmabry",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWdAAA%3D&exvsurl=1",
-    "date": "May 11",
-    "done": false,
-    "doneAt": null,
-    "note": ""
-  },
-  "h3": {
-    "id": "h3",
-    "p": "h",
     "label": "Outlook - @Madison - May 9 IE Computex PR",
-    "title": "Madison: Dedicated blog for all ISVs, surface top ones into NAT PR. Use Cadence demo embedded in asset.",
+    "title": "Madison: Dedicated blog for all ISVs, surface top ones into NAT PR. Take advantage of Cadence demo embedded in asset.",
     "tags": [
       {
         "c": "ta",
@@ -191,35 +147,39 @@
       }
     ],
     "owners": "@madisonh @tcosta @ahecht @nhereth",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe0AAA%3D&exvsurl=1",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe0AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe0AAA%3D&exvsurl=1",
     "date": "May 9",
     "done": false,
     "doneAt": null,
     "note": ""
   },
-  "h4": {
-    "id": "h4",
+  "h2": {
+    "id": "h2",
     "p": "h",
     "label": "Outlook - ISC 2026 - @anibbi tagged you",
-    "title": "cuEST + Alchemi booth pod placement. @anibbi: @Becca @Pawini for vis. @bgadhia back today",
+    "title": "cuEST + Alchemi booth pod placement. @anibbi: @Becca @Pawini for vis. @bgadhia back today.",
     "tags": [
       {
         "c": "ta",
         "t": "Tagged for vis"
+      },
+      {
+        "c": "tn",
+        "t": "@bgadhia back"
       }
     ],
     "owners": "@anibbi @bzandstein @bgadhia @parts",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCSAAA%3D&exvsurl=1",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCSAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCSAAA%3D&exvsurl=1",
     "date": "May 7",
     "done": false,
     "doneAt": null,
     "note": ""
   },
-  "h5": {
-    "id": "h5",
+  "h3": {
+    "id": "h3",
     "p": "h",
     "label": "Outlook - @Tim Costa - May 7 GTC Taipei Booth",
-    "title": "Tim hold on POR: need to determine combined demo first. Alchemi approved by Madison. Unresolved",
+    "title": "Tim hold on POR: need to determine combined demo first. Alchemi approved by Madison. Still unresolved.",
     "tags": [
       {
         "c": "ta",
@@ -231,8 +191,52 @@
       }
     ],
     "owners": "@tcosta @sbonnema @madisonh",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCbAAA%3D&exvsurl=1",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCbAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCbAAA%3D&exvsurl=1",
     "date": "May 7",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h4": {
+    "id": "h4",
+    "p": "h",
+    "label": "Outlook - @Madison - GTC-CPTX26 HQ PIC - UNREAD",
+    "title": "Madison: @Jennifer Chen @Demy Huang ensure groups tour both booths on @Deepu Talla calendar. TWTC booth tour not on Madison calendar - ensure PMMs block all PICs.",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "New unread"
+      },
+      {
+        "c": "ta",
+        "t": "GTC Taipei"
+      }
+    ],
+    "owners": "@madisonh @jenniferc @dehuang @avleenk",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eZdAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eZdAAA%3D&exvsurl=1",
+    "date": "May 12",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h5": {
+    "id": "h5",
+    "p": "h",
+    "label": "Slack - Esther Lee DM - TSMC brainstorm tomorrow",
+    "title": "Esther Lee confirmed TSMC slide brainstorm Tue May 12 11:00 AM PT. You organized this meeting.",
+    "tags": [
+      {
+        "c": "ta",
+        "t": "Tue May 12 11:00 AM"
+      },
+      {
+        "c": "tg",
+        "t": "TSMC slide"
+      }
+    ],
+    "owners": "@pawinim @eluh",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWhAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 12",
     "done": false,
     "doneAt": null,
     "note": ""
@@ -241,15 +245,15 @@
     "id": "h6",
     "p": "h",
     "label": "Outlook - ISC 2026 Master Thread",
-    "title": "Quantum chemistry emulation tech blog. @chporter + @bzandstein + @paltoe to drive. No due date",
+    "title": "Quantum chemistry emulation tech blog. @chporter + @bzandstein + @paltoe to drive. No due date.",
     "tags": [
       {
         "c": "ta",
         "t": "Open"
       }
     ],
-    "owners": "@gegupta @chporter @bzandstein",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGP4qIDAAA%3D&exvsurl=1",
+    "owners": "@gegupta @chporter @bzandstein @paltoe",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGP4qIDAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGP4qIDAAA%3D&exvsurl=1",
     "date": "May 6",
     "done": false,
     "doneAt": null,
@@ -258,17 +262,17 @@
   "m1": {
     "id": "m1",
     "p": "m",
-    "label": "Calendar - TODAY 8:00 AM PT",
-    "title": "User2User Europe Rehearsal + slide check. Hilton Munich Airport",
+    "label": "Calendar - Tue May 12 8:00 AM PT",
+    "title": "ISC 2026 Weekly Planning Meeting (Jun 23-26 Hamburg)",
     "tags": [
       {
         "c": "tb",
-        "t": "Siemens U2U"
+        "t": "Recurring"
       }
     ],
-    "owners": "@tcosta @kushp @pawinim",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAACf7ngEAAA%3D&exvsurl=1",
-    "date": "May 11",
+    "owners": "@blairh @anibbi @bgadhia @pawinim @bzandstein",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAn_54MAAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 12",
     "done": true,
     "doneAt": "May 11, 2026 at 01:44 PM",
     "note": ""
@@ -276,17 +280,17 @@
   "m2": {
     "id": "m2",
     "p": "m",
-    "label": "Calendar - TODAY 10:00 AM PT",
-    "title": "ISC Announcement Alignment",
+    "label": "Calendar - Tue May 12 8:30 AM PT",
+    "title": "Computex Daily Sync: ISV Announcement Deliverables. Arch diagrams, partner PR/blog, opens.",
     "tags": [
       {
         "c": "tb",
-        "t": "Mon 10:00 AM"
+        "t": "Computex"
       }
     ],
-    "owners": "@anibbi @chporter @bgadhia",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAA&exvsurl=1",
-    "date": "May 11",
+    "owners": "@msousa @ahecht @madisonh @tcosta @pawinim @slevay",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 12",
     "done": false,
     "doneAt": null,
     "note": ""
@@ -294,17 +298,21 @@
   "m3": {
     "id": "m3",
     "p": "m",
-    "label": "Calendar - TODAY 10:00 AM PT",
-    "title": "Industrial Engineering Marketing Meeting CAE/EDA/Semi/AI Physics",
+    "label": "Calendar - Tue May 12 11:00 AM PT",
+    "title": "TSMC Slide Brainstorm with Esther Lee. You organized this.",
     "tags": [
       {
         "c": "tb",
-        "t": "Mon 10:00 AM"
+        "t": "TSMC slide"
+      },
+      {
+        "c": "tn",
+        "t": "You organizer"
       }
     ],
-    "owners": "@bgadhia @pawinim @tcosta @madisonh",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAA&exvsurl=1",
-    "date": "May 11",
+    "owners": "@pawinim @eluh",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWhAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 12",
     "done": false,
     "doneAt": null,
     "note": ""
@@ -312,17 +320,17 @@
   "m4": {
     "id": "m4",
     "p": "m",
-    "label": "Calendar - TODAY 12:00 PM PT",
-    "title": "Industrial Eng PM/PMM/TME sync",
+    "label": "Calendar - Tue May 12 12:00 PM PT",
+    "title": "26GTC/CPTX - JHH Keynote Demo: Cadence Autonomous Agents review (@jblodgett organizer)",
     "tags": [
       {
         "c": "tb",
-        "t": "Mon 12:00 PM"
+        "t": "CPTX Cadence demo"
       }
     ],
-    "owners": "@jlarkin @pawinim @daya @slevay",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAB&exvsurl=1",
-    "date": "May 11",
+    "owners": "@jblodgett @madisonh @slevay @nashton @jmabry @pawinim",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWkAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 12",
     "done": true,
     "doneAt": "May 11, 2026 at 01:44 PM",
     "note": ""
@@ -330,16 +338,16 @@
   "m5": {
     "id": "m5",
     "p": "m",
-    "label": "Calendar - Tue May 12 CEST",
-    "title": "User2User Europe Opening General Session. Ballroom Munich 9:00-10:45 AM",
+    "label": "Calendar - Tue May 12 1:00 PM PT",
+    "title": "IE PMM Sync - @tcosta organizer. Key items: TSMC slide, Computex PR, ISC updates.",
     "tags": [
       {
         "c": "tb",
-        "t": "Siemens U2U"
+        "t": "Tue 1:00 PM"
       }
     ],
-    "owners": "@tcosta @kushp @pawinim",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAACf7ngFAAA%3D&exvsurl=1",
+    "owners": "@tcosta @slevay @bgadhia @pawinim @nashton @daya @bzandstein @jlinford",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABJTLRHAAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 12",
     "done": true,
     "doneAt": "May 11, 2026 at 01:45 PM",
@@ -348,16 +356,20 @@
   "m6": {
     "id": "m6",
     "p": "m",
-    "label": "Calendar - Tue May 12 8:00 AM PT",
-    "title": "ISC 2026 Weekly Planning Meeting Jun 23-26 Hamburg",
+    "label": "Calendar - Tue May 12 4:30 PM PT",
+    "title": "GTC Taipei 26 - NV Booth Showcase and Demo Planning weekly sync",
     "tags": [
       {
         "c": "tb",
+        "t": "GTC Taipei"
+      },
+      {
+        "c": "tg",
         "t": "Recurring"
       }
     ],
-    "owners": "@blairh @anibbi @bgadhia @pawinim",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA&exvsurl=1",
+    "owners": "@ssprinkles @sbonnema @slevay @nashton @pawinim @bgadhia",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFmgAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 12",
     "done": false,
     "doneAt": null,
@@ -366,21 +378,17 @@
   "m7": {
     "id": "m7",
     "p": "m",
-    "label": "Calendar - Tue May 12 8:30 AM PT - NEW",
-    "title": "Computex Daily Sync: ISV Announcement Deliverables. Arch diagrams, partner PR/blog, opens",
+    "label": "Calendar - Wed May 13 10:00 AM PT",
+    "title": "Cisco Enterprise RA + Solutions May Roadmap",
     "tags": [
       {
-        "c": "tn",
-        "t": "New"
-      },
-      {
         "c": "tb",
-        "t": "Computex"
+        "t": "Wed 10:00 AM"
       }
     ],
-    "owners": "@msousa @ahecht @madisonh @tcosta @pawinim @slevay",
-    "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAB&exvsurl=1",
-    "date": "May 12",
+    "owners": "@ismaila @jlinford @srinivast @pawinim @bgadhia",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAEUW5UaAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 13",
     "done": true,
     "doneAt": "May 11, 2026 at 03:03 PM",
     "note": ""
@@ -406,16 +414,12 @@
   "u6": {
     "id": "u6",
     "p": "u",
-    "label": "Slack - @nashton @jmabry @slevay Group DM - TODAY",
-    "title": "@jmabry done with JHH_Computex2026_v2agents.pptx. @nashton: no HPC cluster needed, just agent/tool/skills. You + @slevay need to abstract the simpler Computex slide",
+    "label": "Slack - Computex deck - @jmabry done with v2agents",
+    "title": "@jmabry done with JHH_Computex2026_v2agents.pptx. @nashton: no HPC cluster, just agent/tool/skills. You + @slevay need to abstract the simpler slide.",
     "tags": [
       {
         "c": "tr",
         "t": "Action: abstract slide"
-      },
-      {
-        "c": "tn",
-        "t": "New today"
       }
     ],
     "owners": "@pawinim @slevay @jmabry @nashton",
@@ -428,16 +432,16 @@
   "u7": {
     "id": "u7",
     "p": "u",
-    "label": "Slack - @nashton @slevay DM - TODAY CPTX demo script",
-    "title": "Tim+@nashton aligned: Cadence is the hero, NVIDIA as LHA. @slevay shared script link (Google Sheet). YOU said: I'll do some thinking tonight - need dummy codes, b-roll direction. DELIVERABLE STILL OPEN.",
+    "label": "Slack - CPTX demo script - b-roll + dummy codes",
+    "title": "Tim + @nashton aligned: Cadence is hero, NVIDIA as LHA. @slevay shared script. You said: will do some thinking tonight. VO track already being produced.",
     "tags": [
       {
         "c": "tr",
-        "t": "You said you'd work on it"
+        "t": "Deliverable: b-roll direction"
       },
       {
         "c": "tr",
-        "t": "VO track already being produced"
+        "t": "VO in production"
       }
     ],
     "owners": "@pawinim @slevay @nashton @jmabry",
@@ -450,19 +454,19 @@
   "u8": {
     "id": "u8",
     "p": "u",
-    "label": "Slack - @bzandstein @tcosta @yiyiw DM - TODAY cuEST TSMC demo",
-    "title": "@bzandstein: 4-4.5x RTX Pro 6000 acceleration ready. Wants you to ask TSMC about cuEST demo for GTC Taipei. You replied: will await Vanessa feedback then reach out. @tcosta: Vanessa should answer if this is valuable to TSMC - Becca adding her.",
+    "label": "Slack - cuEST TSMC demo for GTC Taipei",
+    "title": "@bzandstein: 4-4.5x RTX Pro 6000 ready. You: will await Vanessa feedback then reach out to TSMC. @tcosta: Vanessa should weigh in on value to TSMC.",
     "tags": [
       {
         "c": "tr",
-        "t": "You said: will await Vanessa"
+        "t": "Waiting on Vanessa"
       },
       {
         "c": "ta",
-        "t": "Vanessa feedback pending"
+        "t": "Then ask TSMC"
       }
     ],
-    "owners": "@pawinim @bzandstein @valee @yiyiw @tcosta",
+    "owners": "@pawinim @bzandstein @valee @tcosta",
     "url": "https://nvidia.enterprise.slack.com/archives/C0B37A9N0QY/p1778540062953989",
     "date": "May 11",
     "done": false,
@@ -575,6 +579,46 @@
     "owners": "@ssprinkles @sbonnema @slevay @nashton @pawinim @bgadhia",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFmgAAEA%3D%3D&exvsurl=1",
     "date": "May 12",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u9": {
+    "id": "u9",
+    "p": "u",
+    "label": "Slack - #physical-ai-marketing - Wed May 13 EOD",
+    "title": "STW61036: Review Rishi Ranade AI Physics slide deck (CAE + Semi Design). Add feedback to Google Sheet cell Q47 by Wed May 13 EOD. Tagged with @bgadhia.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Wed May 13 EOD"
+      },
+      {
+        "c": "tr",
+        "t": "GTC Taipei session"
+      }
+    ],
+    "owners": "@pawinim @bgadhia @rranade",
+    "url": "https://nvidia.enterprise.slack.com/archives/C060JHGJZR9/p1778538646304239",
+    "date": "May 11",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "manual-1778568482733": {
+    "id": "manual-1778568482733",
+    "p": "u",
+    "label": "Slack",
+    "title": "Semi Web Page Use Cases Finalization",
+    "tags": [
+      {
+        "c": "tg",
+        "t": "Manual"
+      }
+    ],
+    "owners": "",
+    "url": "https://nvidia.enterprise.slack.com/archives/C083Y8T5RHA/p1776108775895989",
+    "date": "May 11",
     "done": false,
     "doneAt": null,
     "note": ""
