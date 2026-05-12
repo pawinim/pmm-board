@@ -61,8 +61,8 @@
     "owners": "@tcosta @madisonh @ahecht",
     "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xezAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xezAAA%3D&exvsurl=1",
     "date": "May 9",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "May 12, 2026 at 01:53 PM",
     "note": ""
   },
   "u3": {
@@ -619,6 +619,148 @@
     "owners": "",
     "url": "https://nvidia.enterprise.slack.com/archives/C083Y8T5RHA/p1776108775895989",
     "date": "May 11",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u10": {
+    "id": "u10",
+    "p": "u",
+    "label": "Slack - @slevay Group DM - TODAY 8:08 AM",
+    "title": "@slevay: Can you start an email to Ed Goldman (Siemens EDA)? Scope: Computex arch diagram + PMM engagement. @jmabry confirmed you have latest diagram (used by Da Yang at U2U). @slevay will sync with you after.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "@slevay direct ask"
+      },
+      {
+        "c": "tn",
+        "t": "New today"
+      }
+    ],
+    "owners": "@pawinim @slevay @jmabry",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0B38P8B886/p1778598531149859",
+    "date": "May 12",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h9": {
+    "id": "h9",
+    "p": "h",
+    "label": "Slack - @nashton @slevay DM - TODAY - Slide 13 JHH approval",
+    "title": "@nashton: removing slide 14, updating slide 13 to include Claude Code in super agent. Madison wants JHH approval on all agent diagrams first, then @slevay negotiates Cadence badge positioning with Rob.",
+    "tags": [
+      {
+        "c": "ta",
+        "t": "JHH approval needed"
+      },
+      {
+        "c": "tg",
+        "t": "Computex deck"
+      }
+    ],
+    "owners": "@nashton @slevay @pawinim @jmabry",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0B33NPBZFU/p1778597952828359",
+    "date": "May 12",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h10": {
+    "id": "h10",
+    "p": "h",
+    "label": "Outlook - IE PMM Sync notes - @tcosta - TODAY",
+    "title": "Tim's sync note: @slevay to review computer plans today. Also: Tim/Pawini 1:1 was DECLINED by Tim. Follow up to reschedule if needed.",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "New today"
+      },
+      {
+        "c": "ta",
+        "t": "1:1 declined"
+      }
+    ],
+    "owners": "@tcosta @slevay @pawinim",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuYZAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuYZAAA%3D&exvsurl=1",
+    "date": "May 12",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_aif": {
+    "id": "m_aif",
+    "p": "m",
+    "label": "Calendar - Tue May 12 6:00 PM PT (Tomorrow)",
+    "title": "26GTC/CPTX - JHH Keynote Demo: AI Factory Computer (@jblodgett organizer)",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "CPTX AI Factory demo"
+      }
+    ],
+    "owners": "@jblodgett @madisonh @bgadhia @pochunl @pawinim",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWnAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 12",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_cptxw": {
+    "id": "m_cptxw",
+    "p": "m",
+    "label": "Calendar - Wed May 13 8:30 AM PT",
+    "title": "Computex Daily Sync: ISV Announcement Deliverables (recurring)",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Computex"
+      }
+    ],
+    "owners": "@msousa @ahecht @madisonh @tcosta @pawinim @slevay",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rCCk38AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 13",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_avl": {
+    "id": "m_avl",
+    "p": "m",
+    "label": "Calendar - Wed May 13 12:45 PM PT",
+    "title": "Pawini + Avleen weekly sync (@avleenk organizer). Note: Avleen out sick this morning.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Weekly sync"
+      },
+      {
+        "c": "tg",
+        "t": "@avleenk sick today"
+      }
+    ],
+    "owners": "@avleenk @pawinim",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rCCk38AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAB3NpIwAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 13",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_cdnc": {
+    "id": "m_cdnc",
+    "p": "m",
+    "label": "Calendar - Thu May 14 8:30 AM PT",
+    "title": "NVIDIA + Cadence Joint Marketing POR (@kushp organizer). Cadence contacts: stevebr, knoth, sgartner, lautanen, sims, cronk.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Cadence joint marketing"
+      }
+    ],
+    "owners": "@kushp @bgadhia @pawinim @qnolibois @madisonh @adocca",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAArW98gAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 14",
     "done": false,
     "doneAt": null,
     "note": ""
