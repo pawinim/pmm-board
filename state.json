@@ -19,7 +19,7 @@
     "date": "May 11",
     "done": false,
     "doneAt": null,
-    "note": "Pawini replied May 11 2:41 PM: \"Yes. I will start building the slide.\" — DELIVERABLE STILL OPEN. Slide across workloads not yet built."
+    "note": "Pawini replied May 11 2:41 PM: \"Yes. I will start building the slide.\" — DELIVERABLE STILL OPEN. Slide across workloads not yet built. V1 sent. V2 started "
   },
   "u0": {
     "id": "u0",
@@ -761,6 +761,28 @@
     "owners": "@kushp @bgadhia @pawinim @qnolibois @madisonh @adocca",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAArW98gAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 14",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h11": {
+    "id": "h11",
+    "p": "h",
+    "label": "Outlook - Siemens EDA Collaboration Review - @tcosta - TODAY",
+    "title": "Tim replied to @anbhardwaj: June is totally booked, July 2 would be great. Siemens EDA collab review meeting needs to be scheduled July 2. Action: confirm date and send invite.",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "New today"
+      },
+      {
+        "c": "ta",
+        "t": "Schedule for Jul 2"
+      }
+    ],
+    "owners": "@tcosta @anbhardwaj @pawinim",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuY1AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuY1AAA%3D&exvsurl=1",
+    "date": "May 12",
     "done": false,
     "doneAt": null,
     "note": ""
