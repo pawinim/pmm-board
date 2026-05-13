@@ -786,5 +786,183 @@
     "done": false,
     "doneAt": null,
     "note": ""
+  },
+  "u11": {
+    "id": "u11",
+    "p": "u",
+    "label": "Outlook - ISC 2026 Meeting Notes - @blairh - UNREAD",
+    "title": "ISC Meeting Notes May 12: Tech Blog Pitches deadline MAY 15. All PMMs submit pitches in #isc-hamburg-2026 Slack channel. Also: ISC 2026 is June 23-26 Hamburg.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Deadline Thu May 15"
+      },
+      {
+        "c": "tn",
+        "t": "New unread"
+      }
+    ],
+    "owners": "@blairh @gegupta @pawinim @bgadhia @bzandstein @chporter",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuZCAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuZCAAA%3D&exvsurl=1",
+    "date": "May 12",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u12": {
+    "id": "u12",
+    "p": "u",
+    "label": "Calendar - Thu May 14 12:30 PM PT - YOU ORGANIZED",
+    "title": "Tim/Pawini 1:1 rescheduled - you organized this. Key topics to prep: TSMC slide, Computex PR direction, GTC Taipei POR, cuEST demo ask.",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "You rescheduled"
+      },
+      {
+        "c": "tr",
+        "t": "Prep needed"
+      }
+    ],
+    "owners": "@pawinim @tcosta",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABbusDAwAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 14",
+    "done": true,
+    "doneAt": "May 12, 2026 at 10:57 PM",
+    "note": ""
+  },
+  "m_w1": {
+    "id": "m_w1",
+    "p": "m",
+    "label": "Calendar - Wed May 13 6:00 PM PT",
+    "title": "26GTC/CPTX - JHH Keynote Demo: AI Factory Computer (Daily) - @jblodgett organizer",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "CPTX daily"
+      }
+    ],
+    "owners": "@jblodgett @madisonh @bgadhia @pawinim",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rCCk38AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABrT-FWAAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 13",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_t2": {
+    "id": "m_t2",
+    "p": "m",
+    "label": "Calendar - Thu May 14 8:00 AM PT",
+    "title": "HPE May Roadmap Update - Software and Solutions (tentative)",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "HPE"
+      },
+      {
+        "c": "tg",
+        "t": "Tentative"
+      }
+    ],
+    "owners": "@sbaliyara @pawinim @bgadhia @jlinford @srinivast",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAEUW5UjAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 14",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_t1": {
+    "id": "m_t1",
+    "p": "m",
+    "label": "Calendar - Thu May 14 8:30 AM PT",
+    "title": "Computex Daily Sync: ISV Announcement Deliverables",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Computex"
+      }
+    ],
+    "owners": "@msousa @ahecht @madisonh @tcosta @pawinim @slevay @bgadhia @kushp",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 14",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_t3": {
+    "id": "m_t3",
+    "p": "m",
+    "label": "Calendar - Thu May 14 9:00 AM PT",
+    "title": "Physical AI Weekly Core Sync (@ghoyem organizer). Rolling agenda: https://docs.google.com/document/d/1cTPB8Cz4iKssA1SwurScLB7cakaUElZudd7PjgMlhX8",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Physical AI weekly"
+      }
+    ],
+    "owners": "@ghoyem @madisonh @avleenk @pawinim @slevay @kushp @bgadhia @qnolibois @nbradford @lalshihabi",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABbusC5AAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 14",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_t4": {
+    "id": "m_t4",
+    "p": "m",
+    "label": "Calendar - Thu May 14 1:00 PM PT - YOU ORGANIZER",
+    "title": "Yiyi/Pawini Weekly 1:1 - you organized. Topics: TSMC cuEST demo ask, Samsung SAFE Forum, GTC Taipei.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Thu 1:00 PM"
+      },
+      {
+        "c": "tn",
+        "t": "You organizer"
+      }
+    ],
+    "owners": "@pawinim @yiyiw",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAEkhuywAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 14",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_t5": {
+    "id": "m_t5",
+    "p": "m",
+    "label": "Calendar - Thu May 14 1:00 PM PT",
+    "title": "Computex 2026 WWFO Announcement Summary + FAQ Kick-Off (@jeffchang organizer). You + @bgadhia @slevay @kushp @tcosta @madisonh.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "CPTX WWFO FAQ"
+      }
+    ],
+    "owners": "@jeffchang @pawinim @bgadhia @slevay @kushp @tcosta @madisonh",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGMEm84AAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 14",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_t6": {
+    "id": "m_t6",
+    "p": "m",
+    "label": "Calendar - Thu May 14 2:00 PM PT",
+    "title": "26GTC/CPTX - JHH Keynote Demo: AI Factory Computer (Daily) @jblodgett organizer",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "CPTX daily"
+      }
+    ],
+    "owners": "@jblodgett @madisonh @bgadhia @pawinim",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABrT-FWAAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 14",
+    "done": false,
+    "doneAt": null,
+    "note": ""
   }
 }
