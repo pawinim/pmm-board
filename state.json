@@ -3,15 +3,15 @@
     "id": "u1",
     "p": "u",
     "label": "Outlook - @Madison - TSMC slide across workloads",
-    "title": "Madison: @Pawini please take the lead on building the slide across workloads. You replied: Yes will start. TSMC slide brainstorm with Esther Lee tomorrow 11:00 AM PT.",
+    "title": "TSMC slide IN PROGRESS with Esther Lee. Last night: added workload speedups, Esther gave structure feedback. This morning: looped in @siddharths for data processing PR help. Still needs: define each workload simply + metrics section cleanup.",
     "tags": [
       {
-        "c": "tr",
-        "t": "Deliverable open"
+        "c": "ta",
+        "t": "In progress with Esther"
       },
       {
-        "c": "tg",
-        "t": "Brainstorm Tue 11am"
+        "c": "tr",
+        "t": "Early AM deliverable"
       }
     ],
     "owners": "@madisonh @qnolibois @eluh",
@@ -19,7 +19,7 @@
     "date": "May 11",
     "done": false,
     "doneAt": null,
-    "note": "Pawini replied May 11 2:41 PM: \"Yes. I will start building the slide.\" — DELIVERABLE STILL OPEN. Slide across workloads not yet built. V1 sent. V2 started "
+    "note": "Pawini replied May 11 2:41 PM: \"Yes. I will start building the slide.\" — DELIVERABLE STILL OPEN. Slide across workloads not yet built. V1 sent. V2 completed "
   },
   "u0": {
     "id": "u0",
@@ -961,6 +961,94 @@
     "owners": "@jblodgett @madisonh @bgadhia @pawinim",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABrT-FWAAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 14",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u13": {
+    "id": "u13",
+    "p": "u",
+    "label": "Outlook - ISC Master Thread - @parts - UNREAD - Thu EOD",
+    "title": "@parts proposed partner display hardware plan: NVL4, HGX etc. No objections = approved. Deadline: close of TOMORROW Thu May 14 to prep paperwork. Review and confirm.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Objection deadline Thu EOD"
+      },
+      {
+        "c": "tn",
+        "t": "New unread"
+      }
+    ],
+    "owners": "@parts @hpetty @bzandstein @anibbi @bgadhia @pawinim",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuZcAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuZcAAA%3D&exvsurl=1",
+    "date": "May 13",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u14": {
+    "id": "u14",
+    "p": "u",
+    "label": "Slack - @paris_fox Group DM - TODAY - Flag PR direction to Madison",
+    "title": "@paris_fox asked: Was new direction of PR flagged for Madison yet? You clarified the 5 workload pillars stay the same, only keynote visual changed. This question is still open - someone needs to flag the TSMC PR direction to Madison.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Unanswered question"
+      },
+      {
+        "c": "tr",
+        "t": "Flag to Madison needed"
+      }
+    ],
+    "owners": "@pawinim @paris_fox @eluh @madisonh",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0B3EDFP2C9/p1778686710597539",
+    "date": "May 13",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h12": {
+    "id": "h12",
+    "p": "h",
+    "label": "Outlook - @Tim Costa - TODAY UNREAD - Quantum Algorithm Engineering",
+    "title": "Tim forwarded quantum algorithm engineering notes: MIT Will Oliver group real-time calibration via NVQLink + CMA-ES optimizer, Google, AWS, DOE labs. Relevant to ISC quantum chemistry blog (@chporter @bzandstein @paltoe).",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "New unread"
+      },
+      {
+        "c": "ta",
+        "t": "ISC blog connection"
+      }
+    ],
+    "owners": "@tcosta @chporter @bzandstein @paltoe @pawinim",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwAOSxSUXXV5QbTVwcytwnGBAAANgF0gAAAOSxSUXXV5QbTVwcytwnGBAAGrCzF3AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwAOSxSUXXV5QbTVwcytwnGBAAANgF0gAAAOSxSUXXV5QbTVwcytwnGBAAGrCzF3AAA%3D&exvsurl=1",
+    "date": "May 13",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h13": {
+    "id": "h13",
+    "p": "h",
+    "label": "Outlook - @Madison - GTC-CPTX26 KR meetings - TODAY",
+    "title": "Madison added @SunnyLee @TaehoKim @SukwonChung @SoyoungJeong for KR meetings/activities at GTC Taipei. Ensure Korean activities are covered in PMM POR.",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "New today"
+      },
+      {
+        "c": "ta",
+        "t": "GTC Taipei KR"
+      }
+    ],
+    "owners": "@madisonh @soyoungj @qnolibois @dehuang @pawinim",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuZaAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuZaAAA%3D&exvsurl=1",
+    "date": "May 13",
     "done": false,
     "doneAt": null,
     "note": ""
