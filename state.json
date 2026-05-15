@@ -3,15 +3,15 @@
     "id": "u1",
     "p": "u",
     "label": "Outlook - @Madison - TSMC slide across workloads",
-    "title": "TSMC slide IN PROGRESS with Esther Lee. Last night: added workload speedups, Esther gave structure feedback. This morning: looped in @siddharths for data processing PR help. Still needs: define each workload simply + metrics section cleanup.",
+    "title": "DIRECTION LOCKED: discussed with Madison, going with bubbles slide. Tim: sounds good. TSMC slide direction resolved - execution still needed.",
     "tags": [
       {
-        "c": "ta",
-        "t": "In progress with Esther"
+        "c": "tn",
+        "t": "Direction locked"
       },
       {
-        "c": "tr",
-        "t": "Early AM deliverable"
+        "c": "ta",
+        "t": "Execution still needed"
       }
     ],
     "owners": "@madisonh @qnolibois @eluh",
@@ -627,15 +627,11 @@
     "id": "u10",
     "p": "u",
     "label": "Slack - @slevay Group DM - TODAY 8:08 AM",
-    "title": "@slevay: Can you start an email to Ed Goldman (Siemens EDA)? Scope: Computex arch diagram + PMM engagement. @jmabry confirmed you have latest diagram (used by Da Yang at U2U). @slevay will sync with you after.",
+    "title": "RESOLVED: email sent to Ed Goldman, meeting scheduled Mon May 18 1:30 PM with Siemens team (Cristina Betanzo, Ed Goldman, Niranjan Sitapure) + @jmabry @slevay @kushp.",
     "tags": [
       {
-        "c": "tr",
-        "t": "@slevay direct ask"
-      },
-      {
         "c": "tn",
-        "t": "New today"
+        "t": "Meeting set Mon May 18"
       }
     ],
     "owners": "@pawinim @slevay @jmabry",
@@ -813,15 +809,15 @@
     "id": "u12",
     "p": "u",
     "label": "Calendar - Thu May 14 12:30 PM PT - YOU ORGANIZED",
-    "title": "Tim/Pawini 1:1 rescheduled - you organized this. Key topics to prep: TSMC slide, Computex PR direction, GTC Taipei POR, cuEST demo ask.",
+    "title": "Tim declined AGAIN (May 15). 1:1 cancelled. Need to find another way to get Tim time - consider async email with top 3 asks.",
     "tags": [
       {
-        "c": "tn",
-        "t": "You rescheduled"
+        "c": "tr",
+        "t": "Tim declined twice"
       },
       {
-        "c": "tr",
-        "t": "Prep needed"
+        "c": "ta",
+        "t": "Go async?"
       }
     ],
     "owners": "@pawinim @tcosta",
@@ -1051,6 +1047,290 @@
     "date": "May 13",
     "done": true,
     "doneAt": "May 15, 2026 at 10:24 AM",
+    "note": ""
+  },
+  "u15": {
+    "id": "u15",
+    "p": "u",
+    "label": "Outlook - SEMES AI Forum - @tcosta forwarded - TODAY",
+    "title": "Tim forwarded SEMES AI Forum invite: 'I think this is important. @YiyiWang agree?' @yiyiw confirmed SEMES is key Samsung partner. Tim checking estaff conflict. PMM may need to support this event.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Tim flagged as important"
+      },
+      {
+        "c": "tn",
+        "t": "New today"
+      }
+    ],
+    "owners": "@tcosta @yiyiw @pawinim",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuaQAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuaQAAA%3D&exvsurl=1",
+    "date": "May 15",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u16": {
+    "id": "u16",
+    "p": "u",
+    "label": "Slack - @slevay - TODAY - CPTX creative call 10:30",
+    "title": "@slevay can't make creative call at 10:30 (family conflict). He added notes from chipstack demo video to script. You said: 'Will update you on details.' Creative direction for CPTX demo may land on you.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "You said will update"
+      },
+      {
+        "c": "tr",
+        "t": "VO in production"
+      }
+    ],
+    "owners": "@pawinim @slevay @nashton @jmabry",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0B33NPBZFU/p1778863828750819",
+    "date": "May 15",
+    "done": true,
+    "doneAt": "May 15, 2026 at 12:39 PM",
+    "note": ""
+  },
+  "m_resc": {
+    "id": "m_resc",
+    "p": "m",
+    "label": "Calendar - TODAY Fri May 15 9:30 AM PT (Tentative)",
+    "title": "Rescale + NVIDIA reconnect on upcoming conferences. You said skip (all CAE). @bgadhia @avleenk covering.",
+    "tags": [
+      {
+        "c": "tg",
+        "t": "Tentative - you skipping"
+      }
+    ],
+    "owners": "@bgadhia @avleenk @slevay @tcosta",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGtP8VWAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 15",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_fcc": {
+    "id": "m_fcc",
+    "p": "m",
+    "label": "Calendar - TODAY Fri May 15 10:30 AM PT",
+    "title": "26GTC/CPTX - JHH Keynote Demo: Cadence Autonomous Agents IMPORTANT meeting (@jblodgett). @slevay out, you may need to cover.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "@slevay out"
+      },
+      {
+        "c": "tb",
+        "t": "CPTX Cadence demo"
+      }
+    ],
+    "owners": "@jblodgett @madisonh @nashton @jmabry @pawinim @slevay",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGtP8VuAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 15",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_semi": {
+    "id": "m_semi",
+    "p": "m",
+    "label": "Calendar - TODAY Fri May 15 1:30 PM PT - YOU ORGANIZED",
+    "title": "Semi/EDA Webpage Review - you organized. @yiyiw @daya @tcosta. Tim accepted.",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "You organized"
+      },
+      {
+        "c": "tb",
+        "t": "Semi/EDA webpage"
+      }
+    ],
+    "owners": "@pawinim @yiyiw @daya @tcosta",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGtP8ViAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 15",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_faf": {
+    "id": "m_faf",
+    "p": "m",
+    "label": "Calendar - TODAY Fri May 15 2:00 PM PT",
+    "title": "26GTC/CPTX - JHH Keynote Demo: AI Factory Computer Daily (@jblodgett)",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "CPTX daily"
+      }
+    ],
+    "owners": "@jblodgett @madisonh @bgadhia @eluh @pawinim",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rIU6FKAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABrT-FWAAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 15",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_cd_m": {
+    "id": "m_cd_m",
+    "p": "m",
+    "label": "Calendar - Mon May 18 8:30 AM PT",
+    "title": "Computex Daily Sync: ISV Announcement Deliverables (recurring)",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Computex"
+      }
+    ],
+    "owners": "@msousa @ahecht @madisonh @tcosta @pawinim @slevay @bgadhia @kushp",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rRwZ4-AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_pb": {
+    "id": "m_pb",
+    "p": "m",
+    "label": "Calendar - Mon May 18 9:00 AM PT",
+    "title": "CPTX/GTC Taipei Prebrief - 1st Content Alignment Call (@makinleyb organizer). Large cross-functional. You + @slevay @tcosta @qnolibois @bgadhia @eluh.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Mon May 18"
+      },
+      {
+        "c": "ta",
+        "t": "CPTX/GTC Taipei"
+      }
+    ],
+    "owners": "@makinleyb @pawinim @slevay @tcosta @qnolibois @bgadhia @eluh",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAFu6wL6AAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_iemkt": {
+    "id": "m_iemkt",
+    "p": "m",
+    "label": "Calendar - Mon May 18 10:00 AM PT",
+    "title": "Industrial Engineering Marketing Meeting (CAE/EDA/Semi/AI Physics) @bgadhia organizer",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Mon May 18"
+      }
+    ],
+    "owners": "@bgadhia @tcosta @pawinim @madisonh @daya @slevay @avleenk @kushp",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rRwZ4-AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAArW97gAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_iscm": {
+    "id": "m_iscm",
+    "p": "m",
+    "label": "Calendar - Mon May 18 10:00 AM PT",
+    "title": "ISC Announcement Alignment (@anibbi organizer)",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Mon May 18"
+      },
+      {
+        "c": "tg",
+        "t": "ISC"
+      }
+    ],
+    "owners": "@anibbi @pawinim @bgadhia @bzandstein @chporter @blairh @slevay",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rRwZ4-AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABjBJvNAAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_sie": {
+    "id": "m_sie",
+    "p": "m",
+    "label": "Calendar - Mon May 18 1:30 PM PT - YOU ORGANIZED",
+    "title": "Siemens at Computex + GTC Taipei call - you organized with Ed Goldman, @jmabry, @slevay, @kushp + Cristina Betanzo + Niranjan Sitapure (Siemens).",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "You organized"
+      },
+      {
+        "c": "tb",
+        "t": "Siemens External"
+      }
+    ],
+    "owners": "@pawinim @slevay @jmabry @kushp ed.goldman@siemens.com",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGtP8VpAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_iesa": {
+    "id": "m_iesa",
+    "p": "m",
+    "label": "Calendar - Mon May 18 3:00 PM PT - YOU ORGANIZED",
+    "title": "IE SA for GTC Taipei - you organized. @yiyiw @tcosta @daya @slevay @bgadhia @jlinford @bzandstein.",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "You organized"
+      },
+      {
+        "c": "tb",
+        "t": "GTC Taipei"
+      }
+    ],
+    "owners": "@pawinim @yiyiw @tcosta @daya @slevay @bgadhia @jlinford @bzandstein",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rRwZ4-AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABrT-FbwAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_daya": {
+    "id": "m_daya",
+    "p": "m",
+    "label": "Calendar - Mon May 18 11:00 AM PT",
+    "title": "Biweekly Sync with Da Yang (@daya organizer)",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Mon May 18"
+      }
+    ],
+    "owners": "@daya @pawinim",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rRwZ4-AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAEkhu2AAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_nvaie": {
+    "id": "m_nvaie",
+    "p": "m",
+    "label": "Calendar - Mon May 18 10:00 AM PT",
+    "title": "Weekly NVIDIA AI Enterprise GTM (@jboitano organizer). You + @tcosta @bgadhia @madisonh @kushp @nbradford @qnolibois.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Mon May 18"
+      }
+    ],
+    "owners": "@jboitano @tcosta @bgadhia @madisonh @pawinim @kushp @nbradford",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rRwZ4-AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAn_54BgAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
     "note": ""
   }
 }
