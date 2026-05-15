@@ -535,8 +535,8 @@
     "owners": "@pawinim @eluh",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWhAAA%3D&exvsurl=1",
     "date": "May 12",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "May 15, 2026 at 10:19 AM",
     "note": ""
   },
   "m10": {
