@@ -237,8 +237,8 @@
     "owners": "@pawinim @eluh",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWhAAA%3D&exvsurl=1&path=/calendar/item",
     "date": "May 12",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "May 15, 2026 at 10:18 AM",
     "note": ""
   },
   "h6": {
@@ -491,8 +491,8 @@
     "owners": "@pawinim @estherlee",
     "url": "https://nvidia.enterprise.slack.com/archives/D0A8NGS7KC6/p1778530293736379",
     "date": "May 11",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "May 15, 2026 at 10:18 AM",
     "note": ""
   },
   "h8": {
