@@ -1169,8 +1169,8 @@
     "owners": "@jblodgett @madisonh @bgadhia @eluh @pawinim",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rIU6FKAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABrT-FWAAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 15",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "May 15, 2026 at 12:42 PM",
     "note": ""
   },
   "m_cd_m": {
@@ -1187,8 +1187,8 @@
     "owners": "@msousa @ahecht @madisonh @tcosta @pawinim @slevay @bgadhia @kushp",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rRwZ4-AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 18",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "May 15, 2026 at 12:42 PM",
     "note": ""
   },
   "m_pb": {
