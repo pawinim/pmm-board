@@ -127,8 +127,8 @@
     "owners": "@hpetty @bzandstein @rparrish",
     "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xdeAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xdeAAA%3D&exvsurl=1",
     "date": "May 8",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "May 15, 2026 at 10:21 AM",
     "note": ""
   },
   "h1": {
