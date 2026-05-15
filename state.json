@@ -18,7 +18,7 @@
     "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eYTAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eYTAAA%3D&exvsurl=1",
     "date": "May 11",
     "done": true,
-    "doneAt": "May 15, 2026 at 10:18 AM",
+    "doneAt": "May 15, 2026 at 10:20 AM",
     "note": "Pawini replied May 11 2:41 PM: \"Yes. I will start building the slide.\" — DELIVERABLE STILL OPEN. Slide across workloads not yet built. V1 sent. V2 completed "
   },
   "u0": {
@@ -237,8 +237,8 @@
     "owners": "@pawinim @eluh",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWhAAA%3D&exvsurl=1&path=/calendar/item",
     "date": "May 12",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:18 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "h6": {
@@ -291,8 +291,8 @@
     "owners": "@msousa @ahecht @madisonh @tcosta @pawinim @slevay",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 12",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:19 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "m3": {
@@ -313,8 +313,8 @@
     "owners": "@pawinim @eluh",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWhAAA%3D&exvsurl=1&path=/calendar/item",
     "date": "May 12",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:19 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "m4": {
@@ -371,8 +371,8 @@
     "owners": "@ssprinkles @sbonnema @slevay @nashton @pawinim @bgadhia",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFmgAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 12",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:19 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "m7": {
@@ -407,8 +407,8 @@
     "owners": "@tcosta @slevay @bgadhia @pawinim @nashton",
     "url": "https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAC&exvsurl=1",
     "date": "May 12",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:19 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "u6": {
@@ -491,8 +491,8 @@
     "owners": "@pawinim @estherlee",
     "url": "https://nvidia.enterprise.slack.com/archives/D0A8NGS7KC6/p1778530293736379",
     "date": "May 11",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:18 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "h8": {
@@ -535,8 +535,8 @@
     "owners": "@pawinim @eluh",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWhAAA%3D&exvsurl=1",
     "date": "May 12",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:19 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "m10": {
@@ -557,8 +557,8 @@
     "owners": "@jblodgett @madisonh @slevay @nashton @jmabry @pawinim",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWkAAA%3D&exvsurl=1",
     "date": "May 12",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:19 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "m11": {
@@ -579,8 +579,8 @@
     "owners": "@ssprinkles @sbonnema @slevay @nashton @pawinim @bgadhia",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFmgAAEA%3D%3D&exvsurl=1",
     "date": "May 12",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:19 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "u9": {
@@ -641,8 +641,8 @@
     "owners": "@pawinim @slevay @jmabry",
     "url": "https://nvidia.enterprise.slack.com/archives/C0B38P8B886/p1778598531149859",
     "date": "May 12",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:18 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "h9": {
@@ -703,8 +703,8 @@
     "owners": "@jblodgett @madisonh @bgadhia @pochunl @pawinim",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWnAAA%3D&exvsurl=1&path=/calendar/item",
     "date": "May 12",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:19 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "m_cptxw": {
@@ -721,8 +721,8 @@
     "owners": "@msousa @ahecht @madisonh @tcosta @pawinim @slevay",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rCCk38AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 13",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:20 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "m_avl": {
@@ -743,8 +743,8 @@
     "owners": "@avleenk @pawinim",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rCCk38AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAB3NpIwAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 13",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:19 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "m_cdnc": {
@@ -783,8 +783,8 @@
     "owners": "@tcosta @anbhardwaj @pawinim",
     "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuY1AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuY1AAA%3D&exvsurl=1",
     "date": "May 12",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:18 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "u11": {
@@ -845,8 +845,8 @@
     "owners": "@jblodgett @madisonh @bgadhia @pawinim",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rCCk38AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABrT-FWAAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 13",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:20 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "m_t2": {
@@ -867,8 +867,8 @@
     "owners": "@sbaliyara @pawinim @bgadhia @jlinford @srinivast",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAEUW5UjAAA%3D&exvsurl=1&path=/calendar/item",
     "date": "May 14",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:20 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "m_t1": {
@@ -885,8 +885,8 @@
     "owners": "@msousa @ahecht @madisonh @tcosta @pawinim @slevay @bgadhia @kushp",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 14",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:20 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "m_t3": {
@@ -903,8 +903,8 @@
     "owners": "@ghoyem @madisonh @avleenk @pawinim @slevay @kushp @bgadhia @qnolibois @nbradford @lalshihabi",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABbusC5AAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 14",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:20 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "m_t4": {
@@ -925,8 +925,8 @@
     "owners": "@pawinim @yiyiw",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAEkhuywAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 14",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:20 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "m_t5": {
@@ -961,8 +961,8 @@
     "owners": "@jblodgett @madisonh @bgadhia @pawinim",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABrT-FWAAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 14",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:20 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "u13": {
@@ -1027,8 +1027,8 @@
     "owners": "@tcosta @chporter @bzandstein @paltoe @pawinim",
     "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwAOSxSUXXV5QbTVwcytwnGBAAANgF0gAAAOSxSUXXV5QbTVwcytwnGBAAGrCzF3AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwAOSxSUXXV5QbTVwcytwnGBAAANgF0gAAAOSxSUXXV5QbTVwcytwnGBAAGrCzF3AAA%3D&exvsurl=1",
     "date": "May 13",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:18 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   },
   "h13": {
@@ -1049,8 +1049,8 @@
     "owners": "@madisonh @soyoungj @qnolibois @dehuang @pawinim",
     "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuZaAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuZaAAA%3D&exvsurl=1",
     "date": "May 13",
-    "done": true,
-    "doneAt": "May 15, 2026 at 10:18 AM",
+    "done": false,
+    "doneAt": null,
     "note": ""
   }
 }
