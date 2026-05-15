@@ -885,8 +885,8 @@
     "owners": "@msousa @ahecht @madisonh @tcosta @pawinim @slevay @bgadhia @kushp",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 14",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "May 15, 2026 at 10:20 AM",
     "note": ""
   },
   "m_t3": {
