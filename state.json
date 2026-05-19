@@ -619,8 +619,8 @@
     "owners": "",
     "url": "https://nvidia.enterprise.slack.com/archives/C083Y8T5RHA/p1776108775895989",
     "date": "May 11",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "May 18, 2026 at 05:27 PM",
     "note": ""
   },
   "u10": {
@@ -1331,6 +1331,292 @@
     "date": "May 18",
     "done": true,
     "doneAt": "May 15, 2026 at 12:42 PM",
+    "note": ""
+  },
+  "u17": {
+    "id": "u17",
+    "p": "u",
+    "label": "Slack - TSMC slide Group DM - TODAY - cuEST so what",
+    "title": "Tim: cuEST is weakest now. Azi: TSMC not forthcoming on details. Yiyi: cuEST enables DFT data generation at scale - hard to quantify. You said ack. Need cuEST TSMC so-what from Azi and TSMC To4.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Tim: weakest metric"
+      },
+      {
+        "c": "tr",
+        "t": "Get from Azi + TSMC To4"
+      }
+    ],
+    "owners": "@pawinim @aziria @yiyiw @tcosta",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0B4LENDYQ2/p1779147615890719",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u18": {
+    "id": "u18",
+    "p": "u",
+    "label": "Slack - TSMC slide + @preethi_maulik - TODAY - cuOpt metric",
+    "title": "Preethi: anticipated cuOpt = 3% lot scheduling improvement, 20-40x speedup, under 3 min. Tim accepted framing. TSMC To4 must confirm number tomorrow. You said: will verify.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "TSMC To4 confirmation needed"
+      },
+      {
+        "c": "tr",
+        "t": "Tomorrow deadline"
+      }
+    ],
+    "owners": "@pawinim @preethi_maulik @tcosta",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0B5G6MKJSU/p1779146840986609",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u19": {
+    "id": "u19",
+    "p": "u",
+    "label": "Slack - @Yiyi Wang DM - TODAY - Cosmos/Tao terminology",
+    "title": "Yiyi: Cosmos/Tao is for Defect Classification, NOT Defect Detection. You said ack will check. Verify correct term with TSMC To4 and update slide.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Wrong terminology in slide"
+      },
+      {
+        "c": "tr",
+        "t": "Verify with TSMC To4"
+      }
+    ],
+    "owners": "@pawinim @yiyiw @tcosta",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0B4LENDYQ2/p1779147998604209",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u20": {
+    "id": "u20",
+    "p": "u",
+    "label": "Outlook - @Madison - TODAY UNREAD - CPTX PR Last Call for Review",
+    "title": "LAST CALL: Madison forwarding Paris Fox CPTX Physical AI Press Releases/Corp Blog/Tech Blog. PMs and research leads: quick read-through to ensure alignment. Semi-relevant PRs need your review.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Last call - UNREAD"
+      },
+      {
+        "c": "tr",
+        "t": "PR review needed"
+      }
+    ],
+    "owners": "@madisonh @paris_fox @pawinim",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHBSzF9AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHBSzF9AAA%3D&exvsurl=1",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u21": {
+    "id": "u21",
+    "p": "u",
+    "label": "Slack - @Yiyi Wang DM - TODAY - NALA call prep tomorrow",
+    "title": "Yiyi: tomorrow NALA call, give GTC CPTX review on Semi campaign contents: keynotes, sessions, announcements, PR/blog/social. Prep needed before tomorrow morning.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Prep needed tonight"
+      },
+      {
+        "c": "tr",
+        "t": "Tomorrow NALA call"
+      }
+    ],
+    "owners": "@pawinim @yiyiw",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0A6XSQQ28P/p1779147320957639",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h17": {
+    "id": "h17",
+    "p": "h",
+    "label": "Outlook - @Tim Costa - Sat May 17 - Top5 Reply UNREAD",
+    "title": "Tim replied to Top5 Things Industrial Engineering AI Physics: Thanks for the top5. AI is revolutionizing engineering and this work is essential. For AI physics/PN benchmarking make sure we are collaborating and not creating confusion.",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "Tim replied - UNREAD"
+      },
+      {
+        "c": "ta",
+        "t": "Align on AI physics/PN"
+      }
+    ],
+    "owners": "@tcosta @pawinim @rranade",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwAOSxSUXXV5QbTVwcytwnGBAAANgF0gAAAOSxSUXXV5QbTVwcytwnGBAAG6qP-OAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwAOSxSUXXV5QbTVwcytwnGBAAANgF0gAAAOSxSUXXV5QbTVwcytwnGBAAG6qP%2FOAAA%3D&exvsurl=1",
+    "date": "May 17",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h18": {
+    "id": "h18",
+    "p": "h",
+    "label": "Slack - @avleenk DM - TODAY - DAC event feels weak",
+    "title": "Avleenk: event feels weak with $50K budget. Need to close event objectives, partner priorities, PSG. She will tag PICs in DAC channel. You: ask Kush to get involved, 3 ISV P0s, find partner sessions with all P0 semis.",
+    "tags": [
+      {
+        "c": "ta",
+        "t": "Event execution open"
+      },
+      {
+        "c": "tg",
+        "t": "DAC Jul 26-29"
+      }
+    ],
+    "owners": "@pawinim @avleenk @kushp @lalshihabi",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1779144893828979",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_isch": {
+    "id": "m_isch",
+    "p": "m",
+    "label": "Calendar - TODAY Mon May 18 11:00 AM PT",
+    "title": "ISC Headlines Sync (@ashapiro organizer, tentative). You + @bgadhia @slevay @qnolibois @pfox @tcosta @sstanwyck.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Mon 11:00 AM"
+      },
+      {
+        "c": "tg",
+        "t": "Tentative"
+      }
+    ],
+    "owners": "@ashapiro @pawinim @bgadhia @slevay @qnolibois @pfox",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHBxUs-AAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_syncp": {
+    "id": "m_syncp",
+    "p": "m",
+    "label": "Calendar - TODAY Mon May 18 11:30 AM PT",
+    "title": "NVIDIA + Synopsys at GTC/Computex 2026 Demo Technical Discussion. Agenda: demo objective, timeline, Computex CAE workflow demo alignment. Synopsys team: thiruven, kutzsche, gpartha, sumitv, jtharp, adityaja.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Mon 11:30 AM"
+      },
+      {
+        "c": "tg",
+        "t": "Synopsys external"
+      }
+    ],
+    "owners": "@abreazeale @nashton @slevay @pawinim @vsellappan @gubarnes",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGtP8VzAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_sw": {
+    "id": "m_sw",
+    "p": "m",
+    "label": "Calendar - TODAY Mon May 18 12:45 PM PT",
+    "title": "Semi webpage sync (@avleenk organizer). Leadership feedback on technology section. Yiyi reviewing page now.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Mon 12:45 PM"
+      },
+      {
+        "c": "tn",
+        "t": "In progress"
+      }
+    ],
+    "owners": "@avleenk @pawinim @yiyiw @bmathias @dchan",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHBxUtDAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_str": {
+    "id": "m_str",
+    "p": "m",
+    "label": "Calendar - TODAY Mon May 18 2:00 PM PT",
+    "title": "Structural Analysis Content (@boliveri organizer, tentative). You + @bgadhia @nbradford @avleenk @kushp @slevay @lalshihabi.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Mon 2:00 PM"
+      },
+      {
+        "c": "tg",
+        "t": "Tentative"
+      }
+    ],
+    "owners": "@boliveri @pawinim @bgadhia @nbradford @avleenk @slevay",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHBxUtFAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_dac": {
+    "id": "m_dac",
+    "p": "m",
+    "label": "Calendar - TODAY Mon May 18 2:30 PM PT",
+    "title": "DAC Event Sync (@molmstead organizer). Resources: DAC Event Overview, DAC Playbook, PSG tracker. You + @slevay @yiyiw @daya @jlinford @tcosta @avleenk @lalshihabi.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Mon 2:30 PM"
+      },
+      {
+        "c": "ta",
+        "t": "DAC Jul 26-29"
+      }
+    ],
+    "owners": "@molmstead @pawinim @slevay @yiyiw @daya @jlinford @avleenk @lalshihabi @tcosta",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABbusC_QAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 18",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_scad": {
+    "id": "m_scad",
+    "p": "m",
+    "label": "Calendar - Tue May 19 8:30 AM PT",
+    "title": "NVIDIA + Siemens Partnership Marketing cadence call (Cristina Betanzo organizer). Monthly recurring. Large Siemens team + @madisonh @bgadhia @kushp @qnolibois @pawinim @ipegler.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Tue May 19"
+      },
+      {
+        "c": "tg",
+        "t": "Siemens external"
+      }
+    ],
+    "owners": "@pawinim @kushp @bgadhia @madisonh @qnolibois @ipegler cristina.betanzo@siemens.com",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rU5kfmAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABhMostQAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 19",
+    "done": false,
+    "doneAt": null,
     "note": ""
   }
 }
