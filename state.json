@@ -2214,5 +2214,23 @@
     "done": false,
     "doneAt": null,
     "note": ""
+  },
+  "manual-1780029414180": {
+    "id": "manual-1780029414180",
+    "p": "m",
+    "label": "Manual task - May 28",
+    "title": "Send TSMC all action items",
+    "tags": [
+      {
+        "c": "tg",
+        "t": "Manual"
+      }
+    ],
+    "owners": "",
+    "url": "#",
+    "date": "May 28",
+    "done": false,
+    "doneAt": null,
+    "note": ""
   }
 }
