@@ -3,15 +3,15 @@
     "id": "u1",
     "p": "u",
     "label": "Outlook - @Madison - TSMC slide across workloads",
-    "title": "DIRECTION LOCKED: discussed with Madison, going with bubbles slide. Tim: sounds good. TSMC slide direction resolved - execution still needed.",
+    "title": "Bootcamp talking points: DONE - confirmed to Debraj Sinha today. Bubbles slide direction locked.",
     "tags": [
       {
         "c": "tn",
-        "t": "Direction locked"
+        "t": "Talking points done"
       },
       {
         "c": "ta",
-        "t": "Execution still needed"
+        "t": "Direction locked"
       }
     ],
     "owners": "@madisonh @qnolibois @eluh",
@@ -471,7 +471,7 @@
     "date": "May 11",
     "done": false,
     "doneAt": null,
-    "note": "Pending for Vanessa or Becca to respond "
+    "note": "Demo done: need "
   },
   "h7": {
     "id": "h7",
@@ -1359,15 +1359,15 @@
     "id": "u18",
     "p": "u",
     "label": "Slack - TSMC slide + @preethi_maulik - TODAY - cuOpt metric",
-    "title": "Preethi: anticipated cuOpt = 3% lot scheduling improvement, 20-40x speedup, under 3 min. Tim accepted framing. TSMC To4 must confirm number tomorrow. You said: will verify.",
+    "title": "Sylendran (cuOpt PM) confirmed: NVIDIA ok with 3% tool productivity claim AS LONG AS TSMC credits it to cuOpt. Just need TSMC approval. You said: will check and get back.",
     "tags": [
       {
         "c": "tr",
-        "t": "TSMC To4 confirmation needed"
+        "t": "Need TSMC To4 approval"
       },
       {
-        "c": "tr",
-        "t": "Tomorrow deadline"
+        "c": "tn",
+        "t": "NVIDIA side confirmed"
       }
     ],
     "owners": "@pawinim @preethi_maulik @tcosta",
@@ -1403,15 +1403,15 @@
     "id": "u20",
     "p": "u",
     "label": "Outlook - @Madison - TODAY UNREAD - CPTX PR Last Call for Review",
-    "title": "LAST CALL: Madison forwarding Paris Fox CPTX Physical AI Press Releases/Corp Blog/Tech Blog. PMs and research leads: quick read-through to ensure alignment. Semi-relevant PRs need your review.",
+    "title": "@paris_fox DM this morning: expects you to make edits to TSMC PR based on Tim + meeting guidance. You said: Tim didn't share new updates yet, will ping Madison and Tim in HL Slack thread. PR edits still not made.",
     "tags": [
       {
         "c": "tr",
-        "t": "Last call - UNREAD"
+        "t": "PR edits not done"
       },
       {
         "c": "tr",
-        "t": "PR review needed"
+        "t": "Ping Tim + Madison in HL thread"
       }
     ],
     "owners": "@madisonh @paris_fox @pawinim",
@@ -1615,6 +1615,584 @@
     "owners": "@pawinim @kushp @bgadhia @madisonh @qnolibois @ipegler cristina.betanzo@siemens.com",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rU5kfmAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABhMostQAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 19",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u22": {
+    "id": "u22",
+    "p": "u",
+    "label": "Slack - @paris_fox DM - TODAY - Ping Tim + Madison in HL thread",
+    "title": "@paris_fox: make TSMC PR edits based on Tim guidance. You said will ping Madison and Tim in HL Slack thread to get feedback. This is not done yet.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Action: ping in HL thread"
+      },
+      {
+        "c": "tr",
+        "t": "PR edits blocked on feedback"
+      }
+    ],
+    "owners": "@pawinim @paris_fox @tcosta @madisonh",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0A92P4UM6G/p1779206773094329",
+    "date": "May 19",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u23": {
+    "id": "u23",
+    "p": "u",
+    "label": "Slack - @avleenk DM - TODAY - Advantest blog review status",
+    "title": "You asked @avleenk: did the Advantest blog get into review? She said: Yes I routed it, let me confirm. Confirmation pending.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Confirmation pending"
+      },
+      {
+        "c": "tn",
+        "t": "Avleenk routing"
+      }
+    ],
+    "owners": "@pawinim @avleenk",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1779210959156309",
+    "date": "May 19",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_cptxisv": {
+    "id": "u_cptxisv",
+    "p": "u",
+    "label": "Outlook - Computex ISV - @tcosta tagged @Pawini - TODAY",
+    "title": "Tim tagged @Pawini directly on Computex ISV Special Agent Announcements thread. @jboitano posted update. Check what Tim is asking of you.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Tim tagged you"
+      },
+      {
+        "c": "tn",
+        "t": "Today"
+      }
+    ],
+    "owners": "@tcosta @jboitano @madisonh @pawinim",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHjyr-KAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHjyr-KAAA%3D&exvsurl=1",
+    "date": "May 27",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_twsc": {
+    "id": "u_twsc",
+    "p": "u",
+    "label": "Outlook - @Madison - Taiwan Supply Chain Announcement - TODAY HOT",
+    "title": "Madison: JHH wants to show Taiwan partner adoption. Pulling in GPU commitment numbers from last Computex vs this year. TW account teams now on thread. @qnolibois asking about smaller partners. You are tagged.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Live fast-moving thread"
+      },
+      {
+        "c": "tr",
+        "t": "You are tagged"
+      }
+    ],
+    "owners": "@madisonh @qnolibois @valee @pawinim @ehsiao @ellen_chen @jimmyc",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHjysA0AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHjysA0AAA%3D&exvsurl=1",
+    "date": "May 27",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_iscreach": {
+    "id": "u_iscreach",
+    "p": "u",
+    "label": "Outlook - ISC 2026 - @kpattany - TODAY - Event Reachout",
+    "title": "@kpattany: Please reach out to your contacts to register for NVIDIA ISC26 Executive Briefing and AWS event. Invites sent this week. Follow-up instructions to be shared.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Action: reach out to contacts"
+      },
+      {
+        "c": "tn",
+        "t": "New today"
+      }
+    ],
+    "owners": "@kpattany @blairh @pawinim @bgadhia @bzandstein",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHveUxOAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHveUxOAAA%3D&exvsurl=1",
+    "date": "May 27",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_amat": {
+    "id": "u_amat",
+    "p": "u",
+    "label": "Slack - @avleenk DM - TODAY - AMAT blog workback",
+    "title": "You asked @avleenk: do you have workback for AMAT? Also asked her to share workback for AMT blog. Semi webpage now with web team. Lam Research video approval pending - PhysicsNeMo as placeholder for now.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Workback needed"
+      },
+      {
+        "c": "tn",
+        "t": "Webpage shipped to web team"
+      }
+    ],
+    "owners": "@pawinim @avleenk",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780003580444949",
+    "date": "May 28",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_iscdemo": {
+    "id": "u_iscdemo",
+    "p": "u",
+    "label": "Slack - @bzandstein DM - TODAY - ISC cuEST demo details",
+    "title": "@bzandstein needs ISC demo details to reuse. You said: should be same demo and video as GTC SJ - still checking email. Need to confirm and send to Becca.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "You said checking email"
+      },
+      {
+        "c": "tr",
+        "t": "Becca waiting"
+      }
+    ],
+    "owners": "@pawinim @bzandstein",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0A7S94SJCQ/p1780002636689989",
+    "date": "May 28",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_samsung_mktg": {
+    "id": "u_samsung_mktg",
+    "p": "u",
+    "label": "Outlook - Samsung Marketing - Euna Koh - UNREAD",
+    "title": "Euna Koh (Samsung) sent updated Samsung-NVIDIA Marketing POR with attachments ahead of monthly check-in meeting. Review before the call.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "UNREAD with attachments"
+      },
+      {
+        "c": "tn",
+        "t": "External Samsung"
+      }
+    ],
+    "owners": "@pawinim @mjung @yiyiw @soyoungj",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHjyr-EAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHjyr-EAAA%3D&exvsurl=1",
+    "date": "May 26",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_tim1on1_thu": {
+    "id": "u_tim1on1_thu",
+    "p": "u",
+    "label": "Calendar - TODAY Thu May 28 11:30 AM PT - YOU ORGANIZED",
+    "title": "Tim/Pawini 1:1 is BACK ON today at 11:30 AM PT. You organized this. Top 3 to prep: (1) TSMC slide + PR status, (2) Computex PR direction, (3) GTC Taipei POR + cuEST demo ask.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "TODAY 11:30 AM"
+      },
+      {
+        "c": "tr",
+        "t": "Prep needed NOW"
+      }
+    ],
+    "owners": "@pawinim @tcosta",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rxMD7FAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABbusDAwAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 28",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_cptx2nd": {
+    "id": "u_cptx2nd",
+    "p": "u",
+    "label": "Calendar - TODAY Thu May 28 2:00 PM PT - ACTION REQUIRED",
+    "title": "CPTX/GTC Taipei 2nd Run-Through with spokespeople. Slides + script must be complete before analyst message-test. Action required: review your section of the pre-brief deck before this call.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "TODAY 2:00 PM"
+      },
+      {
+        "c": "tr",
+        "t": "Script must be complete"
+      }
+    ],
+    "owners": "@makinleyb @pawinim @slevay @tcosta @qnolibois @bgadhia @eluh @madisonh",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAFu6wL9AAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 28",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h19": {
+    "id": "h19",
+    "p": "h",
+    "label": "Slack - @jmabry Group DM - TODAY - DAC Siemens QBR Friday",
+    "title": "@jmabry building deck for Friday QBR with Amit Gupta (Siemens) team. Planning Siemens EDA workstreams sprint toward DAC. @jmabry: also needs help thinking through work-back schedule for floor demo. You added @avleenk for workback schedule.",
+    "tags": [
+      {
+        "c": "ta",
+        "t": "Friday QBR"
+      },
+      {
+        "c": "ta",
+        "t": "Floor demo workback needed"
+      }
+    ],
+    "owners": "@jmabry @pawinim @avleenk @kushp",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0B4R6CJ2E9/p1779208641462039",
+    "date": "May 19",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h20": {
+    "id": "h20",
+    "p": "h",
+    "label": "Slack - @sylendran DM - TODAY - CUDA-X agent skills list",
+    "title": "Sylendran asked: which CUDA-X libraries have their own agent skills? You said: will check and get back. Needs list of libraries + agent skill availability.",
+    "tags": [
+      {
+        "c": "ta",
+        "t": "You said will check"
+      },
+      {
+        "c": "tg",
+        "t": "Agent skills"
+      }
+    ],
+    "owners": "@pawinim @sylendran",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0B3QU7DH0X/p1779209699796709",
+    "date": "May 19",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h_iscnotes28": {
+    "id": "h_iscnotes28",
+    "p": "h",
+    "label": "Outlook - ISC 2026 Meeting Notes - @blairh - TODAY UNREAD",
+    "title": "ISC 2026 meeting notes May 28 with attachments. Likely contains action items from today ISC Announcement Alignment call. Review for Semi/EDA action items.",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "UNREAD with attachments"
+      },
+      {
+        "c": "ta",
+        "t": "ISC actions likely inside"
+      }
+    ],
+    "owners": "@blairh @pawinim @bgadhia @bzandstein @anibbi @gegupta",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHveU0nAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHveU0nAAA%3D&exvsurl=1",
+    "date": "May 28",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_wed_cd": {
+    "id": "m_wed_cd",
+    "p": "m",
+    "label": "Calendar - TODAY Wed May 27 8:30 AM PT",
+    "title": "Computex Daily Sync: ISV Announcement Deliverables. Agenda: Arch Diagrams, Partner PR/Blog, Opens.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "TODAY Computex"
+      }
+    ],
+    "owners": "@msousa @ahecht @madisonh @tcosta @pawinim @slevay @bgadhia @kushp",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3ruC5UeAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 27",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_wed_isc": {
+    "id": "m_wed_isc",
+    "p": "m",
+    "label": "Calendar - TODAY Wed May 27 10:00 AM PT",
+    "title": "ISC26 Demo Call (@hpetty organizer). Individual demo PICs check status. cuEST + Alchemi demo for ISC26 Hamburg Jun 23-26.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "TODAY ISC26"
+      }
+    ],
+    "owners": "@hpetty @bzandstein @pawinim @nashton @slevay @blairh @nharrigan",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHv817dAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 27",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_wed_av": {
+    "id": "m_wed_av",
+    "p": "m",
+    "label": "Calendar - TODAY Wed May 27 12:45 PM PT",
+    "title": "Pawini + Avleen weekly sync",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "TODAY 12:45 PM"
+      }
+    ],
+    "owners": "@avleenk @pawinim",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3ruC5UeAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAB3NpIwAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 27",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_wed_dac": {
+    "id": "m_wed_dac",
+    "p": "m",
+    "label": "Calendar - TODAY Wed May 27 3:00 PM PT",
+    "title": "DAC Event Sync (@molmstead). Moved from Mon for Memorial Day. DAC Jul 26-29 SF.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "TODAY 3:00 PM"
+      },
+      {
+        "c": "ta",
+        "t": "DAC"
+      }
+    ],
+    "owners": "@molmstead @pawinim @avleenk @kushp @tcosta @slevay @yiyiw @lalshihabi",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rnwkHQAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABbusC_QAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 27",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_wed_bc": {
+    "id": "m_wed_bc",
+    "p": "m",
+    "label": "Calendar - TODAY Wed May 27 6:00 PM PT (Thu 9am Taiwan)",
+    "title": "GTC Taipei 2026 WWFO Bootcamp final content sync. Moved to Wed evening PT to accommodate speakers traveling. You + @bgadhia @pawinim + full bootcamp team.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "TODAY 6:00 PM PT"
+      },
+      {
+        "c": "tr",
+        "t": "FINAL before Computex"
+      }
+    ],
+    "owners": "@ndivakarla @pawinim @bgadhia @madisonh @tcosta @jboitano @adocca @eluh @valee",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHUsGLIAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 27",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_thu_alc": {
+    "id": "m_thu_alc",
+    "p": "m",
+    "label": "Calendar - Thu May 28 6:00 AM PT (Thu 9pm Taiwan)",
+    "title": "Training on ALCHEMI+cuEST demo (D406) for Computex. @ericat organizer. ALCHEMI + cuEST sharing booth - demos are distinct. You + @bzandstein @rparrish @gegupta @pochunl @nfedik.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Thu May 28"
+      },
+      {
+        "c": "tr",
+        "t": "Pre-Computex demo training"
+      }
+    ],
+    "owners": "@ericat @pawinim @bzandstein @rparrish @gegupta @pochunl @nfedik @abreazeale",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHI8CzhAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 28",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_thu_cd": {
+    "id": "m_thu_cd",
+    "p": "m",
+    "label": "Calendar - Thu May 28 8:30 AM PT",
+    "title": "Computex Daily Sync: ISV Announcement Deliverables (recurring) + NVIDIA/Cadence Joint Marketing POR (same time).",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Thu 8:30 AM"
+      },
+      {
+        "c": "ta",
+        "t": "Computex + Cadence"
+      }
+    ],
+    "owners": "@msousa @pawinim @kushp @bgadhia @madisonh @qnolibois @adocca",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rxMD7FAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 28",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_thu_isc": {
+    "id": "m_thu_isc",
+    "p": "m",
+    "label": "Calendar - Thu May 28 10:00 AM PT",
+    "title": "ISC Announcement Alignment (@anibbi organizer). Full ISC team + all speakers.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "Thu 10:00 AM"
+      },
+      {
+        "c": "tg",
+        "t": "ISC"
+      }
+    ],
+    "owners": "@anibbi @pawinim @bgadhia @bzandstein @chporter @nashton @slevay @blairh @gegupta",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rnwkHQAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABjBJvNAAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 28",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_gtctaipei": {
+    "id": "m_gtctaipei",
+    "p": "m",
+    "label": "Calendar - GTC Taipei Jun 2-4 - NV Booth Planning - ONE WEEK AWAY",
+    "title": "GTC Taipei NV Booth Showcase and Demo Planning. One more touchpoint before boots on ground. Come with status on action items. Flag anything at risk.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "ONE WEEK AWAY"
+      },
+      {
+        "c": "tb",
+        "t": "GTC Taipei Jun 2-4"
+      }
+    ],
+    "owners": "@ssprinkles @pawinim @bgadhia @slevay @nashton @madisonh",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rq5ut3AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFmgAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "Jun 2-4",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_physai_thu": {
+    "id": "m_physai_thu",
+    "p": "m",
+    "label": "Calendar - TODAY Thu May 28 11:00 AM PT",
+    "title": "Physical AI Weekly Core Sync. Rolling agenda doc linked in invite. @ghoyem organizer.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "TODAY 11:00 AM"
+      }
+    ],
+    "owners": "@ghoyem @pawinim @slevay @avleenk @kushp @madisonh @qnolibois @bgadhia @lalshihabi",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rxMD7FAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABbusC5AAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 28",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_yiyi_thu": {
+    "id": "m_yiyi_thu",
+    "p": "m",
+    "label": "Calendar - TODAY Thu May 28 12:00 PM PT - YOU ORGANIZED",
+    "title": "Yiyi/Pawini Weekly 1:1. Topics: TSMC cuEST demo ask (Vanessa response?), Samsung SAFE Forum, GTC Taipei KR coverage.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "TODAY 12:00 PM"
+      },
+      {
+        "c": "tn",
+        "t": "You organized"
+      }
+    ],
+    "owners": "@pawinim @yiyiw",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rxMD7FAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAEkhuywAAEA%3D%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 28",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_wwfo_faq": {
+    "id": "m_wwfo_faq",
+    "p": "m",
+    "label": "Calendar - TODAY Thu May 28 12:00 PM PT",
+    "title": "Computex 2026 WWFO Announcement Summary + FAQ Sign-Off (@jeffchang organizer). This is the sign-off meeting - come prepared.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "TODAY 12:00 PM"
+      },
+      {
+        "c": "tr",
+        "t": "Sign-off required"
+      }
+    ],
+    "owners": "@jeffchang @pawinim @bgadhia @slevay @kushp @tcosta @madisonh @adocca",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGMEm83AAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 28",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_bootcamp_spk": {
+    "id": "m_bootcamp_spk",
+    "p": "m",
+    "label": "Calendar - TODAY Thu May 28 4:30-6:00 PM PT",
+    "title": "Speaker/Moderator Invite: GTC Taipei Bootcamp + Mandatory Training: GTC Taipei Bootcamp for WWFO (2 hours via Teams). Back-to-back.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "TODAY 4:30-8:00 PM"
+      },
+      {
+        "c": "tr",
+        "t": "Mandatory training"
+      }
+    ],
+    "owners": "@ndivakarla @pawinim @bgadhia @adocca @madisonh",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHv817aAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 28",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "m_postbrief": {
+    "id": "m_postbrief",
+    "p": "m",
+    "label": "Calendar - TODAY Thu May 28 7:00 PM PT",
+    "title": "CPTX Physical AI Post-Brief Content Alignment Call 2 (@paris_fox organizer). Deck + script linked in invite. You + @bgadhia @slevay @qnolibois @madisonh @eluh @adocca @ansleyd.",
+    "tags": [
+      {
+        "c": "tb",
+        "t": "TODAY 7:00 PM"
+      },
+      {
+        "c": "ta",
+        "t": "Post-brief alignment"
+      }
+    ],
+    "owners": "@paris_fox @pawinim @bgadhia @slevay @qnolibois @madisonh @eluh",
+    "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHI8CzUAAA%3D&exvsurl=1&path=/calendar/item",
+    "date": "May 28",
     "done": false,
     "doneAt": null,
     "note": ""
