@@ -2127,8 +2127,8 @@
     "owners": "@pawinim @yiyiw",
     "url": "https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rxMD7FAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAEkhuywAAEA%3D%3D&exvsurl=1&path=/calendar/item",
     "date": "May 28",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "May 28, 2026 at 08:15 PM",
     "note": ""
   },
   "m_wwfo_faq": {
