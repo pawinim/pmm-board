@@ -2196,5 +2196,23 @@
     "done": true,
     "doneAt": "May 28, 2026 at 08:15 PM",
     "note": ""
+  },
+  "manual-1780029339320": {
+    "id": "manual-1780029339320",
+    "p": "u",
+    "label": "Email",
+    "title": "Post Brief deck - update keynote slide",
+    "tags": [
+      {
+        "c": "tg",
+        "t": "Manual"
+      }
+    ],
+    "owners": "",
+    "url": "#",
+    "date": "May 28",
+    "done": false,
+    "doneAt": null,
+    "note": ""
   }
 }
