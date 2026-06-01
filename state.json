@@ -469,8 +469,8 @@
     "owners": "@pawinim @bzandstein @valee @tcosta",
     "url": "https://nvidia.enterprise.slack.com/archives/C0B37A9N0QY/p1778540062953989",
     "date": "May 11",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "Jun 1, 2026 at 02:28 PM",
     "note": "Demo done: need TSMC to confirm"
   },
   "h7": {
