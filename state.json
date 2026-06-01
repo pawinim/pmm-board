@@ -2225,8 +2225,8 @@
     "owners": "",
     "url": "#",
     "date": "May 28",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "Jun 1, 2026 at 04:24 PM",
     "note": ""
   },
   "u_tsmc_slide_approv": {
