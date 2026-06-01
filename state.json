@@ -1667,15 +1667,11 @@
     "id": "u_cptxisv",
     "p": "u",
     "label": "Outlook - Computex ISV - @tcosta tagged @Pawini - TODAY",
-    "title": "Tim tagged @Pawini directly on Computex ISV Special Agent Announcements thread. @jboitano posted update. Check what Tim is asking of you.",
+    "title": "Computex ISV PR is LIVE: nvidianews.nvidia.com/news/enterprise-software-leaders-build-ai-agents-with-nvidia. @nashton flagged missing SimScale link. @slevay handling partner link cleanup.",
     "tags": [
       {
-        "c": "tr",
-        "t": "Tim tagged you"
-      },
-      {
         "c": "tn",
-        "t": "Today"
+        "t": "PR live - cleanup in progress"
       }
     ],
     "owners": "@tcosta @jboitano @madisonh @pawinim",
@@ -2229,6 +2225,134 @@
     "owners": "",
     "url": "#",
     "date": "May 28",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_tsmc_slide_approv": {
+    "id": "u_tsmc_slide_approv",
+    "p": "h",
+    "label": "Outlook - @pochunl - TODAY 6:37 AM UNREAD",
+    "title": "RESOLVED: Madison said we do not need to do keynote slide approval anymore. TSMC approved the PR (switched back from blog). PR is live.",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "Resolved - no action needed"
+      }
+    ],
+    "owners": "@pawinim @pochunl @paris_fox",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAH7eitTAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAH7eitTAAA%3D&exvsurl=1",
+    "date": "May 30",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_noble": {
+    "id": "u_noble",
+    "p": "u",
+    "label": "Outlook - Noble Machines / @Madison - TODAY - Humanoid PoC",
+    "title": "Wei Ding (Noble Machines) asked NVIDIA for publicity support around Humanoid PoC in semiconductor manufacturing at Computex. Madison tagged you + @pochunl @valee @ehsiao. Noble Machines sent draft PR/blog. @valee handling. You are CC'd - confirm PMM support scope.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Madison tagged you"
+      },
+      {
+        "c": "tn",
+        "t": "New today"
+      }
+    ],
+    "owners": "@pawinim @valee @pochunl @ehsiao @madisonh",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHveU3lAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHveU3lAAA%3D&exvsurl=1",
+    "date": "May 29",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_webpage_broken": {
+    "id": "u_webpage_broken",
+    "p": "u",
+    "label": "Slack - @ram_cherukuri @avleenk DM - TODAY - Semi webpage broken links",
+    "title": "Alsemy user story link is broken on semi webpage (Page Not Found). You confirmed it broke post-launch. ALSO: Missing logos SK + Samsung. Pending: Lam. Potential removal: KLA. ADD: Advantest. Missing link: Alsemy success story. @avleenk fixing.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Broken links - live"
+      },
+      {
+        "c": "tr",
+        "t": "Logo gaps to fix"
+      }
+    ],
+    "owners": "@pawinim @avleenk @ram_cherukuri",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0AP5KGST3J/p1780323958957969",
+    "date": "Jun 1",
+    "done": true,
+    "doneAt": "Jun 1, 2026 at 02:28 PM",
+    "note": ""
+  },
+  "u_social_cosmos": {
+    "id": "u_social_cosmos",
+    "p": "u",
+    "label": "Slack - @avleenk DM - TODAY - Remove Cosmos from social copy",
+    "title": "You told @avleenk: social copy needs to remove Cosmos for TSMC. @avleenk removing from LinkedIn/NVShare. X post may need to be republished. Confirm this is done.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Confirm removal done"
+      },
+      {
+        "c": "tn",
+        "t": "@avleenk handling"
+      }
+    ],
+    "owners": "@pawinim @avleenk @meaghanf",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780320440575949",
+    "date": "Jun 1",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h_semicontw": {
+    "id": "h_semicontw",
+    "p": "h",
+    "label": "Slack - @avleenk DM - TODAY - SEMICON Taiwan Michael keynote",
+    "title": "@avleenk: Who supports Michael keynote PPT for SEMICON Taiwan? You: I don't know, start thread with Tim and ask. Semi event but not Tim as speaker. PMM coverage unclear.",
+    "tags": [
+      {
+        "c": "ta",
+        "t": "Coverage TBD"
+      },
+      {
+        "c": "tn",
+        "t": "New - SEMICON Taiwan"
+      }
+    ],
+    "owners": "@avleenk @pawinim @tcosta",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780320104592139",
+    "date": "Jun 1",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h_advblog": {
+    "id": "h_advblog",
+    "p": "h",
+    "label": "Slack - @avleenk DM - TODAY - Advantest blog cross-link timing",
+    "title": "You asked: when does Advantest blog go live? We need to cross-link it to upcoming news. Still pending from @avleenk.",
+    "tags": [
+      {
+        "c": "ta",
+        "t": "Cross-link needed"
+      },
+      {
+        "c": "tn",
+        "t": "Timing TBD"
+      }
+    ],
+    "owners": "@pawinim @avleenk",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780320263230599",
+    "date": "Jun 1",
     "done": false,
     "doneAt": null,
     "note": ""
