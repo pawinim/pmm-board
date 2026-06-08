@@ -2,420 +2,200 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PMM Board - Pawini</title>
+<title>Pawini PMM Board</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0f0f0f;--sur:#181818;--b1:#252525;--b2:#333;--tx:#e8e6e0;--t2:#777;--t3:#555;--red:#ff4d4d;--rdim:#2a1010;--amb:#f5a623;--adim:#2a1e08;--blu:#4d9fff;--bdim:#0a1a2a;--grn:#4dff91;--gdim:#0a2018;--mono:'DM Mono',monospace;--sans:'DM Sans',sans-serif;}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:var(--sans);background:var(--bg);color:var(--tx);min-height:100vh;padding:16px 12px 60px;max-width:640px;margin:0 auto;}
-.hdr{margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--b1);}
-.hdr h1{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;}
-.hdr-row{display:flex;justify-content:space-between;align-items:center;margin-top:4px;}
-.hdr p{font-size:10px;color:var(--t3);font-family:var(--mono);}
-.ss{font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:3px;cursor:pointer;}
-.ss-ok{background:var(--gdim);color:var(--grn);}
-.ss-saving{background:var(--adim);color:var(--amb);}
-.ss-err{background:var(--rdim);color:var(--red);}
-.tabs{display:flex;gap:2px;margin-bottom:12px;background:var(--sur);border:1px solid var(--b1);border-radius:8px;padding:3px;}
-.tab{flex:1;padding:9px 2px;font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-align:center;cursor:pointer;background:transparent;color:var(--t3);border:none;border-radius:6px;transition:all 0.12s;}
-.tab.active{background:var(--b2);color:var(--tx);}
-.tab .cnt{display:inline-block;font-size:9px;padding:1px 5px;border-radius:3px;margin-left:3px;vertical-align:middle;}
-.tu .cnt{background:var(--rdim);color:var(--red);}
-.th .cnt{background:var(--adim);color:var(--amb);}
-.tm .cnt{background:var(--bdim);color:var(--blu);}
-.td .cnt{background:var(--gdim);color:var(--grn);}
-.panel{display:none;}.panel.active{display:block;}
-.dgrp{margin-bottom:16px;}
-.dlbl{font-family:var(--mono);font-size:9px;color:var(--t3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;padding-left:2px;}
-.card{background:var(--sur);border:1px solid var(--b1);border-left:2px solid transparent;border-radius:8px;padding:11px 44px 10px 13px;margin-bottom:5px;position:relative;-webkit-tap-highlight-color:transparent;}
-.card.done{opacity:0.4;}.card.done .ct{text-decoration:line-through;text-decoration-color:var(--t3);}
-.pu{border-left-color:var(--red);}.ph{border-left-color:var(--amb);}.pm{border-left-color:var(--blu);}.pdone{border-left-color:var(--b2);}
-.cl{font-family:var(--mono);font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:var(--t3);margin-bottom:3px;cursor:pointer;}
-.ct{font-size:13px;font-weight:500;color:var(--tx);line-height:1.45;margin-bottom:4px;cursor:pointer;}
-.cm{display:flex;gap:4px;flex-wrap:wrap;margin-top:3px;cursor:pointer;}
-.tag{font-family:var(--mono);font-size:9px;padding:2px 6px;border-radius:3px;font-weight:500;}
-.tr{background:var(--rdim);color:var(--red);}.ta{background:var(--adim);color:var(--amb);}.tb{background:var(--bdim);color:var(--blu);}.tg{background:#1c1c1c;color:var(--t3);}.tn{background:var(--gdim);color:var(--grn);}
-.ow{font-family:var(--mono);font-size:10px;color:var(--t3);margin-top:4px;cursor:pointer;}
-.dat{font-family:var(--mono);font-size:9px;color:var(--grn);margin-top:3px;opacity:0.7;}
-.notes-wrap{margin-top:7px;display:none;}.notes-wrap.open{display:block;}
-.notes-ta{width:100%;background:#111;border:1px solid var(--b2);border-radius:4px;color:var(--tx);font-family:var(--sans);font-size:12px;padding:8px 10px;resize:vertical;min-height:60px;line-height:1.5;outline:none;}
-.notes-ta:focus{border-color:var(--t2);}
-.notes-ta::placeholder{color:var(--t3);}
-.notes-hint{font-family:var(--mono);font-size:9px;color:var(--t3);margin-top:3px;text-align:right;}
-.chk{position:absolute;top:11px;right:10px;width:22px;height:22px;border:1px solid var(--b2);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--t3);background:var(--bg);transition:all 0.12s;cursor:pointer;z-index:2;}
-.chk.on{background:var(--gdim);border-color:var(--grn);color:var(--grn);}
-.expand-btn{font-family:var(--mono);font-size:9px;color:var(--t3);background:transparent;border:none;cursor:pointer;padding:0;margin-top:5px;letter-spacing:0.04em;text-decoration:underline;display:block;}
-.empty{font-family:var(--mono);font-size:11px;color:var(--t3);text-align:center;padding:48px 0;letter-spacing:0.05em;}
-.loading{font-family:var(--mono);font-size:11px;color:var(--t3);text-align:center;padding:60px 0;letter-spacing:0.05em;}
-.foot{font-family:var(--mono);font-size:9px;color:var(--t3);text-align:center;margin-top:28px;line-height:1.8;letter-spacing:0.04em;}
-.clrbtn{background:transparent;border:none;color:var(--t3);font-family:var(--mono);font-size:9px;cursor:pointer;text-decoration:underline;letter-spacing:0.04em;}
-.err-msg{font-family:var(--mono);font-size:9px;color:var(--red);background:var(--rdim);padding:6px 10px;border-radius:4px;margin-bottom:10px;display:none;}
-
-.fab{position:fixed;bottom:24px;right:20px;width:48px;height:48px;border-radius:50%;background:var(--red);border:none;color:#fff;font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:300;box-shadow:0 4px 12px rgba(255,77,77,0.4);transition:transform 0.15s;}
-.fab:active{transform:scale(0.9);}
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:200;display:none;align-items:flex-end;justify-content:center;pointer-events:none;}
-.modal-overlay.open{display:flex;pointer-events:all;}
-.modal{background:var(--sur);border:1px solid var(--b2);border-radius:14px 14px 0 0;padding:20px 16px 32px;width:100%;max-width:640px;}
-.modal h2{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--tx);margin-bottom:16px;}
-.field{margin-bottom:12px;}
-.field label{font-family:var(--mono);font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:var(--t3);display:block;margin-bottom:5px;}
-.field input,.field textarea,.field select{width:100%;background:#111;border:1px solid var(--b2);border-radius:4px;color:var(--tx);font-family:var(--sans);font-size:13px;padding:8px 10px;outline:none;}
-.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--t2);}
-.field textarea{min-height:70px;resize:vertical;line-height:1.5;}
-.field select option{background:var(--sur);}
-.modal-btns{display:flex;gap:8px;margin-top:16px;}
-.btn-add{flex:1;background:var(--red);border:none;color:#fff;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:11px;border-radius:6px;cursor:pointer;}
-.btn-cancel{background:transparent;border:1px solid var(--b2);color:var(--t3);font-family:var(--mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;padding:11px 16px;border-radius:6px;cursor:pointer;}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f0f0f; color: #e8e4dc; font-family: 'DM Sans', sans-serif; max-width: 640px; margin: 0 auto; padding: 16px; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 16px 0 12px; border-bottom: 1px solid #1e1e1e; margin-bottom: 16px; }
+  header h1 { font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.15em; color: #76c442; text-transform: uppercase; }
+  header span { font-family: 'DM Mono', monospace; font-size: 11px; color: #444; }
+  .tabs { display: flex; gap: 4px; margin-bottom: 16px; }
+  .tab { font-family: 'DM Mono', monospace; font-size: 11px; padding: 6px 12px; background: #1a1a1a; border: 1px solid #2a2a2a; color: #666; cursor: pointer; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.1em; }
+  .tab.active { background: #222; color: #e8e4dc; border-color: #444; }
+  .section { margin-bottom: 20px; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px; padding-left: 4px; }
+  .urgent .section-label { color: #ff4d4d; }
+  .high .section-label { color: #f5a623; }
+  .medium .section-label { color: #4d9fff; }
+  .done-section .section-label { color: #555; }
+  .card { background: #141414; border: 1px solid #222; border-radius: 3px; padding: 12px 14px; margin-bottom: 8px; display: flex; gap: 10px; align-items: flex-start; cursor: pointer; transition: background 0.15s; border-left: 3px solid transparent; }
+  .card:hover { background: #1a1a1a; }
+  .urgent .card { border-left-color: #ff4d4d; }
+  .high .card { border-left-color: #f5a623; }
+  .medium .card { border-left-color: #4d9fff; }
+  .done-section .card { border-left-color: #333; opacity: 0.5; }
+  .card.checked { opacity: 0.4; }
+  .card.checked .card-title { text-decoration: line-through; }
+  .checkbox { width: 16px; height: 16px; border: 1px solid #333; border-radius: 2px; flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+  .checkbox.done { background: #333; border-color: #555; }
+  .checkbox.done::after { content: '✓'; font-size: 10px; color: #888; }
+  .card-body { flex: 1; min-width: 0; }
+  .card-title { font-size: 13px; font-weight: 500; color: #ddd; margin-bottom: 4px; line-height: 1.4; }
+  .card-desc { font-size: 12px; color: #888; line-height: 1.5; margin-bottom: 6px; }
+  .card-meta { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .tag { font-family: 'DM Mono', monospace; font-size: 10px; padding: 2px 6px; border-radius: 2px; }
+  .tag.owner { background: #1a2a1a; color: #76c442; }
+  .tag.date { background: #1a1a2a; color: #4d9fff; }
+  .tag.source { background: #2a1a1a; color: #f5a623; }
+  .tag.resolved { background: #1a2a1a; color: #4d9fff; }
+  .card-link { font-family: 'DM Mono', monospace; font-size: 10px; color: #444; text-decoration: none; margin-top: 4px; display: inline-block; }
+  .card-link:hover { color: #76c442; }
+  .footer { padding: 16px 0; border-top: 1px solid #1a1a1a; display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+  .clear-btn { font-family: 'DM Mono', monospace; font-size: 11px; color: #444; background: transparent; border: 1px solid #222; padding: 6px 12px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; }
+  .clear-btn:hover { color: #888; border-color: #333; }
+  .empty { font-family: 'DM Mono', monospace; font-size: 12px; color: #333; padding: 20px 0; text-align: center; }
+  .badge { font-family: 'DM Mono', monospace; font-size: 10px; background: #222; color: #666; padding: 1px 5px; border-radius: 10px; margin-left: 4px; }
 </style>
 </head>
 <body>
-<div class="hdr">
-  <h1>PMM Board - Pawini</h1>
-  <div class="hdr-row">
-    <p id="meta">Loading...</p>
-    <span id="ss" class="ss ss-ok" onclick="forceSave()">synced</span>
-  </div>
-</div>
-<div id="err-msg" class="err-msg"></div>
+
+<header>
+  <h1>PMM Board</h1>
+  <span id="scan-time">Scanned Jun 7, 2026 9:36 PM</span>
+</header>
+
 <div class="tabs">
-  <button class="tab tu active" onclick="sw('u',this)">Urgent<span class="cnt" id="cu">-</span></button>
-  <button class="tab th" onclick="sw('h',this)">High<span class="cnt" id="ch">-</span></button>
-  <button class="tab tm" onclick="sw('m',this)">Med<span class="cnt" id="cm">-</span></button>
-  <button class="tab td" onclick="sw('done',this)">Done<span class="cnt" id="cd">-</span></button>
+  <div class="tab active" onclick="showTab('urgent')">Urgent <span class="badge" id="b-urgent"></span></div>
+  <div class="tab" onclick="showTab('high')">High <span class="badge" id="b-high"></span></div>
+  <div class="tab" onclick="showTab('medium')">Medium <span class="badge" id="b-medium"></span></div>
+  <div class="tab" onclick="showTab('done')">Done <span class="badge" id="b-done"></span></div>
 </div>
-<div id="pu" class="panel active"><div class="loading">loading board...</div></div>
-<div id="ph" class="panel"></div>
-<div id="pm" class="panel"></div>
-<div id="pdone" class="panel"></div>
-<div class="foot">Done + notes saved to GitHub forever<br>Tap "synced" to retry if error<br><br><button class="clrbtn" onclick="clrDone()">Clear completed items</button></div>
+
+<div id="tab-urgent"></div>
+<div id="tab-high" style="display:none"></div>
+<div id="tab-medium" style="display:none"></div>
+<div id="tab-done" style="display:none"></div>
+
+<div class="footer">
+  <span style="font-family:'DM Mono',monospace;font-size:11px;color:#333">pawinim@nvidia.com</span>
+  <button class="clear-btn" onclick="clearDone()">Clear completed</button>
+</div>
+
 <script>
-var TA=["ghp_rCrsVYitENJyFZ8Ga","bHXyuEyBYWVzN2CA3wN"].join("");
-var REPO="pawinim/pmm-board";
-var API="https://api.github.com/repos/"+REPO+"/contents/state.json";
-var RAW="https://raw.githubusercontent.com/"+REPO+"/main/state.json";
-var META={date:"Fri Jun 5, 2026",src:"Outlook - Slack - Calendar"};
-var INC=[
-  {id:"u0",p:"u",label:"Outlook - Synopsys OIP - Tim: PASS - Action needed",title:"Tim replied: Recommend we pass. Reply to Arvind (Synopsys) declining the joint paper. Draft ready - use warm or brief variant.",tags:[{c:"tr",t:"Reply to Arvind needed"},{c:"tn",t:"Tim decided: pass"}],owners:"@tcosta @yiyiw",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eZFAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eZFAAA%3D&exvsurl=1",date:"May 11"},
-  {id:"u1",p:"u",label:"Outlook - @Madison - TSMC slide across workloads",title:"Bootcamp talking points: DONE - confirmed to Debraj Sinha today. Bubbles slide direction locked.",tags:[{c:"tn",t:"Talking points done"},{c:"ta",t:"Direction locked"}],owners:"@madisonh @qnolibois @eluh",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eYTAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eYTAAA%3D&exvsurl=1",date:"May 11"},
-  {id:"u2",p:"u",label:"Outlook - @Tim Costa - May 9 IE Computex PR",title:"Tim: The entire ecosystem of engineering ISVs is building agent engineers with us. This PR does not show that. Full narrative reframe needed.",tags:[{c:"tr",t:"Tim rejected"},{c:"tr",t:"Needs rewrite"}],owners:"@tcosta @madisonh @ahecht",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xezAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xezAAA%3D&exvsurl=1",date:"May 9"},
-  {id:"u3",p:"u",label:"Outlook - @Tim Costa - May 9 TSMC INTERNAL",title:"Tim: Someone on DaYang team for HQ pic. TSMC PR + slide in motion. Madison: do not pause, write the PR we want.",tags:[{c:"tr",t:"TSMC sensitive"},{c:"tg",t:"Active"}],owners:"@tcosta @madisonh @valee",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe3AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe3AAA%3D&exvsurl=1",date:"May 9"},
-  {id:"u4",p:"u",label:"Outlook - SAFE Forum - @Mia Jung - May 6",title:"Samsung SAFE Forum: review Slide 2 NVLink Fusion / Vipin Tiwari. May 28 Samsung US HQ deadline.",tags:[{c:"tr",t:"Slide review needed"},{c:"tg",t:"May 28 deadline"}],owners:"@mjung @avleenk @jichambers",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGJsAaqAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGJsAaqAAA%3D&exvsurl=1",date:"May 6"},
-  {id:"u5",p:"u",label:"Outlook - ISC26 - Ada 6000 Hardware",title:"ETO EMEA inventory reply still pending. RTX Pro 6000 not a substitute. @bzandstein still on hold.",tags:[{c:"tr",t:"Blocking"},{c:"tg",t:"ETO pending"}],owners:"@hpetty @bzandstein @rparrish",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xdeAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xdeAAA%3D&exvsurl=1",date:"May 8"},
-  {id:"u6",p:"u",label:"Slack - Computex deck - @jmabry done with v2agents",title:"@jmabry done with JHH_Computex2026_v2agents.pptx. @nashton: no HPC cluster, just agent/tool/skills. You + @slevay need to abstract the simpler slide.",tags:[{c:"tr",t:"Action: abstract slide"}],owners:"@pawinim @slevay @jmabry @nashton",url:"https://nvidia.enterprise.slack.com/archives/C0B33NPBZFU/p1778529678616009",date:"May 11"},
-  {id:"u7",p:"u",label:"Slack - CPTX demo script - b-roll + dummy codes",title:"Tim + @nashton aligned: Cadence is hero, NVIDIA as LHA. @slevay shared script. You said: will do some thinking tonight. VO track already being produced.",tags:[{c:"tr",t:"Deliverable: b-roll direction"},{c:"tr",t:"VO in production"}],owners:"@pawinim @slevay @nashton @jmabry",url:"https://nvidia.enterprise.slack.com/archives/C0B33C2R8UR/p1778537422393999",date:"May 11"},
-  {id:"u8",p:"u",label:"Slack - cuEST TSMC demo for GTC Taipei",title:"@bzandstein: 4-4.5x RTX Pro 6000 ready. You: will await Vanessa feedback then reach out to TSMC. @tcosta: Vanessa should weigh in on value to TSMC.",tags:[{c:"tr",t:"Waiting on Vanessa"},{c:"ta",t:"Then ask TSMC"}],owners:"@pawinim @bzandstein @valee @tcosta",url:"https://nvidia.enterprise.slack.com/archives/C0B37A9N0QY/p1778540062953989",date:"May 11"},
-  {id:"u9",p:"u",label:"Slack - #physical-ai-marketing - Wed May 13 EOD",title:"STW61036: Review Rishi Ranade AI Physics slide deck (CAE + Semi Design). Add feedback to Google Sheet cell Q47 by Wed May 13 EOD. Tagged with @bgadhia.",tags:[{c:"tr",t:"Wed May 13 EOD"},{c:"tr",t:"GTC Taipei session"}],owners:"@pawinim @bgadhia @rranade",url:"https://nvidia.enterprise.slack.com/archives/C060JHGJZR9/p1778538646304239",date:"May 11"},
-  {id:"u10",p:"u",label:"Slack - @slevay Group DM - TODAY 8:08 AM",title:"RESOLVED: email sent to Ed Goldman, meeting scheduled Mon May 18 1:30 PM with Siemens team (Cristina Betanzo, Ed Goldman, Niranjan Sitapure) + @jmabry @slevay @kushp.",tags:[{c:"tn",t:"Meeting set Mon May 18"}],owners:"@pawinim @slevay @jmabry",url:"https://nvidia.enterprise.slack.com/archives/C0B38P8B886/p1778598531149859",date:"May 12"},
-  {id:"u11",p:"u",label:"Outlook - ISC 2026 Meeting Notes - @blairh - UNREAD",title:"ISC Meeting Notes May 12: Tech Blog Pitches deadline MAY 15. All PMMs submit pitches in #isc-hamburg-2026 Slack channel. Also: ISC 2026 is June 23-26 Hamburg.",tags:[{c:"tr",t:"Deadline Thu May 15"},{c:"tn",t:"New unread"}],owners:"@blairh @gegupta @pawinim @bgadhia @bzandstein @chporter",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuZCAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuZCAAA%3D&exvsurl=1",date:"May 12"},
-  {id:"u12",p:"u",label:"Calendar - Thu May 14 12:30 PM PT - YOU ORGANIZED",title:"Tim declined 3 times now (latest: Jun 3). 1:1 is not happening. Must go async - draft a tight email with top 3 asks: Computex PR direction, GTC Taipei POR, SEMES AI Forum.",tags:[{c:"tr",t:"Tim declined 3 times"},{c:"tr",t:"Must go async NOW"}],owners:"@pawinim @tcosta",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABbusDAwAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 14"},
-  {id:"u13",p:"u",label:"Outlook - ISC Master Thread - @parts - UNREAD - Thu EOD",title:"@parts proposed partner display hardware plan: NVL4, HGX etc. No objections = approved. Deadline: close of TOMORROW Thu May 14 to prep paperwork. Review and confirm.",tags:[{c:"tr",t:"Objection deadline Thu EOD"},{c:"tn",t:"New unread"}],owners:"@parts @hpetty @bzandstein @anibbi @bgadhia @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuZcAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuZcAAA%3D&exvsurl=1",date:"May 13"},
-  {id:"u14",p:"u",label:"Slack - @paris_fox Group DM - TODAY - Flag PR direction to Madison",title:"@paris_fox asked: Was new direction of PR flagged for Madison yet? You clarified the 5 workload pillars stay the same, only keynote visual changed. This question is still open - someone needs to flag the TSMC PR direction to Madison.",tags:[{c:"tr",t:"Unanswered question"},{c:"tr",t:"Flag to Madison needed"}],owners:"@pawinim @paris_fox @eluh @madisonh",url:"https://nvidia.enterprise.slack.com/archives/C0B3EDFP2C9/p1778686710597539",date:"May 13"},
-  {id:"u15",p:"u",label:"Outlook - SEMES AI Forum - @tcosta forwarded - TODAY",title:"Tim forwarded SEMES AI Forum invite: 'I think this is important. @YiyiWang agree?' @yiyiw confirmed SEMES is key Samsung partner. Tim checking estaff conflict. PMM may need to support this event.",tags:[{c:"tr",t:"Tim flagged as important"},{c:"tn",t:"New today"}],owners:"@tcosta @yiyiw @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuaQAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuaQAAA%3D&exvsurl=1",date:"May 15"},
-  {id:"u16",p:"u",label:"Slack - @slevay - TODAY - CPTX creative call 10:30",title:"@slevay can't make creative call at 10:30 (family conflict). He added notes from chipstack demo video to script. You said: 'Will update you on details.' Creative direction for CPTX demo may land on you.",tags:[{c:"tr",t:"You said will update"},{c:"tr",t:"VO in production"}],owners:"@pawinim @slevay @nashton @jmabry",url:"https://nvidia.enterprise.slack.com/archives/C0B33NPBZFU/p1778863828750819",date:"May 15"},
-  {id:"u17",p:"u",label:"Slack - TSMC slide Group DM - TODAY - cuEST so what",title:"Tim: cuEST is weakest now. Azi: TSMC not forthcoming on details. Yiyi: cuEST enables DFT data generation at scale - hard to quantify. You said ack. Need cuEST TSMC so-what from Azi and TSMC To4.",tags:[{c:"tr",t:"Tim: weakest metric"},{c:"tr",t:"Get from Azi + TSMC To4"}],owners:"@pawinim @aziria @yiyiw @tcosta",url:"https://nvidia.enterprise.slack.com/archives/C0B4LENDYQ2/p1779147615890719",date:"May 18"},
-  {id:"u18",p:"u",label:"Slack - TSMC slide + @preethi_maulik - TODAY - cuOpt metric",title:"Sylendran (cuOpt PM) confirmed: NVIDIA ok with 3% tool productivity claim AS LONG AS TSMC credits it to cuOpt. Just need TSMC approval. You said: will check and get back.",tags:[{c:"tr",t:"Need TSMC To4 approval"},{c:"tn",t:"NVIDIA side confirmed"}],owners:"@pawinim @preethi_maulik @tcosta",url:"https://nvidia.enterprise.slack.com/archives/C0B5G6MKJSU/p1779146840986609",date:"May 18"},
-  {id:"u19",p:"u",label:"Slack - @Yiyi Wang DM - TODAY - Cosmos/Tao terminology",title:"Yiyi: Cosmos/Tao is for Defect Classification, NOT Defect Detection. You said ack will check. Verify correct term with TSMC To4 and update slide.",tags:[{c:"tr",t:"Wrong terminology in slide"},{c:"tr",t:"Verify with TSMC To4"}],owners:"@pawinim @yiyiw @tcosta",url:"https://nvidia.enterprise.slack.com/archives/C0B4LENDYQ2/p1779147998604209",date:"May 18"},
-  {id:"u20",p:"u",label:"Outlook - @Madison - TODAY UNREAD - CPTX PR Last Call for Review",title:"@paris_fox DM this morning: expects you to make edits to TSMC PR based on Tim + meeting guidance. You said: Tim didn't share new updates yet, will ping Madison and Tim in HL Slack thread. PR edits still not made.",tags:[{c:"tr",t:"PR edits not done"},{c:"tr",t:"Ping Tim + Madison in HL thread"}],owners:"@madisonh @paris_fox @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHBSzF9AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHBSzF9AAA%3D&exvsurl=1",date:"May 18"},
-  {id:"u21",p:"u",label:"Slack - @Yiyi Wang DM - TODAY - NALA call prep tomorrow",title:"Yiyi: tomorrow NALA call, give GTC CPTX review on Semi campaign contents: keynotes, sessions, announcements, PR/blog/social. Prep needed before tomorrow morning.",tags:[{c:"tr",t:"Prep needed tonight"},{c:"tr",t:"Tomorrow NALA call"}],owners:"@pawinim @yiyiw",url:"https://nvidia.enterprise.slack.com/archives/D0A6XSQQ28P/p1779147320957639",date:"May 18"},
-  {id:"u22",p:"u",label:"Slack - @paris_fox DM - TODAY - Ping Tim + Madison in HL thread",title:"@paris_fox: make TSMC PR edits based on Tim guidance. You said will ping Madison and Tim in HL Slack thread to get feedback. This is not done yet.",tags:[{c:"tr",t:"Action: ping in HL thread"},{c:"tr",t:"PR edits blocked on feedback"}],owners:"@pawinim @paris_fox @tcosta @madisonh",url:"https://nvidia.enterprise.slack.com/archives/D0A92P4UM6G/p1779206773094329",date:"May 19"},
-  {id:"u23",p:"u",label:"Slack - @avleenk DM - TODAY - Advantest blog review status",title:"You asked @avleenk: did the Advantest blog get into review? She said: Yes I routed it, let me confirm. Confirmation pending.",tags:[{c:"tr",t:"Confirmation pending"},{c:"tn",t:"Avleenk routing"}],owners:"@pawinim @avleenk",url:"https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1779210959156309",date:"May 19"},
-  {id:"u_cptxisv",p:"u",label:"Outlook - Computex ISV - @tcosta tagged @Pawini - TODAY",title:"Computex ISV PR is LIVE: nvidianews.nvidia.com/news/enterprise-software-leaders-build-ai-agents-with-nvidia. @nashton flagged missing SimScale link. @slevay handling partner link cleanup.",tags:[{c:"tn",t:"PR live - cleanup in progress"}],owners:"@tcosta @jboitano @madisonh @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHjyr-KAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHjyr-KAAA%3D&exvsurl=1",date:"May 27"},
-  {id:"u_twsc",p:"u",label:"Outlook - @Madison - Taiwan Supply Chain Announcement - TODAY HOT",title:"Madison: JHH wants to show Taiwan partner adoption. Pulling in GPU commitment numbers from last Computex vs this year. TW account teams now on thread. @qnolibois asking about smaller partners. You are tagged.",tags:[{c:"tr",t:"Live fast-moving thread"},{c:"tr",t:"You are tagged"}],owners:"@madisonh @qnolibois @valee @pawinim @ehsiao @ellen_chen @jimmyc",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHjysA0AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHjysA0AAA%3D&exvsurl=1",date:"May 27"},
-  {id:"u_iscreach",p:"u",label:"Outlook - ISC 2026 - @kpattany - TODAY - Event Reachout",title:"@kpattany: Please reach out to your contacts to register for NVIDIA ISC26 Executive Briefing and AWS event. Invites sent this week. Follow-up instructions to be shared.",tags:[{c:"tr",t:"Action: reach out to contacts"},{c:"tn",t:"New today"}],owners:"@kpattany @blairh @pawinim @bgadhia @bzandstein",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHveUxOAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHveUxOAAA%3D&exvsurl=1",date:"May 27"},
-  {id:"u_amat",p:"u",label:"Slack - @avleenk DM - TODAY - AMAT blog workback",title:"You asked @avleenk: do you have workback for AMAT? Also asked her to share workback for AMT blog. Semi webpage now with web team. Lam Research video approval pending - PhysicsNeMo as placeholder for now.",tags:[{c:"tr",t:"Workback needed"},{c:"tn",t:"Webpage shipped to web team"}],owners:"@pawinim @avleenk",url:"https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780003580444949",date:"May 28"},
-  {id:"u_iscdemo",p:"u",label:"Slack - @bzandstein DM - TODAY - ISC cuEST demo details",title:"@bzandstein needs ISC demo details to reuse. You said: should be same demo and video as GTC SJ - still checking email. Need to confirm and send to Becca.",tags:[{c:"tr",t:"You said checking email"},{c:"tr",t:"Becca waiting"}],owners:"@pawinim @bzandstein",url:"https://nvidia.enterprise.slack.com/archives/D0A7S94SJCQ/p1780002636689989",date:"May 28"},
-  {id:"u_samsung_mktg",p:"u",label:"Outlook - Samsung Marketing - Euna Koh - UNREAD",title:"Euna Koh (Samsung) sent updated Samsung-NVIDIA Marketing POR with attachments ahead of monthly check-in meeting. Review before the call.",tags:[{c:"tr",t:"UNREAD with attachments"},{c:"tn",t:"External Samsung"}],owners:"@pawinim @mjung @yiyiw @soyoungj",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHjyr-EAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHjyr-EAAA%3D&exvsurl=1",date:"May 26"},
-  {id:"u_tim1on1_thu",p:"u",label:"Calendar - TODAY Thu May 28 11:30 AM PT - YOU ORGANIZED",title:"Tim/Pawini 1:1 is BACK ON today at 11:30 AM PT. You organized this. Top 3 to prep: (1) TSMC slide + PR status, (2) Computex PR direction, (3) GTC Taipei POR + cuEST demo ask.",tags:[{c:"tr",t:"TODAY 11:30 AM"},{c:"tr",t:"Prep needed NOW"}],owners:"@pawinim @tcosta",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rxMD7FAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABbusDAwAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 28"},
-  {id:"u_cptx2nd",p:"u",label:"Calendar - TODAY Thu May 28 2:00 PM PT - ACTION REQUIRED",title:"CPTX/GTC Taipei 2nd Run-Through with spokespeople. Slides + script must be complete before analyst message-test. Action required: review your section of the pre-brief deck before this call.",tags:[{c:"tr",t:"TODAY 2:00 PM"},{c:"tr",t:"Script must be complete"}],owners:"@makinleyb @pawinim @slevay @tcosta @qnolibois @bgadhia @eluh @madisonh",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAFu6wL9AAA%3D&exvsurl=1&path=/calendar/item",date:"May 28"},
-  {id:"u_tsmc_slide_approv",p:"h",label:"Outlook - @pochunl - TODAY 6:37 AM UNREAD",title:"RESOLVED: Madison said we do not need to do keynote slide approval anymore. TSMC approved the PR (switched back from blog). PR is live.",tags:[{c:"tn",t:"Resolved - no action needed"}],owners:"@pawinim @pochunl @paris_fox",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAH7eitTAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAH7eitTAAA%3D&exvsurl=1",date:"May 30"},
-  {id:"u_noble",p:"u",label:"Outlook - Noble Machines / @Madison - TODAY - Humanoid PoC",title:"Madison replied today: Could you provide that in the thread with the partner? - directed at @valee. @valee needs to provide something to Noble Machines thread. Monitor for any PMM asks to you.",tags:[{c:"ta",t:"@valee to provide"},{c:"tg",t:"Monitor"}],owners:"@pawinim @valee @pochunl @ehsiao @madisonh",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHveU3lAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHveU3lAAA%3D&exvsurl=1",date:"May 29"},
-  {id:"u_webpage_broken",p:"u",label:"Slack - @ram_cherukuri @avleenk DM - TODAY - Semi webpage broken links",title:"Alsemy user story link is broken on semi webpage (Page Not Found). You confirmed it broke post-launch. ALSO: Missing logos SK + Samsung. Pending: Lam. Potential removal: KLA. ADD: Advantest. Missing link: Alsemy success story. @avleenk fixing.",tags:[{c:"tr",t:"Broken links - live"},{c:"tr",t:"Logo gaps to fix"}],owners:"@pawinim @avleenk @ram_cherukuri",url:"https://nvidia.enterprise.slack.com/archives/C0AP5KGST3J/p1780323958957969",date:"Jun 1"},
-  {id:"u_social_cosmos",p:"u",label:"Slack - @avleenk DM - TODAY - Remove Cosmos from social copy",title:"You told @avleenk: social copy needs to remove Cosmos for TSMC. @avleenk removing from LinkedIn/NVShare. X post may need to be republished. Confirm this is done.",tags:[{c:"tr",t:"Confirm removal done"},{c:"tn",t:"@avleenk handling"}],owners:"@pawinim @avleenk @meaghanf",url:"https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780320440575949",date:"Jun 1"},
-  {id:"u_cuest_qr",p:"h",label:"Slack - @avleenk @ericatsai DM - TODAY - cuEST QR code booth",title:"RESOLVED at Computex - QR code printed and placed on booth. Both cuEST and ALCHEMI QR codes on placard.",tags:[{c:"tn",t:"Resolved - Computex"}],owners:"@pawinim @avleenk @ericatsai",url:"https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780424085418249",date:"Jun 2"},
-  {id:"u_cadence_dac",p:"u",label:"Outlook - @Madison - TODAY - Cadence DAC launch coordination",title:"Cadence stock hit all-time high at $393. @avkaur flagged likely big DAC announcement coming. Madison: Ensure we launch properly at DAC if that's what they're aiming for. @KushP @Pawini @Slevay @Laila. Need NVIDIA/Cadence DAC launch plan.",tags:[{c:"tr",t:"Madison direct ask"},{c:"tn",t:"New today - post Computex"}],owners:"@pawinim @kushp @slevay @lalshihabi @madisonh",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42imAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42imAAA%3D&exvsurl=1",date:"Jun 4"},
-  {id:"u_isc_speaker",p:"u",label:"Slack - Tim/Nashton/Slevay DM - TODAY - ISC Skytalk speaker change",title:"Tim confirmed Da Yang will be the ISC Skytalk speaker. You said will change to Da. Action: update ISC Skytalk speaker assignment to @daya.",tags:[{c:"tr",t:"Update speaker to @daya"},{c:"tn",t:"Tim confirmed today"}],owners:"@pawinim @tcosta @nashton @daya @blairh",url:"https://nvidia.enterprise.slack.com/archives/C0B2JMKHN8M/p1780611886019469",date:"Jun 4"},
-  {id:"u_vera_blog",p:"u",label:"Slack - @patrina_yang @avleenk DM - TODAY - Vera Rubin blog decline",title:"Patrina Yang: whole blog is Vera Rubin, team cannot contribute. You said aligned and agreed to decline. Patrina asked you to let them know. Action: communicate the decline to whoever requested the Vera Rubin blog contribution.",tags:[{c:"tr",t:"You said will communicate decline"},{c:"tn",t:"New today"}],owners:"@pawinim @patrinay @avleenk",url:"https://nvidia.enterprise.slack.com/archives/C0ACNCEEK7Z/p1780626580697069",date:"Jun 4"},
-  {id:"u_dion",p:"u",label:"Slack - @yiyiw Group DM - TODAY - Due diligence with Dion Harris",title:"@yiyiw: Please do due-diligence with @dion_harris and list the coverage of NVIDIA energy topics within Ian's team. You said: yes I will work with Dion. Still open.",tags:[{c:"tr",t:"You said will work with Dion"},{c:"tn",t:"New today"}],owners:"@pawinim @yiyiw @dion_harris",url:"https://nvidia.enterprise.slack.com/archives/C0AGJPPHLR2/p1780686259646009",date:"Jun 5"},
-  {id:"u_isc_reg",p:"u",label:"Outlook - ISC 2026 - @kpattany - TODAY - Reach out to contacts",title:"29 clients registered for ISC Executive Briefing. @kpattany: all to personally follow up with invited customers who have not registered. You still need to reach out to your semiconductor contacts.",tags:[{c:"tr",t:"Action: reach out to Semi contacts"},{c:"tn",t:"29 registered so far"}],owners:"@pawinim @kpattany @blairh @bgadhia",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42hLAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42hLAAA%3D&exvsurl=1",date:"Jun 3"},
-  {id:"h1",p:"h",label:"Outlook - @Madison - May 9 IE Computex PR",title:"Madison: Dedicated blog for all ISVs, surface top ones into NAT PR. Take advantage of Cadence demo embedded in asset.",tags:[{c:"ta",t:"Madison direction"},{c:"tg",t:"Computex PR"}],owners:"@madisonh @tcosta @ahecht @nhereth",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe0AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGW9xe0AAA%3D&exvsurl=1",date:"May 9"},
-  {id:"h2",p:"h",label:"Outlook - ISC 2026 - @anibbi tagged you",title:"cuEST + Alchemi booth pod placement. @anibbi: @Becca @Pawini for vis. @bgadhia back today.",tags:[{c:"ta",t:"Tagged for vis"},{c:"tn",t:"@bgadhia back"}],owners:"@anibbi @bzandstein @bgadhia @parts",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCSAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCSAAA%3D&exvsurl=1",date:"May 7"},
-  {id:"h3",p:"h",label:"Outlook - @Tim Costa - May 7 GTC Taipei Booth",title:"Tim hold on POR: need to determine combined demo first. Alchemi approved by Madison. Still unresolved.",tags:[{c:"ta",t:"Tim hold on POR"},{c:"tg",t:"GTC Taipei"}],owners:"@tcosta @sbonnema @madisonh",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCbAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGQsoCbAAA%3D&exvsurl=1",date:"May 7"},
-  {id:"h4",p:"h",label:"Outlook - @Madison - GTC-CPTX26 HQ PIC - UNREAD",title:"Madison: @Jennifer Chen @Demy Huang ensure groups tour both booths on @Deepu Talla calendar. TWTC booth tour not on Madison calendar - ensure PMMs block all PICs.",tags:[{c:"tn",t:"New unread"},{c:"ta",t:"GTC Taipei"}],owners:"@madisonh @jenniferc @dehuang @avleenk",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eZdAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGj4eZdAAA%3D&exvsurl=1",date:"May 12"},
-  {id:"h5",p:"h",label:"Slack - Esther Lee DM - TSMC brainstorm tomorrow",title:"Esther Lee confirmed TSMC slide brainstorm Tue May 12 11:00 AM PT. You organized this meeting.",tags:[{c:"ta",t:"Tue May 12 11:00 AM"},{c:"tg",t:"TSMC slide"}],owners:"@pawinim @eluh",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWhAAA%3D&exvsurl=1&path=/calendar/item",date:"May 12"},
-  {id:"h6",p:"h",label:"Outlook - ISC 2026 Master Thread",title:"Quantum chemistry emulation tech blog. @chporter + @bzandstein + @paltoe to drive. No due date.",tags:[{c:"ta",t:"Open"}],owners:"@gegupta @chporter @bzandstein @paltoe",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGP4qIDAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGP4qIDAAA%3D&exvsurl=1",date:"May 6"},
-  {id:"h9",p:"h",label:"Slack - @nashton @slevay DM - TODAY - Slide 13 JHH approval",title:"@nashton: removing slide 14, updating slide 13 to include Claude Code in super agent. Madison wants JHH approval on all agent diagrams first, then @slevay negotiates Cadence badge positioning with Rob.",tags:[{c:"ta",t:"JHH approval needed"},{c:"tg",t:"Computex deck"}],owners:"@nashton @slevay @pawinim @jmabry",url:"https://nvidia.enterprise.slack.com/archives/C0B33NPBZFU/p1778597952828359",date:"May 12"},
-  {id:"h10",p:"h",label:"Outlook - IE PMM Sync notes - @tcosta - TODAY",title:"Tim's sync note: @slevay to review computer plans today. Also: Tim/Pawini 1:1 was DECLINED by Tim. Follow up to reschedule if needed.",tags:[{c:"tn",t:"New today"},{c:"ta",t:"1:1 declined"}],owners:"@tcosta @slevay @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuYZAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuYZAAA%3D&exvsurl=1",date:"May 12"},
-  {id:"h11",p:"h",label:"Outlook - Siemens EDA Collaboration Review - @tcosta - TODAY",title:"Tim replied to @anbhardwaj: June is totally booked, July 2 would be great. Siemens EDA collab review meeting needs to be scheduled July 2. Action: confirm date and send invite.",tags:[{c:"tn",t:"New today"},{c:"ta",t:"Schedule for Jul 2"}],owners:"@tcosta @anbhardwaj @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuY1AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuY1AAA%3D&exvsurl=1",date:"May 12"},
-  {id:"h12",p:"h",label:"Outlook - @Tim Costa - TODAY UNREAD - Quantum Algorithm Engineering",title:"Tim forwarded quantum algorithm engineering notes: MIT Will Oliver group real-time calibration via NVQLink + CMA-ES optimizer, Google, AWS, DOE labs. Relevant to ISC quantum chemistry blog (@chporter @bzandstein @paltoe).",tags:[{c:"tn",t:"New unread"},{c:"ta",t:"ISC blog connection"}],owners:"@tcosta @chporter @bzandstein @paltoe @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwAOSxSUXXV5QbTVwcytwnGBAAANgF0gAAAOSxSUXXV5QbTVwcytwnGBAAGrCzF3AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwAOSxSUXXV5QbTVwcytwnGBAAANgF0gAAAOSxSUXXV5QbTVwcytwnGBAAGrCzF3AAA%3D&exvsurl=1",date:"May 13"},
-  {id:"h13",p:"h",label:"Outlook - @Madison - GTC-CPTX26 KR meetings - TODAY",title:"Madison added @SunnyLee @TaehoKim @SukwonChung @SoyoungJeong for KR meetings/activities at GTC Taipei. Ensure Korean activities are covered in PMM POR.",tags:[{c:"tn",t:"New today"},{c:"ta",t:"GTC Taipei KR"}],owners:"@madisonh @soyoungj @qnolibois @dehuang @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuZaAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGqvuZaAAA%3D&exvsurl=1",date:"May 13"},
-  {id:"h17",p:"h",label:"Outlook - @Tim Costa - Sat May 17 - Top5 Reply UNREAD",title:"Tim replied to Top5 Things Industrial Engineering AI Physics: Thanks for the top5. AI is revolutionizing engineering and this work is essential. For AI physics/PN benchmarking make sure we are collaborating and not creating confusion.",tags:[{c:"tn",t:"Tim replied - UNREAD"},{c:"ta",t:"Align on AI physics/PN"}],owners:"@tcosta @pawinim @rranade",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwAOSxSUXXV5QbTVwcytwnGBAAANgF0gAAAOSxSUXXV5QbTVwcytwnGBAAG6qP-OAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwAOSxSUXXV5QbTVwcytwnGBAAANgF0gAAAOSxSUXXV5QbTVwcytwnGBAAG6qP%2FOAAA%3D&exvsurl=1",date:"May 17"},
-  {id:"h18",p:"h",label:"Slack - @avleenk DM - TODAY - DAC event feels weak",title:"Avleenk: event feels weak with $50K budget. Need to close event objectives, partner priorities, PSG. She will tag PICs in DAC channel. You: ask Kush to get involved, 3 ISV P0s, find partner sessions with all P0 semis.",tags:[{c:"ta",t:"Event execution open"},{c:"tg",t:"DAC Jul 26-29"}],owners:"@pawinim @avleenk @kushp @lalshihabi",url:"https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1779144893828979",date:"May 18"},
-  {id:"h19",p:"h",label:"Slack - @jmabry Group DM - TODAY - DAC Siemens QBR Friday",title:"@jmabry building deck for Friday QBR with Amit Gupta (Siemens) team. Planning Siemens EDA workstreams sprint toward DAC. @jmabry: also needs help thinking through work-back schedule for floor demo. You added @avleenk for workback schedule.",tags:[{c:"ta",t:"Friday QBR"},{c:"ta",t:"Floor demo workback needed"}],owners:"@jmabry @pawinim @avleenk @kushp",url:"https://nvidia.enterprise.slack.com/archives/C0B4R6CJ2E9/p1779208641462039",date:"May 19"},
-  {id:"h20",p:"h",label:"Slack - @sylendran DM - TODAY - CUDA-X agent skills list",title:"Sylendran asked: which CUDA-X libraries have their own agent skills? You said: will check and get back. Needs list of libraries + agent skill availability.",tags:[{c:"ta",t:"You said will check"},{c:"tg",t:"Agent skills"}],owners:"@pawinim @sylendran",url:"https://nvidia.enterprise.slack.com/archives/D0B3QU7DH0X/p1779209699796709",date:"May 19"},
-  {id:"h_iscnotes28",p:"h",label:"Outlook - ISC 2026 Meeting Notes - @blairh - TODAY UNREAD",title:"ISC 2026 meeting notes May 28 with attachments. Likely contains action items from today ISC Announcement Alignment call. Review for Semi/EDA action items.",tags:[{c:"tn",t:"UNREAD with attachments"},{c:"ta",t:"ISC actions likely inside"}],owners:"@blairh @pawinim @bgadhia @bzandstein @anibbi @gegupta",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHveU0nAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAHveU0nAAA%3D&exvsurl=1",date:"May 28"},
-  {id:"h_semicontw",p:"h",label:"Slack - @avleenk DM - TODAY - SEMICON Taiwan Michael keynote",title:"@avleenk: Who supports Michael keynote PPT for SEMICON Taiwan? You: I don't know, start thread with Tim and ask. Semi event but not Tim as speaker. PMM coverage unclear.",tags:[{c:"ta",t:"Coverage TBD"},{c:"tn",t:"New - SEMICON Taiwan"}],owners:"@avleenk @pawinim @tcosta",url:"https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780320104592139",date:"Jun 1"},
-  {id:"h_advblog",p:"h",label:"Slack - @avleenk DM - TODAY - Advantest blog cross-link timing",title:"You asked: when does Advantest blog go live? We need to cross-link it to upcoming news. Still pending from @avleenk.",tags:[{c:"ta",t:"Cross-link needed"},{c:"tn",t:"Timing TBD"}],owners:"@pawinim @avleenk",url:"https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780320263230599",date:"Jun 1"},
-  {id:"h_dac_slides",p:"h",label:"Slack - @avleenk DM - TODAY - DAC slides update + Laila PTO",title:"@avleenk planning to update main DAC email thread tomorrow once slides are in place. @lalshihabi is on PTO next week. You said go for it.",tags:[{c:"ta",t:"Avleen updating thread tomorrow"},{c:"tg",t:"Laila PTO next week"}],owners:"@avleenk @pawinim @lalshihabi",url:"https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780604372515029",date:"Jun 4"},
-  {id:"h_siemens_workshop",p:"h",label:"Outlook - Siemens EDA Agent Workshop Day 1 - @tcosta tagged @nashton",title:"@jmabry sent Day 1 meeting notes from Siemens EDA Agent Workshop (Jun 2). Tim replied tagging @nashton. Siemens-To4++ thread active. Check if any PMM action needed from Siemens workshop.",tags:[{c:"tn",t:"Workshop notes Jun 2"},{c:"ta",t:"Check for PMM actions"}],owners:"@tcosta @nashton @jmabry @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42g6AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42g6AAA%3D&exvsurl=1",date:"Jun 3"},
-  {id:"h_semicon_cons",p:"h",label:"Slack - @avleenk DM - TODAY - SEMICON Taiwan consortiums listing",title:"You asked @avleenk for consortiums page link (shown by someone in meeting). She confirmed Michelle shared it. You said: we need to start that too. Action: get NVIDIA listed on relevant semiconductor consortium pages.",tags:[{c:"ta",t:"You said need to start"},{c:"tg",t:"SEMICON Taiwan"}],owners:"@pawinim @avleenk",url:"https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780685328013059",date:"Jun 5"},
-  {id:"m1",p:"m",label:"Calendar - Tue May 12 8:00 AM PT",title:"ISC 2026 Weekly Planning Meeting (Jun 23-26 Hamburg)",tags:[{c:"tb",t:"Recurring"}],owners:"@blairh @anibbi @bgadhia @pawinim @bzandstein",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAn_54MAAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 12"},
-  {id:"m2",p:"m",label:"Calendar - Tue May 12 8:30 AM PT",title:"Computex Daily Sync: ISV Announcement Deliverables. Arch diagrams, partner PR/blog, opens.",tags:[{c:"tb",t:"Computex"}],owners:"@msousa @ahecht @madisonh @tcosta @pawinim @slevay",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 12"},
-  {id:"m3",p:"m",label:"Calendar - Tue May 12 11:00 AM PT",title:"TSMC Slide Brainstorm with Esther Lee. You organized this.",tags:[{c:"tb",t:"TSMC slide"},{c:"tn",t:"You organizer"}],owners:"@pawinim @eluh",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWhAAA%3D&exvsurl=1&path=/calendar/item",date:"May 12"},
-  {id:"m4",p:"m",label:"Calendar - Tue May 12 12:00 PM PT",title:"26GTC/CPTX - JHH Keynote Demo: Cadence Autonomous Agents review (@jblodgett organizer)",tags:[{c:"tb",t:"CPTX Cadence demo"}],owners:"@jblodgett @madisonh @slevay @nashton @jmabry @pawinim",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWkAAA%3D&exvsurl=1&path=/calendar/item",date:"May 12"},
-  {id:"m5",p:"m",label:"Calendar - Tue May 12 1:00 PM PT",title:"IE PMM Sync - @tcosta organizer. Key items: TSMC slide, Computex PR, ISC updates.",tags:[{c:"tb",t:"Tue 1:00 PM"}],owners:"@tcosta @slevay @bgadhia @pawinim @nashton @daya @bzandstein @jlinford",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABJTLRHAAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 12"},
-  {id:"m6",p:"m",label:"Calendar - Tue May 12 4:30 PM PT",title:"GTC Taipei 26 - NV Booth Showcase and Demo Planning weekly sync",tags:[{c:"tb",t:"GTC Taipei"},{c:"tg",t:"Recurring"}],owners:"@ssprinkles @sbonnema @slevay @nashton @pawinim @bgadhia",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q_5aRVAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFmgAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 12"},
-  {id:"m_aif",p:"m",label:"Calendar - Tue May 12 6:00 PM PT (Tomorrow)",title:"26GTC/CPTX - JHH Keynote Demo: AI Factory Computer (@jblodgett organizer)",tags:[{c:"tb",t:"CPTX AI Factory demo"}],owners:"@jblodgett @madisonh @bgadhia @pochunl @pawinim",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGkmQWnAAA%3D&exvsurl=1&path=/calendar/item",date:"May 12"},
-  {id:"m_cptxw",p:"m",label:"Calendar - Wed May 13 8:30 AM PT",title:"Computex Daily Sync: ISV Announcement Deliverables (recurring)",tags:[{c:"tb",t:"Computex"}],owners:"@msousa @ahecht @madisonh @tcosta @pawinim @slevay",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rCCk38AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 13"},
-  {id:"m_avl",p:"m",label:"Calendar - Wed May 13 12:45 PM PT",title:"Pawini + Avleen weekly sync (@avleenk organizer). Note: Avleen out sick this morning.",tags:[{c:"tb",t:"Weekly sync"},{c:"tg",t:"@avleenk sick today"}],owners:"@avleenk @pawinim",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rCCk38AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAB3NpIwAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 13"},
-  {id:"m_cdnc",p:"m",label:"Calendar - Thu May 14 8:30 AM PT",title:"NVIDIA + Cadence Joint Marketing POR (@kushp organizer). Cadence contacts: stevebr, knoth, sgartner, lautanen, sims, cronk.",tags:[{c:"tb",t:"Cadence joint marketing"}],owners:"@kushp @bgadhia @pawinim @qnolibois @madisonh @adocca",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAArW98gAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 14"},
-  {id:"m_w1",p:"m",label:"Calendar - Wed May 13 6:00 PM PT",title:"26GTC/CPTX - JHH Keynote Demo: AI Factory Computer (Daily) - @jblodgett organizer",tags:[{c:"tb",t:"CPTX daily"}],owners:"@jblodgett @madisonh @bgadhia @pawinim",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rCCk38AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABrT-FWAAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 13"},
-  {id:"m_t2",p:"m",label:"Calendar - Thu May 14 8:00 AM PT",title:"HPE May Roadmap Update - Software and Solutions (tentative)",tags:[{c:"tb",t:"HPE"},{c:"tg",t:"Tentative"}],owners:"@sbaliyara @pawinim @bgadhia @jlinford @srinivast",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAEUW5UjAAA%3D&exvsurl=1&path=/calendar/item",date:"May 14"},
-  {id:"m_t1",p:"m",label:"Calendar - Thu May 14 8:30 AM PT",title:"Computex Daily Sync: ISV Announcement Deliverables",tags:[{c:"tb",t:"Computex"}],owners:"@msousa @ahecht @madisonh @tcosta @pawinim @slevay @bgadhia @kushp",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 14"},
-  {id:"m_t3",p:"m",label:"Calendar - Thu May 14 9:00 AM PT",title:"Physical AI Weekly Core Sync (@ghoyem organizer). Rolling agenda: https://docs.google.com/document/d/1cTPB8Cz4iKssA1SwurScLB7cakaUElZudd7PjgMlhX8",tags:[{c:"tb",t:"Physical AI weekly"}],owners:"@ghoyem @madisonh @avleenk @pawinim @slevay @kushp @bgadhia @qnolibois @nbradford @lalshihabi",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABbusC5AAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 14"},
-  {id:"m_t4",p:"m",label:"Calendar - Thu May 14 1:00 PM PT - YOU ORGANIZER",title:"Yiyi/Pawini Weekly 1:1 - you organized. Topics: TSMC cuEST demo ask, Samsung SAFE Forum, GTC Taipei.",tags:[{c:"tb",t:"Thu 1:00 PM"},{c:"tn",t:"You organizer"}],owners:"@pawinim @yiyiw",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAEkhuywAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 14"},
-  {id:"m_t5",p:"m",label:"Calendar - Thu May 14 1:00 PM PT",title:"Computex 2026 WWFO Announcement Summary + FAQ Kick-Off (@jeffchang organizer). You + @bgadhia @slevay @kushp @tcosta @madisonh.",tags:[{c:"tb",t:"CPTX WWFO FAQ"}],owners:"@jeffchang @pawinim @bgadhia @slevay @kushp @tcosta @madisonh",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGMEm84AAA%3D&exvsurl=1&path=/calendar/item",date:"May 14"},
-  {id:"m_t6",p:"m",label:"Calendar - Thu May 14 2:00 PM PT",title:"26GTC/CPTX - JHH Keynote Demo: AI Factory Computer (Daily) @jblodgett organizer",tags:[{c:"tb",t:"CPTX daily"}],owners:"@jblodgett @madisonh @bgadhia @pawinim",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rFLvejAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABrT-FWAAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 14"},
-  {id:"m_resc",p:"m",label:"Calendar - TODAY Fri May 15 9:30 AM PT (Tentative)",title:"Rescale + NVIDIA reconnect on upcoming conferences. You said skip (all CAE). @bgadhia @avleenk covering.",tags:[{c:"tg",t:"Tentative - you skipping"}],owners:"@bgadhia @avleenk @slevay @tcosta",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGtP8VWAAA%3D&exvsurl=1&path=/calendar/item",date:"May 15"},
-  {id:"m_fcc",p:"m",label:"Calendar - TODAY Fri May 15 10:30 AM PT",title:"26GTC/CPTX - JHH Keynote Demo: Cadence Autonomous Agents IMPORTANT meeting (@jblodgett). @slevay out, you may need to cover.",tags:[{c:"tr",t:"@slevay out"},{c:"tb",t:"CPTX Cadence demo"}],owners:"@jblodgett @madisonh @nashton @jmabry @pawinim @slevay",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGtP8VuAAA%3D&exvsurl=1&path=/calendar/item",date:"May 15"},
-  {id:"m_semi",p:"m",label:"Calendar - TODAY Fri May 15 1:30 PM PT - YOU ORGANIZED",title:"Semi/EDA Webpage Review - you organized. @yiyiw @daya @tcosta. Tim accepted.",tags:[{c:"tn",t:"You organized"},{c:"tb",t:"Semi/EDA webpage"}],owners:"@pawinim @yiyiw @daya @tcosta",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGtP8ViAAA%3D&exvsurl=1&path=/calendar/item",date:"May 15"},
-  {id:"m_faf",p:"m",label:"Calendar - TODAY Fri May 15 2:00 PM PT",title:"26GTC/CPTX - JHH Keynote Demo: AI Factory Computer Daily (@jblodgett)",tags:[{c:"tb",t:"CPTX daily"}],owners:"@jblodgett @madisonh @bgadhia @eluh @pawinim",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rIU6FKAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABrT-FWAAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 15"},
-  {id:"m_cd_m",p:"m",label:"Calendar - Mon May 18 8:30 AM PT",title:"Computex Daily Sync: ISV Announcement Deliverables (recurring)",tags:[{c:"tb",t:"Computex"}],owners:"@msousa @ahecht @madisonh @tcosta @pawinim @slevay @bgadhia @kushp",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rRwZ4-AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 18"},
-  {id:"m_pb",p:"m",label:"Calendar - Mon May 18 9:00 AM PT",title:"CPTX/GTC Taipei Prebrief - 1st Content Alignment Call (@makinleyb organizer). Large cross-functional. You + @slevay @tcosta @qnolibois @bgadhia @eluh.",tags:[{c:"tb",t:"Mon May 18"},{c:"ta",t:"CPTX/GTC Taipei"}],owners:"@makinleyb @pawinim @slevay @tcosta @qnolibois @bgadhia @eluh",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAFu6wL6AAA%3D&exvsurl=1&path=/calendar/item",date:"May 18"},
-  {id:"m_iemkt",p:"m",label:"Calendar - Mon May 18 10:00 AM PT",title:"Industrial Engineering Marketing Meeting (CAE/EDA/Semi/AI Physics) @bgadhia organizer",tags:[{c:"tb",t:"Mon May 18"}],owners:"@bgadhia @tcosta @pawinim @madisonh @daya @slevay @avleenk @kushp",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rRwZ4-AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAArW97gAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 18"},
-  {id:"m_iscm",p:"m",label:"Calendar - Mon May 18 10:00 AM PT",title:"ISC Announcement Alignment (@anibbi organizer)",tags:[{c:"tb",t:"Mon May 18"},{c:"tg",t:"ISC"}],owners:"@anibbi @pawinim @bgadhia @bzandstein @chporter @blairh @slevay",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rRwZ4-AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABjBJvNAAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 18"},
-  {id:"m_sie",p:"m",label:"Calendar - Mon May 18 1:30 PM PT - YOU ORGANIZED",title:"Siemens at Computex + GTC Taipei call - you organized with Ed Goldman, @jmabry, @slevay, @kushp + Cristina Betanzo + Niranjan Sitapure (Siemens).",tags:[{c:"tn",t:"You organized"},{c:"tb",t:"Siemens External"}],owners:"@pawinim @slevay @jmabry @kushp ed.goldman@siemens.com",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGtP8VpAAA%3D&exvsurl=1&path=/calendar/item",date:"May 18"},
-  {id:"m_iesa",p:"m",label:"Calendar - Mon May 18 3:00 PM PT - YOU ORGANIZED",title:"IE SA for GTC Taipei - you organized. @yiyiw @tcosta @daya @slevay @bgadhia @jlinford @bzandstein.",tags:[{c:"tn",t:"You organized"},{c:"tb",t:"GTC Taipei"}],owners:"@pawinim @yiyiw @tcosta @daya @slevay @bgadhia @jlinford @bzandstein",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rRwZ4-AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABrT-FbwAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 18"},
-  {id:"m_daya",p:"m",label:"Calendar - Mon May 18 11:00 AM PT",title:"Biweekly Sync with Da Yang (@daya organizer)",tags:[{c:"tb",t:"Mon May 18"}],owners:"@daya @pawinim",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rRwZ4-AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAEkhu2AAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 18"},
-  {id:"m_nvaie",p:"m",label:"Calendar - Mon May 18 10:00 AM PT",title:"Weekly NVIDIA AI Enterprise GTM (@jboitano organizer). You + @tcosta @bgadhia @madisonh @kushp @nbradford @qnolibois.",tags:[{c:"tb",t:"Mon May 18"}],owners:"@jboitano @tcosta @bgadhia @madisonh @pawinim @kushp @nbradford",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rRwZ4-AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAn_54BgAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 18"},
-  {id:"m_isch",p:"m",label:"Calendar - TODAY Mon May 18 11:00 AM PT",title:"ISC Headlines Sync (@ashapiro organizer, tentative). You + @bgadhia @slevay @qnolibois @pfox @tcosta @sstanwyck.",tags:[{c:"tb",t:"Mon 11:00 AM"},{c:"tg",t:"Tentative"}],owners:"@ashapiro @pawinim @bgadhia @slevay @qnolibois @pfox",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHBxUs-AAA%3D&exvsurl=1&path=/calendar/item",date:"May 18"},
-  {id:"m_syncp",p:"m",label:"Calendar - TODAY Mon May 18 11:30 AM PT",title:"NVIDIA + Synopsys at GTC/Computex 2026 Demo Technical Discussion. Agenda: demo objective, timeline, Computex CAE workflow demo alignment. Synopsys team: thiruven, kutzsche, gpartha, sumitv, jtharp, adityaja.",tags:[{c:"tb",t:"Mon 11:30 AM"},{c:"tg",t:"Synopsys external"}],owners:"@abreazeale @nashton @slevay @pawinim @vsellappan @gubarnes",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGtP8VzAAA%3D&exvsurl=1&path=/calendar/item",date:"May 18"},
-  {id:"m_sw",p:"m",label:"Calendar - TODAY Mon May 18 12:45 PM PT",title:"Semi webpage sync (@avleenk organizer). Leadership feedback on technology section. Yiyi reviewing page now.",tags:[{c:"tb",t:"Mon 12:45 PM"},{c:"tn",t:"In progress"}],owners:"@avleenk @pawinim @yiyiw @bmathias @dchan",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHBxUtDAAA%3D&exvsurl=1&path=/calendar/item",date:"May 18"},
-  {id:"m_str",p:"m",label:"Calendar - TODAY Mon May 18 2:00 PM PT",title:"Structural Analysis Content (@boliveri organizer, tentative). You + @bgadhia @nbradford @avleenk @kushp @slevay @lalshihabi.",tags:[{c:"tb",t:"Mon 2:00 PM"},{c:"tg",t:"Tentative"}],owners:"@boliveri @pawinim @bgadhia @nbradford @avleenk @slevay",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHBxUtFAAA%3D&exvsurl=1&path=/calendar/item",date:"May 18"},
-  {id:"m_dac",p:"m",label:"Calendar - TODAY Mon May 18 2:30 PM PT",title:"DAC Event Sync (@molmstead organizer). Resources: DAC Event Overview, DAC Playbook, PSG tracker. You + @slevay @yiyiw @daya @jlinford @tcosta @avleenk @lalshihabi.",tags:[{c:"tb",t:"Mon 2:30 PM"},{c:"ta",t:"DAC Jul 26-29"}],owners:"@molmstead @pawinim @slevay @yiyiw @daya @jlinford @avleenk @lalshihabi @tcosta",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3q7wPquAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABbusC_QAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 18"},
-  {id:"m_scad",p:"m",label:"Calendar - Tue May 19 8:30 AM PT",title:"NVIDIA + Siemens Partnership Marketing cadence call (Cristina Betanzo organizer). Monthly recurring. Large Siemens team + @madisonh @bgadhia @kushp @qnolibois @pawinim @ipegler.",tags:[{c:"tb",t:"Tue May 19"},{c:"tg",t:"Siemens external"}],owners:"@pawinim @kushp @bgadhia @madisonh @qnolibois @ipegler cristina.betanzo@siemens.com",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rU5kfmAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABhMostQAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 19"},
-  {id:"m_wed_cd",p:"m",label:"Calendar - TODAY Wed May 27 8:30 AM PT",title:"Computex Daily Sync: ISV Announcement Deliverables. Agenda: Arch Diagrams, Partner PR/Blog, Opens.",tags:[{c:"tb",t:"TODAY Computex"}],owners:"@msousa @ahecht @madisonh @tcosta @pawinim @slevay @bgadhia @kushp",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3ruC5UeAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 27"},
-  {id:"m_wed_isc",p:"m",label:"Calendar - TODAY Wed May 27 10:00 AM PT",title:"ISC26 Demo Call (@hpetty organizer). Individual demo PICs check status. cuEST + Alchemi demo for ISC26 Hamburg Jun 23-26.",tags:[{c:"tb",t:"TODAY ISC26"}],owners:"@hpetty @bzandstein @pawinim @nashton @slevay @blairh @nharrigan",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHv817dAAA%3D&exvsurl=1&path=/calendar/item",date:"May 27"},
-  {id:"m_wed_av",p:"m",label:"Calendar - TODAY Wed May 27 12:45 PM PT",title:"Pawini + Avleen weekly sync",tags:[{c:"tb",t:"TODAY 12:45 PM"}],owners:"@avleenk @pawinim",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3ruC5UeAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAB3NpIwAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 27"},
-  {id:"m_wed_dac",p:"m",label:"Calendar - TODAY Wed May 27 3:00 PM PT",title:"DAC Event Sync (@molmstead). Moved from Mon for Memorial Day. DAC Jul 26-29 SF.",tags:[{c:"tb",t:"TODAY 3:00 PM"},{c:"ta",t:"DAC"}],owners:"@molmstead @pawinim @avleenk @kushp @tcosta @slevay @yiyiw @lalshihabi",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rnwkHQAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABbusC_QAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 27"},
-  {id:"m_wed_bc",p:"m",label:"Calendar - TODAY Wed May 27 6:00 PM PT (Thu 9am Taiwan)",title:"GTC Taipei 2026 WWFO Bootcamp final content sync. Moved to Wed evening PT to accommodate speakers traveling. You + @bgadhia @pawinim + full bootcamp team.",tags:[{c:"tb",t:"TODAY 6:00 PM PT"},{c:"tr",t:"FINAL before Computex"}],owners:"@ndivakarla @pawinim @bgadhia @madisonh @tcosta @jboitano @adocca @eluh @valee",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHUsGLIAAA%3D&exvsurl=1&path=/calendar/item",date:"May 27"},
-  {id:"m_thu_alc",p:"m",label:"Calendar - Thu May 28 6:00 AM PT (Thu 9pm Taiwan)",title:"Training on ALCHEMI+cuEST demo (D406) for Computex. @ericat organizer. ALCHEMI + cuEST sharing booth - demos are distinct. You + @bzandstein @rparrish @gegupta @pochunl @nfedik.",tags:[{c:"tb",t:"Thu May 28"},{c:"tr",t:"Pre-Computex demo training"}],owners:"@ericat @pawinim @bzandstein @rparrish @gegupta @pochunl @nfedik @abreazeale",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHI8CzhAAA%3D&exvsurl=1&path=/calendar/item",date:"May 28"},
-  {id:"m_thu_cd",p:"m",label:"Calendar - Thu May 28 8:30 AM PT",title:"Computex Daily Sync: ISV Announcement Deliverables (recurring) + NVIDIA/Cadence Joint Marketing POR (same time).",tags:[{c:"tb",t:"Thu 8:30 AM"},{c:"ta",t:"Computex + Cadence"}],owners:"@msousa @pawinim @kushp @bgadhia @madisonh @qnolibois @adocca",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rxMD7FAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFngAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 28"},
-  {id:"m_thu_isc",p:"m",label:"Calendar - Thu May 28 10:00 AM PT",title:"ISC Announcement Alignment (@anibbi organizer). Full ISC team + all speakers.",tags:[{c:"tb",t:"Thu 10:00 AM"},{c:"tg",t:"ISC"}],owners:"@anibbi @pawinim @bgadhia @bzandstein @chporter @nashton @slevay @blairh @gegupta",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rnwkHQAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABjBJvNAAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 28"},
-  {id:"m_gtctaipei",p:"m",label:"Calendar - GTC Taipei Jun 2-4 - NV Booth Planning - ONE WEEK AWAY",title:"GTC Taipei NV Booth Showcase and Demo Planning. One more touchpoint before boots on ground. Come with status on action items. Flag anything at risk.",tags:[{c:"tr",t:"ONE WEEK AWAY"},{c:"tb",t:"GTC Taipei Jun 2-4"}],owners:"@ssprinkles @pawinim @bgadhia @slevay @nashton @madisonh",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rq5ut3AAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABpJkFmgAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"Jun 2-4"},
-  {id:"m_physai_thu",p:"m",label:"Calendar - TODAY Thu May 28 11:00 AM PT",title:"Physical AI Weekly Core Sync. Rolling agenda doc linked in invite. @ghoyem organizer.",tags:[{c:"tb",t:"TODAY 11:00 AM"}],owners:"@ghoyem @pawinim @slevay @avleenk @kushp @madisonh @qnolibois @bgadhia @lalshihabi",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rxMD7FAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABbusC5AAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 28"},
-  {id:"m_yiyi_thu",p:"m",label:"Calendar - TODAY Thu May 28 12:00 PM PT - YOU ORGANIZED",title:"Yiyi/Pawini Weekly 1:1. Topics: TSMC cuEST demo ask (Vanessa response?), Samsung SAFE Forum, GTC Taipei KR coverage.",tags:[{c:"tb",t:"TODAY 12:00 PM"},{c:"tn",t:"You organized"}],owners:"@pawinim @yiyiw",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3rxMD7FAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAEkhuywAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"May 28"},
-  {id:"m_wwfo_faq",p:"m",label:"Calendar - TODAY Thu May 28 12:00 PM PT",title:"Computex 2026 WWFO Announcement Summary + FAQ Sign-Off (@jeffchang organizer). This is the sign-off meeting - come prepared.",tags:[{c:"tb",t:"TODAY 12:00 PM"},{c:"tr",t:"Sign-off required"}],owners:"@jeffchang @pawinim @bgadhia @slevay @kushp @tcosta @madisonh @adocca",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAGMEm83AAA%3D&exvsurl=1&path=/calendar/item",date:"May 28"},
-  {id:"m_bootcamp_spk",p:"m",label:"Calendar - TODAY Thu May 28 4:30-6:00 PM PT",title:"Speaker/Moderator Invite: GTC Taipei Bootcamp + Mandatory Training: GTC Taipei Bootcamp for WWFO (2 hours via Teams). Back-to-back.",tags:[{c:"tb",t:"TODAY 4:30-8:00 PM"},{c:"tr",t:"Mandatory training"}],owners:"@ndivakarla @pawinim @bgadhia @adocca @madisonh",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHv817aAAA%3D&exvsurl=1&path=/calendar/item",date:"May 28"},
-  {id:"m_postbrief",p:"m",label:"Calendar - TODAY Thu May 28 7:00 PM PT",title:"CPTX Physical AI Post-Brief Content Alignment Call 2 (@paris_fox organizer). Deck + script linked in invite. You + @bgadhia @slevay @qnolibois @madisonh @eluh @adocca @ansleyd.",tags:[{c:"tb",t:"TODAY 7:00 PM"},{c:"ta",t:"Post-brief alignment"}],owners:"@paris_fox @pawinim @bgadhia @slevay @qnolibois @madisonh @eluh",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAHI8CzUAAA%3D&exvsurl=1&path=/calendar/item",date:"May 28"},
-  {{id:"m_jun1_briefing",p:"u",label:"Calendar - TODAY Mon Jun 1 7:00 AM PT (10pm Taipei)",title:"NVIDIA COMPUTEX 2026 Physical AI News Briefing (ceyu organizer). You + @bgadhia @slevay @qnolibois @paris_fox @eluh @adocca @madisonh. 30 min Teams.",tags:[{{c:"tr",t:"TODAY - Computex Day 1"}}],owners:"@pawinim @bgadhia @slevay @qnolibois @paris_fox @madisonh",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAH-O38yAAA%3D&exvsurl=1&path=/calendar/item",date:"Jun 1"}},
-  {{id:"m_jun1_debrief",p:"m",label:"Calendar - TODAY Mon Jun 1 7:30 AM PT",title:"Physical AI Briefing Debrief (qnolibois organizer). You + full press team + @madisonh @slevay @paris_fox @eluh.",tags:[{{c:"tb",t:"TODAY 7:30 AM"}}],owners:"@qnolibois @pawinim @slevay @paris_fox @madisonh",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAH-O381AAA%3D&exvsurl=1&path=/calendar/item",date:"Jun 1"}},
-  {{id:"m_jun1_synopsys",p:"m",label:"Calendar - TODAY Mon Jun 1 3:00 PM PT",title:"Synopsys To4++ bi-weekly internal sync (gubarnes organizer). @tcosta @madisonh @yiyiw @avleenk @bgadhia @kushp @lalshihabi @pawinim.",tags:[{{c:"tb",t:"TODAY 3:00 PM"}}],owners:"@gubarnes @pawinim @tcosta @madisonh @yiyiw @avleenk @bgadhia @kushp",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3r9wuVhAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAA9F26wAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"Jun 1"}},
-  {{id:"m_jun1_iesa",p:"m",label:"Calendar - TODAY Mon Jun 1 4:30 PM PT",title:"IE SA Review with Da Yang (@daya organizer). Just you + @daya.",tags:[{{c:"tb",t:"TODAY 4:30 PM"}}],owners:"@daya @pawinim",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAH-O380AAA%3D&exvsurl=1&path=/calendar/item",date:"Jun 1"}},
-  {{id:"m_jun2_mediatek",p:"m",label:"Calendar - Tue Jun 2 12:00 AM PT (Taipei 3pm)",title:"MediaTek public booth at Computex 2026 - Nangang Hall 1 4F L0818. Tentative. You + @avleenk @ehsiao @lalshihabi + MediaTek contacts.",tags:[{{c:"tg",t:"Tentative"},{c:"tb",t:"Computex - MediaTek booth"}}],owners:"@pawinim @avleenk @ehsiao @lalshihabi",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAH-O38wAAA%3D&exvsurl=1&path=/calendar/item",date:"Jun 2"}},
-  {{id:"m_jun2_isc",p:"m",label:"Calendar - Tue Jun 2 8:00 AM PT",title:"ISC 2026 Weekly Planning Meeting (blairh organizer). Full ISC team. Jun 23-26 Hamburg.",tags:[{{c:"tb",t:"Tue 8:00 AM"},{c:"tg",t:"ISC recurring"}}],owners:"@blairh @pawinim @bgadhia @bzandstein @anibbi @nashton @slevay @avleenk",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3sA548IAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQAAn_54MAAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"Jun 2"}},
-  {{id:"m_jun2_siemens",p:"m",label:"Calendar - Tue Jun 2 8:30 AM PT",title:"NVIDIA/Siemens Partnership Marketing Cadence Call (Cristina Betanzo organizer). Monthly recurring. Full Siemens + NVIDIA teams.",tags:[{{c:"tb",t:"Tue 8:30 AM"},{c:"tg",t:"Siemens external"}}],owners:"@pawinim @kushp @bgadhia @madisonh @qnolibois cristina.betanzo@siemens.com ed.goldman@siemens.com",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3sA548IAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABhMostQAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"Jun 2"}},
-  {{id:"m_jun2_isc_align",p:"m",label:"Calendar - Tue Jun 2 10:00 AM PT",title:"ISC Announcement Alignment (anibbi organizer). Full ISC announcement team.",tags:[{{c:"tb",t:"Tue 10:00 AM"},{c:"tg",t:"ISC"}},],owners:"@anibbi @pawinim @bgadhia @bzandstein @nashton @slevay @avleenk @gegupta @blairh",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOAFRAAgI3r9wuVhAAEYAAAAA1YQEdmHrFk6XUnaWNjuIvgcA90-eDmhsH0WOKrwx7y7spwAAAAABDQAADksUlF11eUG01cHMrcJxgQABjBJvNAAAEA%3D%3D&exvsurl=1&path=/calendar/item",date:"Jun 2"}},
-  {id:"m7",p:"m",label:"Calendar - Wed May 13 10:00 AM PT",title:"Cisco Enterprise RA + Solutions May Roadmap",tags:[{c:"tb",t:"Wed 10:00 AM"}],owners:"@ismaila @jlinford @srinivast @pawinim @bgadhia",url:"https://outlook.office365.com/owa/?itemid=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAENAAAOSxSUXXV5QbTVwcytwnGBAAEUW5UaAAA%3D&exvsurl=1&path=/calendar/item",date:"May 13"}
+const STORE_KEY = 'pmm-board-v2';
+
+const INCOMING = [
+  {id:'u1', p:'u', label:'Synopsys', title:'Synopsys -- Da Yang SA slides approval still open',
+   desc:'Arun Bhattacharya asked for better image on bullet 2 (Jun 3). @kushp sent slides Jun 4. No formal Synopsys approval confirmed. You clarified Jun 2 slides were for approval. Confirm with @kushp.',
+   owners:'@pawinim @kushp', date:'Jun 7',
+   url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i%2BBwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIPV%2BO1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem'},
+  {id:'u2', p:'u', label:'Synopsys SteerCo', title:'NV Synopsys Partnership SteerCo -- PMM awareness needed',
+   desc:'@gubarnes sent SteerCo update Jun 4 to @tcosta @madisonh @kbriski @daya. Post-GTC Taipei Synopsys partnership reset. Not explicitly tagged but touches DAC + H2 Synopsys activation. Read and confirm PMM action items.',
+   owners:'@pawinim', date:'Jun 4',
+   url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i%2BBwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIPV%2BO5AAA%3D&exvsurl=1&viewmodel=ReadMessageItem'},
+  {id:'h1', p:'h', label:'Siemens', title:'Siemens at Computex / GTC Taipei -- post-event wrap-up pending',
+   desc:'@anbhardwaj + Siemens CCO congratulated team Jun 1-3. Siemens PR live. @kushp shared NVIDIA blogs/PRs for cross-amplification. Post-event recap and amplification wrap-up still needed.',
+   owners:'@pawinim @kushp', date:'Jun 7',
+   url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i%2BBwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAH7eiw7AAA%3D&exvsurl=1&viewmodel=ReadMessageItem'},
+  {id:'h2', p:'h', label:'Synopsys', title:'Synopsys at Computex / GTC Taipei -- social posts pending amplification',
+   desc:'Synopsys social team creating posts for Da\'s slides. Pete Smith sent links to Synopsys social team. Waiting on Synopsys post links to come back to @kushp -- confirm receipt and amplify on NVIDIA channels.',
+   owners:'@pawinim @kushp', date:'Jun 7',
+   url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i%2BBwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIF1lYwAAA%3D&exvsurl=1&viewmodel=ReadMessageItem'},
+  {id:'h3', p:'h', label:'Cadence', title:'Cadence at Computex / GTC Taipei -- PR confirmation needed',
+   desc:'Cadence sent preemptive PR link with NVIDIA edits incorporated May 31. Confirm this was approved and went live -- no NVIDIA sign-off confirmation visible.',
+   owners:'@pawinim', date:'May 31',
+   url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i%2BBwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAH7eivCAAA%3D&exvsurl=1&viewmodel=ReadMessageItem'},
+  {id:'m1', p:'m', label:'AMAT Blog', title:'AMAT tech blog -- scheduled Jun 24, no active thread visible',
+   desc:'No emails surfacing on AMAT tech blog scheduled Jun 24. 17 days out -- proactive check needed this week to confirm on track.',
+   owners:'@pawinim', date:'Jun 24'},
+  {id:'m2', p:'m', label:'DAC', title:'DAC announcement plan -- end of May target passed, needs reset',
+   desc:'Top5 had DAC plan targeted end of May. No active thread visible. DAC is Jul 26-29 -- 7 weeks out. Follow up with @anbhardwaj (Siemens EDA), @kyoun (Samsung), @tcosta.',
+   owners:'@pawinim @anbhardwaj @kyoun @tcosta', date:'Jul 26'},
 ];
-var STATE={},STATE_SHA=null,saveTimer=null;
-function showErr(msg){var el=document.getElementById("err-msg");el.textContent=msg;el.style.display=msg?"block":"none";}
-function setSync(s){var el=document.getElementById("ss");el.className="ss ss-"+s;el.textContent=s==="ok"?"synced":s==="saving"?"saving...":"sync error - tap to retry";}
-function toB64(str){var bytes=new TextEncoder().encode(str);var binary="";bytes.forEach(function(b){binary+=String.fromCharCode(b);});return btoa(binary);}
-async function loadState(){
-  try{
-    var r=await fetch(RAW+"?t="+Date.now(),{cache:"no-store"});
-    if(!r.ok)throw new Error("HTTP "+r.status);
-    STATE=await r.json();
-    var r2=await fetch(API,{headers:{"Authorization":"token "+TA,"Accept":"application/vnd.github+json"},cache:"no-store"});
-    if(!r2.ok)throw new Error("SHA fetch HTTP "+r2.status);
-    var d=await r2.json();STATE_SHA=d.sha;setSync("ok");showErr("");
-  }catch(e){setSync("err");showErr("Could not load saved state: "+e.message);STATE={};}
+
+const RESOLVED = [
+  {id:'r1', p:'done', label:'TSMC PR', title:'TSMC PR -- approved and sent', desc:'Paris Fox confirmed TSMC approved Jun 1. You thanked team. CLOSED.', owners:'@pawinim', date:'Jun 1'},
+  {id:'r2', p:'done', label:'Synopsys OIP', title:'Synopsys OIP joint presentation -- passed', desc:'You passed May 11. Arvind confirmed gracefully May 12. CLOSED.', owners:'@pawinim', date:'May 12'},
+  {id:'r3', p:'done', label:'Siemens DSX', title:'Siemens DSX PR -- went live', desc:'Siemens PR live Jun 1. CLOSED.', owners:'@kushp', date:'Jun 1'},
+];
+
+function getStore() {
+  try { return JSON.parse(localStorage.getItem(STORE_KEY) || '{}'); } catch(e) { return {}; }
 }
-async function saveState(){
-  if(!STATE_SHA){setSync("err");showErr("No SHA - reload page to fix");return;}
-  setSync("saving");
-  try{
-    var content=toB64(JSON.stringify(STATE,null,2));
-    var body=JSON.stringify({message:"PMM state "+new Date().toISOString(),content:content,sha:STATE_SHA});
-    var r=await fetch(API,{method:"PUT",headers:{"Authorization":"token "+TA,"Accept":"application/vnd.github+json","Content-Type":"application/json"},body:body});
-    if(!r.ok){var err=await r.json();throw new Error(err.message);}
-    var d=await r.json();STATE_SHA=d.content.sha;setSync("ok");showErr("");
-  }catch(e){setSync("err");showErr("Save failed: "+e.message);}
-}
-function forceSave(){if(document.getElementById("ss").className.includes("err")){STATE_SHA=null;loadState().then(function(){saveState();});}else{saveState();}}
-function debSave(){clearTimeout(saveTimer);saveTimer=setTimeout(saveState,1500);}
-function merge(inc,st){
-  var out=Object.assign({},st);
-  inc.forEach(function(c){
-    if(!out[c.id])out[c.id]=Object.assign({},c,{done:false,doneAt:null,note:""});
-    else out[c.id]=Object.assign({},c,{done:out[c.id].done,doneAt:out[c.id].doneAt,note:out[c.id].note||""});
+function setStore(s) { localStorage.setItem(STORE_KEY, JSON.stringify(s)); }
+
+function renderAll() {
+  const store = getStore();
+  const allCards = [...INCOMING, ...RESOLVED];
+  const tabs = {urgent: [], high: [], medium: [], done: []};
+  
+  allCards.forEach(card => {
+    const isDone = store[card.id] === 'done';
+    if (card.p === 'done' || isDone) {
+      tabs.done.push({...card, isDone: true});
+    } else {
+      const key = card.p === 'u' ? 'urgent' : card.p === 'h' ? 'high' : 'medium';
+      tabs[key].push({...card, isDone: false});
+    }
   });
-  return out;
-}
-function openItem(url){
-  var parts=url.split("|||");
-  var appUrl=parts[0];
-  var webUrl=parts.length>1?parts[1]:url;
-  var isMobile=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if(isMobile&&appUrl.indexOf("ms-outlook://")===0){
-    var done=false;
-    var fallback=setTimeout(function(){if(!done){done=true;window.open(webUrl,"_blank");}},1500);
-    document.addEventListener("visibilitychange",function(){if(document.hidden){done=true;clearTimeout(fallback);}},{once:true});
-    window.location.href=appUrl;
-  } else {window.open(webUrl,"_blank");}
-}
-function mkCard(c){
-  var el=document.createElement("div");
-  el.className="card p"+(c.done?"done":c.p)+(c.done?" done":"");
-  el.id="card-"+c.id;
-  var tags=(c.tags||[]).map(function(t){return'<span class="tag '+t.c+'">'+t.t+"</span>";}).join("");
-  var dat=c.done&&c.doneAt?'<div class="dat">done '+c.doneAt+"</div>":"";
-  var noteVal=(c.note||"").replace(/</g,"&lt;").replace(/>/g,"&gt;");
-  var hasNote=(c.note||"").trim().length>0;
-  var lineCount=(c.note||"").split("\n").filter(Boolean).length;
-  el.innerHTML=
-    '<div class="chk'+(c.done?" on":"")+'" id="chk-'+c.id+'">'+(c.done?"&#10003;":"")+"</div>"+
-    '<div class="cl" id="cl-'+c.id+'">'+c.label+"</div>"+
-    '<div class="ct" id="ct-'+c.id+'">'+c.title+"</div>"+
-    '<div class="cm" id="cm-'+c.id+'">'+tags+"</div>"+
-    '<div class="ow" id="ow-'+c.id+'">'+(c.owners||"")+"</div>"+dat+
-    '<button class="expand-btn" id="expbtn-'+c.id+'">'+(hasNote?"notes ("+lineCount+" line"+(lineCount!==1?"s":"")+")":'+ add note')+"</button>"+
-    '<div class="notes-wrap'+(hasNote?" open":"")+'" id="notes-'+c.id+'">'+
-      '<textarea class="notes-ta" id="ta-'+c.id+'" placeholder="Your notes...">'+noteVal+"</textarea>"+
-      '<div class="notes-hint">auto-saves to GitHub</div>'+
-    "</div>";
-  el.querySelector(".chk").addEventListener("click",function(e){e.stopPropagation();tog(c.id);});
-  ["cl","ct","cm","ow"].forEach(function(cls){var node=el.querySelector("#"+cls+"-"+c.id);if(node)node.addEventListener("click",function(){openItem(c.url);});});
-  el.querySelector("#expbtn-"+c.id).addEventListener("click",function(e){
-    e.stopPropagation();
-    var nw=document.getElementById("notes-"+c.id);nw.classList.toggle("open");
-    if(nw.classList.contains("open"))document.getElementById("ta-"+c.id).focus();
-  });
-  var ta=el.querySelector("#ta-"+c.id);
-  ta.addEventListener("input",function(e){e.stopPropagation();STATE[c.id].note=this.value;debSave();});
-  ta.addEventListener("click",function(e){e.stopPropagation();});
-  ta.addEventListener("touchstart",function(e){e.stopPropagation();});
-  return el;
-}
-function rpanel(pid,cards){
-  var p=document.getElementById(pid);p.innerHTML="";
-  if(!cards.length){p.innerHTML='<div class="empty">nothing here</div>';return;}
-  var g={};cards.forEach(function(c){if(!g[c.date||"-"])g[c.date||"-"]=[];g[c.date||"-"].push(c);});
-  Object.keys(g).sort().forEach(function(d){
-    var div=document.createElement("div");div.className="dgrp";
-    div.innerHTML='<div class="dlbl">'+d+"</div>";
-    g[d].forEach(function(c){div.appendChild(mkCard(c));});
-    p.appendChild(div);
-  });
-}
-function render(){
-  var merged=merge(INC,STATE);STATE=merged;
-  var all=Object.values(merged);
-  var u=all.filter(function(c){return c.p==="u"&&!c.done;});
-  var h=all.filter(function(c){return c.p==="h"&&!c.done;});
-  var m=all.filter(function(c){return c.p==="m"&&!c.done;});
-  var dn=all.filter(function(c){return c.done;}).sort(function(a,b){return(b.doneAt||"").localeCompare(a.doneAt||"");});
-  rpanel("pu",u);rpanel("ph",h);rpanel("pm",m);rpanel("pdone",dn);
-  document.getElementById("cu").textContent=u.length;
-  document.getElementById("ch").textContent=h.length;
-  document.getElementById("cm").textContent=m.length;
-  document.getElementById("cd").textContent=dn.length;
-  document.getElementById("meta").textContent=META.date+" - "+META.src;
-}
-function tog(id){
-  if(!STATE[id])return;
-  STATE[id].done=!STATE[id].done;
-  STATE[id].doneAt=STATE[id].done?new Date().toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric",hour:"2-digit",minute:"2-digit"}):null;
-  render();debSave();
-}
-function sw(t,btn){
-  document.querySelectorAll(".panel").forEach(function(p){p.classList.remove("active");});
-  document.querySelectorAll(".tab").forEach(function(b){b.classList.remove("active");});
-  document.getElementById("p"+t).classList.add("active");btn.classList.add("active");
-}
-function clrDone(){
-  if(!confirm("Clear all completed items?"))return;
-  Object.keys(STATE).forEach(function(id){if(STATE[id].done)delete STATE[id];});
-  render();saveState();
+
+  document.getElementById('b-urgent').textContent = tabs.urgent.length;
+  document.getElementById('b-high').textContent = tabs.high.length;
+  document.getElementById('b-medium').textContent = tabs.medium.length;
+  document.getElementById('b-done').textContent = tabs.done.length;
+
+  renderTab('urgent', tabs.urgent, 'urgent');
+  renderTab('high', tabs.high, 'high');
+  renderTab('medium', tabs.medium, 'medium');
+  renderTab('done', tabs.done, 'done-section');
 }
 
-function openModal(){
-  document.getElementById("modal-overlay").classList.add("open");
-  setTimeout(function(){document.getElementById("new-title").focus();},100);
-}
-function closeModal(e){
-  if(!e||e.target===document.getElementById("modal-overlay")){
-    document.getElementById("modal-overlay").classList.remove("open");
-    document.getElementById("new-title").value="";
-    document.getElementById("new-label").value="";
-    document.getElementById("new-owners").value="";
-    document.getElementById("new-url").value="";
-    document.getElementById("new-priority").value="m";
+function renderTab(tabId, cards, cls) {
+  const el = document.getElementById('tab-' + tabId);
+  if (cards.length === 0) {
+    el.innerHTML = '<div class="empty">Nothing here</div>';
+    return;
   }
-}
-function addTask(){
-  var title=document.getElementById("new-title").value.trim();
-  if(!title){document.getElementById("new-title").focus();return;}
-  var label=document.getElementById("new-label").value.trim()||"Manual task - "+new Date().toLocaleDateString("en-US",{month:"short",day:"numeric"});
-  var p=document.getElementById("new-priority").value;
-  var owners=document.getElementById("new-owners").value.trim();
-  var url=document.getElementById("new-url").value.trim()||"#";
-  var id="manual-"+Date.now();
-  var today=new Date().toLocaleDateString("en-US",{month:"short",day:"numeric"});
-  STATE[id]={id:id,p:p,label:label,title:title,tags:[{c:"tg",t:"Manual"}],owners:owners,url:url,date:today,done:false,doneAt:null,note:""};
-  render();
-  debSave();
-  closeModal();
-  // Switch to the right tab
-  var tabMap={u:0,h:1,m:2};
-  var tabs=document.querySelectorAll(".tab");
-  var panels=document.querySelectorAll(".panel");
-  tabs.forEach(function(b){b.classList.remove("active");});
-  panels.forEach(function(p){p.classList.remove("active");});
-  tabs[tabMap[p]].classList.add("active");
-  panels[tabMap[p]].classList.add("active");
+  el.innerHTML = cards.map(card => `
+    <div class="section ${cls}">
+      <div class="card ${card.isDone ? 'checked' : ''}" onclick="openCard('${card.id}', '${card.url || ''}')">
+        <div class="checkbox ${card.isDone ? 'done' : ''}" onclick="toggleDone(event, '${card.id}')"></div>
+        <div class="card-body">
+          <div class="card-title">${card.title}</div>
+          <div class="card-desc">${card.desc}</div>
+          <div class="card-meta">
+            <span class="tag source">${card.label}</span>
+            <span class="tag owner">${card.owners}</span>
+            <span class="tag date">${card.date}</span>
+          </div>
+          ${card.url ? `<a class="card-link" href="${card.url}" target="_blank" onclick="event.stopPropagation()">Open in Outlook →</a>` : ''}
+        </div>
+      </div>
+    </div>
+  `).join('');
 }
 
-loadState().then(function(){render();});
+function toggleDone(e, id) {
+  e.stopPropagation();
+  const store = getStore();
+  store[id] = store[id] === 'done' ? undefined : 'done';
+  setStore(store);
+  renderAll();
+}
+
+function openCard(id, url) {
+  if (url) window.open(url, '_blank');
+}
+
+function clearDone() {
+  const store = getStore();
+  Object.keys(store).forEach(k => { if (store[k] === 'done') delete store[k]; });
+  setStore(store);
+  renderAll();
+}
+
+function showTab(name) {
+  ['urgent','high','medium','done'].forEach(t => {
+    document.getElementById('tab-' + t).style.display = t === name ? 'block' : 'none';
+    document.querySelectorAll('.tab').forEach((el, i) => {
+      el.classList.toggle('active', ['urgent','high','medium','done'][i] === name);
+    });
+  });
+}
+
+renderAll();
 </script>
-
-<button class="fab" onclick="openModal()" title="Add task">+</button>
-<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
-  <div class="modal">
-    <h2>Add Task</h2>
-    <div class="field">
-      <label>Title</label>
-      <input type="text" id="new-title" placeholder="What needs to be done?" />
-    </div>
-    <div class="field">
-      <label>Source / Context</label>
-      <input type="text" id="new-label" placeholder="e.g. Slack - @tcosta - May 12" />
-    </div>
-    <div class="field">
-      <label>Priority</label>
-      <select id="new-priority">
-        <option value="u">Urgent</option>
-        <option value="h">High</option>
-        <option value="m" selected>Medium</option>
-      </select>
-    </div>
-    <div class="field">
-      <label>Owners (optional)</label>
-      <input type="text" id="new-owners" placeholder="@person @person2" />
-    </div>
-    <div class="field">
-      <label>Link (optional)</label>
-      <input type="text" id="new-url" placeholder="https://..." />
-    </div>
-    <div class="modal-btns">
-      <button class="btn-cancel" onclick="closeModal()">Cancel</button>
-      <button class="btn-add" onclick="addTask()">Add to Board</button>
-    </div>
-  </div>
-</div>
 </body>
 </html>
