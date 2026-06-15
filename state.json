@@ -2356,5 +2356,325 @@
     "done": false,
     "doneAt": null,
     "note": ""
+  },
+  "u_dac_slate": {
+    "id": "u_dac_slate",
+    "p": "u",
+    "label": "Outlook - DAC 2026 Announcements - TODAY HOT",
+    "title": "Tim: 2-3 product announcements needed at DAC - cuDSS, cuEST, cuISS. Madison: DAC is the perfect place for specialized agents + NAT connected to CUDA-X/PhysicsNeMo. Becca/Da/Neil/John working through NAT lens at 2pm. You own the Semi/EDA product announcement slate for DAC Jul 26-29.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Tim + Madison direct ask"
+      },
+      {
+        "c": "tr",
+        "t": "Own DAC slate"
+      }
+    ],
+    "owners": "@pawinim @daya @nashton @bzandstein @jlinford @tcosta @madisonh",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xNAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xNAAA%3D&exvsurl=1",
+    "date": "Jun 15",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_cudss_dac": {
+    "id": "u_cudss_dac",
+    "p": "u",
+    "label": "Slack - DAC Group DM - TODAY - cuDSS + Synopsys SPICE",
+    "title": "Da Yang to you: SNPS announcing SPICE acceleration - connect it with cuDSS for DAC. You said cuDSS 1.0 planned for Berlin, can do pre-release at DAC. Tim: please look at cuDSS product announcement for chip design. Scope this with Da Yang.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Da Yang direct ask"
+      },
+      {
+        "c": "tr",
+        "t": "cuDSS pre-release scope needed"
+      }
+    ],
+    "owners": "@pawinim @daya @nashton @tcosta",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0BBJLWE3UY/p1781544662221229",
+    "date": "Jun 15",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_madison_pai": {
+    "id": "u_madison_pai",
+    "p": "u",
+    "label": "Outlook - @Madison - TODAY - PMMs stand down - agents signal",
+    "title": "Madison: I want all PMMs to stand down. Just PM and DevRel T5T priorities. If your priorities are not aligned to agents - I wonder what rock you are living under. Ensure your entire workstream is agent-first. Tim OOO through Jun 20.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Direct Madison signal"
+      },
+      {
+        "c": "tr",
+        "t": "Agent-first required"
+      }
+    ],
+    "owners": "@madisonh @pawinim",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xqAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xqAAA%3D&exvsurl=1",
+    "date": "Jun 15",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_siggraph": {
+    "id": "u_siggraph",
+    "p": "u",
+    "label": "Outlook - @Madison - TODAY - SIGGRAPH Physical AI Enablement",
+    "title": "Physical AI @ SIGGRAPH Enablement Kickoff - Action Required. Madison added @Pawini @Slevay @WonsikHan. Kylee Nazareno organizer. Confirm your role and action items for SIGGRAPH.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Madison tagged you"
+      },
+      {
+        "c": "tn",
+        "t": "New today"
+      }
+    ],
+    "owners": "@pawinim @slevay @madisonh @knazareno",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3x3AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3x3AAA%3D&exvsurl=1",
+    "date": "Jun 15",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_cadence_dac": {
+    "id": "u_cadence_dac",
+    "p": "u",
+    "label": "Outlook - @Madison - Cadence DAC launch coordination",
+    "title": "Cadence stock all-time high. Madison: Ensure we launch properly at DAC if that is what they are aiming for. @KushP @Pawini @Slevay @Laila. SNPS announcing SPICE acceleration. Tim: cuDSS, cuEST, cuISS product announcements needed. Full ISV + product slate for DAC needed.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Madison + Tim direct ask"
+      },
+      {
+        "c": "tr",
+        "t": "Full slate needed"
+      }
+    ],
+    "owners": "@pawinim @kushp @slevay @lalshihabi @madisonh",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42imAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42imAAA%3D&exvsurl=1",
+    "date": "Jun 15",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_vera_blog": {
+    "id": "u_vera_blog",
+    "p": "u",
+    "label": "Slack - @patrina_yang - Jun 4 - Vera Rubin blog decline",
+    "title": "Patrina Yang: whole blog is Vera Rubin, team cannot contribute. You said aligned and agreed to decline. She asked you to let them know. Communicate the decline to whoever requested the contribution.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "You said will communicate"
+      }
+    ],
+    "owners": "@pawinim @patrinay @avleenk",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0ACNCEEK7Z/p1780626580697069",
+    "date": "Jun 4",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_isc_reg": {
+    "id": "u_isc_reg",
+    "p": "u",
+    "label": "Outlook - ISC 2026 - @kpattany - Reach out to contacts",
+    "title": "29 clients registered for ISC Executive Briefing. Personally follow up with invited semiconductor contacts who have not registered yet.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Action: reach out to Semi contacts"
+      },
+      {
+        "c": "tg",
+        "t": "ISC Jun 23-26 Hamburg"
+      }
+    ],
+    "owners": "@pawinim @kpattany @blairh @bgadhia",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42hLAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42hLAAA%3D&exvsurl=1",
+    "date": "Jun 3",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_dion": {
+    "id": "u_dion",
+    "p": "u",
+    "label": "Slack - @yiyiw Group DM - Due diligence with Dion Harris",
+    "title": "@yiyiw: Please do due-diligence with @dion_harris and list coverage of NVIDIA energy topics within Ian's team. You said yes. Still open.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "You said will work with Dion"
+      }
+    ],
+    "owners": "@pawinim @yiyiw @dion_harris",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0AGJPPHLR2/p1780686259646009",
+    "date": "Jun 5",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_isc_speaker": {
+    "id": "u_isc_speaker",
+    "p": "u",
+    "label": "Slack - ISC Skytalk + Siemens DAC talk - RESOLVED",
+    "title": "RESOLVED: ISC Skytalk = Da Yang confirmed. @nashton: fine by me. Siemens EDA DAC talk: Amit Goel requested Da Yang, Tim confirmed, @nashton stays on panel.",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "Resolved"
+      }
+    ],
+    "owners": "@daya @nashton @blairh",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0B2JMKHN8M/p1780611886019469",
+    "date": "Jun 4",
+    "done": true,
+    "doneAt": "Jun 15, 2026 at 02:43 PM",
+    "note": ""
+  },
+  "u_safe_forum": {
+    "id": "u_safe_forum",
+    "p": "u",
+    "label": "Outlook - SAFE Forum - @Mia Jung - May 28 Samsung US HQ",
+    "title": "Samsung SAFE Forum: review Slide 2 NVLink Fusion / Vipin Tiwari. May 28 Samsung US HQ deadline. Confirm if submitted.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Deadline passed - confirm status"
+      }
+    ],
+    "owners": "@mjung @avleenk @jichambers @pawinim",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGJsAaqAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGJsAaqAAA%3D&exvsurl=1",
+    "date": "May 6",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h_dac_slides": {
+    "id": "h_dac_slides",
+    "p": "h",
+    "label": "Slack - @avleenk - DAC slides update",
+    "title": "@avleenk updating main DAC email thread once slides are in place. @lalshihabi on PTO next week. DAC Jul 26-29 San Francisco.",
+    "tags": [
+      {
+        "c": "ta",
+        "t": "Avleen updating thread"
+      }
+    ],
+    "owners": "@avleenk @pawinim @lalshihabi",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780604372515029",
+    "date": "Jun 4",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h_siemens_workshop": {
+    "id": "h_siemens_workshop",
+    "p": "h",
+    "label": "Outlook - Siemens EDA Agent Workshop Day 1 - Jun 2",
+    "title": "@jmabry sent Day 1 meeting notes. Tim replied tagging @nashton. Check for any PMM follow-up actions in the Siemens-To4++ thread.",
+    "tags": [
+      {
+        "c": "ta",
+        "t": "Check for PMM actions"
+      }
+    ],
+    "owners": "@tcosta @nashton @jmabry @pawinim",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42g6AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42g6AAA%3D&exvsurl=1",
+    "date": "Jun 3",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h_semicon_cons": {
+    "id": "h_semicon_cons",
+    "p": "h",
+    "label": "Slack - @avleenk DM - SEMICON Taiwan consortiums listing",
+    "title": "You said: we need to start that too. Get NVIDIA listed on relevant semiconductor consortium pages. @avleenk has the link from Michelle.",
+    "tags": [
+      {
+        "c": "ta",
+        "t": "Get NVIDIA listed"
+      }
+    ],
+    "owners": "@pawinim @avleenk",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780685328013059",
+    "date": "Jun 5",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h_tim_ooo": {
+    "id": "h_tim_ooo",
+    "p": "h",
+    "label": "Outlook - @Tim Costa OOO through Jun 20",
+    "title": "Tim OOO through Jun 20. On family trip. Text cell phone if urgently needed. Top items to handle async: DAC product announcements, SIGGRAPH enablement, SEMES AI Forum.",
+    "tags": [
+      {
+        "c": "ta",
+        "t": "OOO through Jun 20"
+      },
+      {
+        "c": "tg",
+        "t": "Async only"
+      }
+    ],
+    "owners": "@tcosta @madisonh @pawinim",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xzAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xzAAA%3D&exvsurl=1",
+    "date": "Jun 15",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h_webpage_broken": {
+    "id": "h_webpage_broken",
+    "p": "h",
+    "label": "Semi webpage - broken links + logo gaps",
+    "title": "Alsemy user story link broken. Missing logos: SK + Samsung. Pending: Lam. Potential removal: KLA. ADD: Advantest. @avleenk is fixing from backend.",
+    "tags": [
+      {
+        "c": "ta",
+        "t": "@avleenk fixing"
+      }
+    ],
+    "owners": "@pawinim @avleenk @ram_cherukuri",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0AP5KGST3J/p1780323958957969",
+    "date": "Jun 1",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h_isc_main": {
+    "id": "h_isc_main",
+    "p": "h",
+    "label": "ISC 2026 - Jun 23-26 Hamburg - 8 DAYS AWAY",
+    "title": "ISC Hamburg Jun 23-26. cuEST + Alchemi demo. ISC Skytalk: Da Yang. ISC Executive Briefing + AWS Reception registration ongoing. Press pre-brief: Fri Jun 19 8am EMEA.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "8 days away"
+      },
+      {
+        "c": "tb",
+        "t": "Jun 23-26 Hamburg"
+      }
+    ],
+    "owners": "@blairh @anibbi @bgadhia @bzandstein @pawinim @nashton @daya",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42iVAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42iVAAA%3D&exvsurl=1",
+    "date": "Jun 15",
+    "done": false,
+    "doneAt": null,
+    "note": ""
   }
 }
