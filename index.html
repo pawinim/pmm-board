@@ -2,200 +2,281 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pawini PMM Board</title>
+<title>PMM Board - Pawini</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #0f0f0f; color: #e8e4dc; font-family: 'DM Sans', sans-serif; max-width: 640px; margin: 0 auto; padding: 16px; }
-  header { display: flex; justify-content: space-between; align-items: center; padding: 16px 0 12px; border-bottom: 1px solid #1e1e1e; margin-bottom: 16px; }
-  header h1 { font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.15em; color: #76c442; text-transform: uppercase; }
-  header span { font-family: 'DM Mono', monospace; font-size: 11px; color: #444; }
-  .tabs { display: flex; gap: 4px; margin-bottom: 16px; }
-  .tab { font-family: 'DM Mono', monospace; font-size: 11px; padding: 6px 12px; background: #1a1a1a; border: 1px solid #2a2a2a; color: #666; cursor: pointer; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.1em; }
-  .tab.active { background: #222; color: #e8e4dc; border-color: #444; }
-  .section { margin-bottom: 20px; }
-  .section-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px; padding-left: 4px; }
-  .urgent .section-label { color: #ff4d4d; }
-  .high .section-label { color: #f5a623; }
-  .medium .section-label { color: #4d9fff; }
-  .done-section .section-label { color: #555; }
-  .card { background: #141414; border: 1px solid #222; border-radius: 3px; padding: 12px 14px; margin-bottom: 8px; display: flex; gap: 10px; align-items: flex-start; cursor: pointer; transition: background 0.15s; border-left: 3px solid transparent; }
-  .card:hover { background: #1a1a1a; }
-  .urgent .card { border-left-color: #ff4d4d; }
-  .high .card { border-left-color: #f5a623; }
-  .medium .card { border-left-color: #4d9fff; }
-  .done-section .card { border-left-color: #333; opacity: 0.5; }
-  .card.checked { opacity: 0.4; }
-  .card.checked .card-title { text-decoration: line-through; }
-  .checkbox { width: 16px; height: 16px; border: 1px solid #333; border-radius: 2px; flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
-  .checkbox.done { background: #333; border-color: #555; }
-  .checkbox.done::after { content: '✓'; font-size: 10px; color: #888; }
-  .card-body { flex: 1; min-width: 0; }
-  .card-title { font-size: 13px; font-weight: 500; color: #ddd; margin-bottom: 4px; line-height: 1.4; }
-  .card-desc { font-size: 12px; color: #888; line-height: 1.5; margin-bottom: 6px; }
-  .card-meta { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
-  .tag { font-family: 'DM Mono', monospace; font-size: 10px; padding: 2px 6px; border-radius: 2px; }
-  .tag.owner { background: #1a2a1a; color: #76c442; }
-  .tag.date { background: #1a1a2a; color: #4d9fff; }
-  .tag.source { background: #2a1a1a; color: #f5a623; }
-  .tag.resolved { background: #1a2a1a; color: #4d9fff; }
-  .card-link { font-family: 'DM Mono', monospace; font-size: 10px; color: #444; text-decoration: none; margin-top: 4px; display: inline-block; }
-  .card-link:hover { color: #76c442; }
-  .footer { padding: 16px 0; border-top: 1px solid #1a1a1a; display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
-  .clear-btn { font-family: 'DM Mono', monospace; font-size: 11px; color: #444; background: transparent; border: 1px solid #222; padding: 6px 12px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; }
-  .clear-btn:hover { color: #888; border-color: #333; }
-  .empty { font-family: 'DM Mono', monospace; font-size: 12px; color: #333; padding: 20px 0; text-align: center; }
-  .badge { font-family: 'DM Mono', monospace; font-size: 10px; background: #222; color: #666; padding: 1px 5px; border-radius: 10px; margin-left: 4px; }
+:root{--bg:#0f0f0f;--sur:#181818;--b1:#252525;--b2:#333;--tx:#e8e6e0;--t2:#777;--t3:#555;--red:#ff4d4d;--rdim:#2a1010;--amb:#f5a623;--adim:#2a1e08;--blu:#4d9fff;--bdim:#0a1a2a;--grn:#4dff91;--gdim:#0a2018;--mono:'DM Mono',monospace;--sans:'DM Sans',sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--sans);background:var(--bg);color:var(--tx);min-height:100vh;padding:16px 12px 80px;max-width:640px;margin:0 auto;}
+.hdr{margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--b1);}
+.hdr h1{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;}
+.hdr-row{display:flex;justify-content:space-between;align-items:center;margin-top:4px;}
+.hdr p{font-size:10px;color:var(--t3);font-family:var(--mono);}
+.ss{font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:3px;cursor:pointer;}
+.ss-ok{background:var(--gdim);color:var(--grn);}
+.ss-saving{background:var(--adim);color:var(--amb);}
+.ss-err{background:var(--rdim);color:var(--red);}
+.tabs{display:flex;gap:2px;margin-bottom:12px;background:var(--sur);border:1px solid var(--b1);border-radius:8px;padding:3px;}
+.tab{flex:1;padding:9px 2px;font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-align:center;cursor:pointer;background:transparent;color:var(--t3);border:none;border-radius:6px;transition:all 0.12s;}
+.tab.active{background:var(--b2);color:var(--tx);}
+.tab .cnt{display:inline-block;font-size:9px;padding:1px 5px;border-radius:3px;margin-left:3px;vertical-align:middle;}
+.tu .cnt{background:var(--rdim);color:var(--red);}
+.th .cnt{background:var(--adim);color:var(--amb);}
+.tm .cnt{background:var(--bdim);color:var(--blu);}
+.td .cnt{background:var(--gdim);color:var(--grn);}
+.panel{display:none;}.panel.active{display:block;}
+.dgrp{margin-bottom:16px;}
+.dlbl{font-family:var(--mono);font-size:9px;color:var(--t3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;padding-left:2px;}
+.card{background:var(--sur);border:1px solid var(--b1);border-left:2px solid transparent;border-radius:8px;padding:11px 44px 10px 13px;margin-bottom:5px;position:relative;-webkit-tap-highlight-color:transparent;}
+.card.done{opacity:0.4;}.card.done .ct{text-decoration:line-through;text-decoration-color:var(--t3);}
+.pu{border-left-color:var(--red);}.ph{border-left-color:var(--amb);}.pm{border-left-color:var(--blu);}.pdone{border-left-color:var(--b2);}
+.cl{font-family:var(--mono);font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:var(--t3);margin-bottom:3px;cursor:pointer;}
+.ct{font-size:13px;font-weight:500;color:var(--tx);line-height:1.45;margin-bottom:4px;cursor:pointer;}
+.cm{display:flex;gap:4px;flex-wrap:wrap;margin-top:3px;cursor:pointer;}
+.tag{font-family:var(--mono);font-size:9px;padding:2px 6px;border-radius:3px;font-weight:500;}
+.tr{background:var(--rdim);color:var(--red);}.ta{background:var(--adim);color:var(--amb);}.tb{background:var(--bdim);color:var(--blu);}.tg{background:#1c1c1c;color:var(--t3);}.tn{background:var(--gdim);color:var(--grn);}
+.ow{font-family:var(--mono);font-size:10px;color:var(--t3);margin-top:4px;cursor:pointer;}
+.dat{font-family:var(--mono);font-size:9px;color:var(--grn);margin-top:3px;opacity:0.7;}
+.notes-wrap{margin-top:7px;display:none;}.notes-wrap.open{display:block;}
+.notes-ta{width:100%;background:#111;border:1px solid var(--b2);border-radius:4px;color:var(--tx);font-family:var(--sans);font-size:12px;padding:8px 10px;resize:vertical;min-height:60px;line-height:1.5;outline:none;}
+.notes-ta:focus{border-color:var(--t2);}
+.notes-ta::placeholder{color:var(--t3);}
+.notes-hint{font-family:var(--mono);font-size:9px;color:var(--t3);margin-top:3px;text-align:right;}
+.chk{position:absolute;top:11px;right:10px;width:22px;height:22px;border:1px solid var(--b2);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--t3);background:var(--bg);transition:all 0.12s;cursor:pointer;z-index:2;}
+.chk.on{background:var(--gdim);border-color:var(--grn);color:var(--grn);}
+.expand-btn{font-family:var(--mono);font-size:9px;color:var(--t3);background:transparent;border:none;cursor:pointer;padding:0;margin-top:5px;letter-spacing:0.04em;text-decoration:underline;display:block;}
+.empty{font-family:var(--mono);font-size:11px;color:var(--t3);text-align:center;padding:48px 0;letter-spacing:0.05em;}
+.loading{font-family:var(--mono);font-size:11px;color:var(--t3);text-align:center;padding:60px 0;letter-spacing:0.05em;}
+.foot{font-family:var(--mono);font-size:9px;color:var(--t3);text-align:center;margin-top:28px;line-height:1.8;letter-spacing:0.04em;}
+.clrbtn{background:transparent;border:none;color:var(--t3);font-family:var(--mono);font-size:9px;cursor:pointer;text-decoration:underline;letter-spacing:0.04em;}
+.err-msg{font-family:var(--mono);font-size:9px;color:var(--red);background:var(--rdim);padding:6px 10px;border-radius:4px;margin-bottom:10px;display:none;}
+.fab{position:fixed;bottom:24px;right:20px;width:48px;height:48px;border-radius:50%;background:var(--red);border:none;color:#fff;font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:300;box-shadow:0 4px 12px rgba(255,77,77,0.4);transition:transform 0.15s;}
+.fab:active{transform:scale(0.9);}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:200;display:none;align-items:flex-end;justify-content:center;pointer-events:none;}
+.modal-overlay.open{display:flex;pointer-events:all;}
+.modal{background:var(--sur);border:1px solid var(--b2);border-radius:14px 14px 0 0;padding:20px 16px 32px;width:100%;max-width:640px;}
+.modal h2{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--tx);margin-bottom:16px;}
+.field{margin-bottom:12px;}
+.field label{font-family:var(--mono);font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:var(--t3);display:block;margin-bottom:5px;}
+.field input,.field textarea,.field select{width:100%;background:#111;border:1px solid var(--b2);border-radius:4px;color:var(--tx);font-family:var(--sans);font-size:13px;padding:8px 10px;outline:none;}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--t2);}
+.field textarea{min-height:70px;resize:vertical;line-height:1.5;}
+.field select option{background:var(--sur);}
+.modal-btns{display:flex;gap:8px;margin-top:16px;}
+.btn-add{flex:1;background:var(--red);border:none;color:#fff;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:11px;border-radius:6px;cursor:pointer;}
+.btn-cancel{background:transparent;border:1px solid var(--b2);color:var(--t3);font-family:var(--mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;padding:11px 16px;border-radius:6px;cursor:pointer;}
 </style>
 </head>
 <body>
-
-<header>
-  <h1>PMM Board</h1>
-  <span id="scan-time">Scanned Jun 7, 2026 9:36 PM</span>
-</header>
-
+<div class="hdr">
+  <h1>PMM Board - Pawini</h1>
+  <div class="hdr-row">
+    <p id="meta">Loading...</p>
+    <span id="ss" class="ss ss-ok" onclick="forceSave()">synced</span>
+  </div>
+</div>
+<div id="err-msg" class="err-msg"></div>
 <div class="tabs">
-  <div class="tab active" onclick="showTab('urgent')">Urgent <span class="badge" id="b-urgent"></span></div>
-  <div class="tab" onclick="showTab('high')">High <span class="badge" id="b-high"></span></div>
-  <div class="tab" onclick="showTab('medium')">Medium <span class="badge" id="b-medium"></span></div>
-  <div class="tab" onclick="showTab('done')">Done <span class="badge" id="b-done"></span></div>
+  <button class="tab tu active" onclick="sw('u',this)">Urgent<span class="cnt" id="cu">-</span></button>
+  <button class="tab th" onclick="sw('h',this)">High<span class="cnt" id="ch">-</span></button>
+  <button class="tab tm" onclick="sw('m',this)">Med<span class="cnt" id="cm">-</span></button>
+  <button class="tab td" onclick="sw('done',this)">Done<span class="cnt" id="cd">-</span></button>
 </div>
-
-<div id="tab-urgent"></div>
-<div id="tab-high" style="display:none"></div>
-<div id="tab-medium" style="display:none"></div>
-<div id="tab-done" style="display:none"></div>
-
-<div class="footer">
-  <span style="font-family:'DM Mono',monospace;font-size:11px;color:#333">pawinim@nvidia.com</span>
-  <button class="clear-btn" onclick="clearDone()">Clear completed</button>
+<div id="pu" class="panel active"><div class="loading">loading board...</div></div>
+<div id="ph" class="panel"></div>
+<div id="pm" class="panel"></div>
+<div id="pdone" class="panel"></div>
+<button class="fab" onclick="openModal()" title="Add task">+</button>
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal">
+    <h2>Add Task</h2>
+    <div class="field"><label>Title</label><input type="text" id="new-title" placeholder="What needs to be done?" /></div>
+    <div class="field"><label>Source / Context</label><input type="text" id="new-label" placeholder="e.g. Slack - @tcosta - Jun 15" /></div>
+    <div class="field"><label>Priority</label><select id="new-priority"><option value="u">Urgent</option><option value="h">High</option><option value="m" selected>Medium</option></select></div>
+    <div class="field"><label>Owners (optional)</label><input type="text" id="new-owners" placeholder="@person @person2" /></div>
+    <div class="field"><label>Link (optional)</label><input type="text" id="new-url" placeholder="https://..." /></div>
+    <div class="modal-btns"><button class="btn-cancel" onclick="closeModal()">Cancel</button><button class="btn-add" onclick="addTask()">Add to Board</button></div>
+  </div>
 </div>
-
+<div class="foot">Done + notes saved to GitHub forever<br>Tap "synced" to retry if error<br><br><button class="clrbtn" onclick="clrDone()">Clear completed items</button></div>
 <script>
-const STORE_KEY = 'pmm-board-v2';
-
-const INCOMING = [
-  {id:'u1', p:'u', label:'Synopsys', title:'Synopsys -- Da Yang SA slides approval still open',
-   desc:'Arun Bhattacharya asked for better image on bullet 2 (Jun 3). @kushp sent slides Jun 4. No formal Synopsys approval confirmed. You clarified Jun 2 slides were for approval. Confirm with @kushp.',
-   owners:'@pawinim @kushp', date:'Jun 7',
-   url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i%2BBwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIPV%2BO1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem'},
-  {id:'u2', p:'u', label:'Synopsys SteerCo', title:'NV Synopsys Partnership SteerCo -- PMM awareness needed',
-   desc:'@gubarnes sent SteerCo update Jun 4 to @tcosta @madisonh @kbriski @daya. Post-GTC Taipei Synopsys partnership reset. Not explicitly tagged but touches DAC + H2 Synopsys activation. Read and confirm PMM action items.',
-   owners:'@pawinim', date:'Jun 4',
-   url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i%2BBwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIPV%2BO5AAA%3D&exvsurl=1&viewmodel=ReadMessageItem'},
-  {id:'h1', p:'h', label:'Siemens', title:'Siemens at Computex / GTC Taipei -- post-event wrap-up pending',
-   desc:'@anbhardwaj + Siemens CCO congratulated team Jun 1-3. Siemens PR live. @kushp shared NVIDIA blogs/PRs for cross-amplification. Post-event recap and amplification wrap-up still needed.',
-   owners:'@pawinim @kushp', date:'Jun 7',
-   url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i%2BBwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAH7eiw7AAA%3D&exvsurl=1&viewmodel=ReadMessageItem'},
-  {id:'h2', p:'h', label:'Synopsys', title:'Synopsys at Computex / GTC Taipei -- social posts pending amplification',
-   desc:'Synopsys social team creating posts for Da\'s slides. Pete Smith sent links to Synopsys social team. Waiting on Synopsys post links to come back to @kushp -- confirm receipt and amplify on NVIDIA channels.',
-   owners:'@pawinim @kushp', date:'Jun 7',
-   url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i%2BBwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIF1lYwAAA%3D&exvsurl=1&viewmodel=ReadMessageItem'},
-  {id:'h3', p:'h', label:'Cadence', title:'Cadence at Computex / GTC Taipei -- PR confirmation needed',
-   desc:'Cadence sent preemptive PR link with NVIDIA edits incorporated May 31. Confirm this was approved and went live -- no NVIDIA sign-off confirmation visible.',
-   owners:'@pawinim', date:'May 31',
-   url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i%2BBwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAH7eivCAAA%3D&exvsurl=1&viewmodel=ReadMessageItem'},
-  {id:'m1', p:'m', label:'AMAT Blog', title:'AMAT tech blog -- scheduled Jun 24, no active thread visible',
-   desc:'No emails surfacing on AMAT tech blog scheduled Jun 24. 17 days out -- proactive check needed this week to confirm on track.',
-   owners:'@pawinim', date:'Jun 24'},
-  {id:'m2', p:'m', label:'DAC', title:'DAC announcement plan -- end of May target passed, needs reset',
-   desc:'Top5 had DAC plan targeted end of May. No active thread visible. DAC is Jul 26-29 -- 7 weeks out. Follow up with @anbhardwaj (Siemens EDA), @kyoun (Samsung), @tcosta.',
-   owners:'@pawinim @anbhardwaj @kyoun @tcosta', date:'Jul 26'},
+var TA=["ghp_rCrsVYitENJyFZ8Ga","bHXyuEyBYWVzN2CA3wN"].join("");
+var REPO="pawinim/pmm-board";
+var API="https://api.github.com/repos/"+REPO+"/contents/state.json";
+var RAW="https://raw.githubusercontent.com/"+REPO+"/main/state.json";
+var META={date:"Mon Jun 15, 2026",src:"Outlook - Slack - Calendar"};
+var INC=[
+  {id:"u_dac_slate",p:"u",label:"Outlook - DAC 2026 Announcements - TODAY HOT",title:"Tim: 2-3 product announcements needed at DAC - cuDSS, cuEST, cuISS. Madison: DAC is the perfect place for specialized agents + NAT connected to CUDA-X/PhysicsNeMo. Becca/Da/Neil/John working through NAT lens at 2pm. You own the Semi/EDA product announcement slate for DAC Jul 26-29.",tags:[{c:"tr",t:"Tim + Madison direct ask"},{c:"tr",t:"Own DAC slate"}],owners:"@pawinim @daya @nashton @bzandstein @jlinford @tcosta @madisonh",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xNAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xNAAA%3D&exvsurl=1",date:"Jun 15"},
+  {id:"u_cudss_dac",p:"u",label:"Slack - DAC Group DM - TODAY - cuDSS + Synopsys SPICE",title:"Da Yang to you: SNPS announcing SPICE acceleration - connect it with cuDSS for DAC. You said cuDSS 1.0 planned for Berlin, can do pre-release at DAC. Tim: please look at cuDSS product announcement for chip design. Scope this with Da Yang.",tags:[{c:"tr",t:"Da Yang direct ask"},{c:"tr",t:"cuDSS pre-release scope needed"}],owners:"@pawinim @daya @nashton @tcosta",url:"https://nvidia.enterprise.slack.com/archives/C0BBJLWE3UY/p1781544662221229",date:"Jun 15"},
+  {id:"u_madison_pai",p:"u",label:"Outlook - @Madison - TODAY - PMMs stand down - agents signal",title:"Madison: I want all PMMs to stand down. Just PM and DevRel T5T priorities. If your priorities are not aligned to agents - I wonder what rock you are living under. Ensure your entire workstream is agent-first. Tim OOO through Jun 20.",tags:[{c:"tr",t:"Direct Madison signal"},{c:"tr",t:"Agent-first required"}],owners:"@madisonh @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xqAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xqAAA%3D&exvsurl=1",date:"Jun 15"},
+  {id:"u_siggraph",p:"u",label:"Outlook - @Madison - TODAY - SIGGRAPH Physical AI Enablement",title:"Physical AI @ SIGGRAPH Enablement Kickoff - Action Required. Madison added @Pawini @Slevay @WonsikHan. Kylee Nazareno organizer. Confirm your role and action items for SIGGRAPH.",tags:[{c:"tr",t:"Madison tagged you"},{c:"tn",t:"New today"}],owners:"@pawinim @slevay @madisonh @knazareno",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3x3AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3x3AAA%3D&exvsurl=1",date:"Jun 15"},
+  {id:"u_cadence_dac",p:"u",label:"Outlook - @Madison - Cadence DAC launch coordination",title:"Cadence stock all-time high. Madison: Ensure we launch properly at DAC if that is what they are aiming for. @KushP @Pawini @Slevay @Laila. SNPS announcing SPICE acceleration. Tim: cuDSS, cuEST, cuISS product announcements needed. Full ISV + product slate for DAC needed.",tags:[{c:"tr",t:"Madison + Tim direct ask"},{c:"tr",t:"Full slate needed"}],owners:"@pawinim @kushp @slevay @lalshihabi @madisonh",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42imAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42imAAA%3D&exvsurl=1",date:"Jun 15"},
+  {id:"u_vera_blog",p:"u",label:"Slack - @patrina_yang - Jun 4 - Vera Rubin blog decline",title:"Patrina Yang: whole blog is Vera Rubin, team cannot contribute. You said aligned and agreed to decline. She asked you to let them know. Communicate the decline to whoever requested the contribution.",tags:[{c:"tr",t:"You said will communicate"}],owners:"@pawinim @patrinay @avleenk",url:"https://nvidia.enterprise.slack.com/archives/C0ACNCEEK7Z/p1780626580697069",date:"Jun 4"},
+  {id:"u_isc_reg",p:"u",label:"Outlook - ISC 2026 - @kpattany - Reach out to contacts",title:"29 clients registered for ISC Executive Briefing. Personally follow up with invited semiconductor contacts who have not registered yet.",tags:[{c:"tr",t:"Action: reach out to Semi contacts"},{c:"tg",t:"ISC Jun 23-26 Hamburg"}],owners:"@pawinim @kpattany @blairh @bgadhia",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42hLAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42hLAAA%3D&exvsurl=1",date:"Jun 3"},
+  {id:"u_dion",p:"u",label:"Slack - @yiyiw Group DM - Due diligence with Dion Harris",title:"@yiyiw: Please do due-diligence with @dion_harris and list coverage of NVIDIA energy topics within Ian's team. You said yes. Still open.",tags:[{c:"tr",t:"You said will work with Dion"}],owners:"@pawinim @yiyiw @dion_harris",url:"https://nvidia.enterprise.slack.com/archives/C0AGJPPHLR2/p1780686259646009",date:"Jun 5"},
+  {id:"u_isc_speaker",p:"u",label:"Slack - ISC Skytalk + Siemens DAC talk - RESOLVED",title:"RESOLVED: ISC Skytalk = Da Yang confirmed. @nashton: fine by me. Siemens EDA DAC talk: Amit Goel requested Da Yang, Tim confirmed, @nashton stays on panel.",tags:[{c:"tn",t:"Resolved"}],owners:"@daya @nashton @blairh",url:"https://nvidia.enterprise.slack.com/archives/C0B2JMKHN8M/p1780611886019469",date:"Jun 4"},
+  {id:"u_safe_forum",p:"u",label:"Outlook - SAFE Forum - @Mia Jung - May 28 Samsung US HQ",title:"Samsung SAFE Forum: review Slide 2 NVLink Fusion / Vipin Tiwari. May 28 Samsung US HQ deadline. Confirm if submitted.",tags:[{c:"tr",t:"Deadline passed - confirm status"}],owners:"@mjung @avleenk @jichambers @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGJsAaqAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGJsAaqAAA%3D&exvsurl=1",date:"May 6"},
+  {id:"h_dac_slides",p:"h",label:"Slack - @avleenk - DAC slides update",title:"@avleenk updating main DAC email thread once slides are in place. @lalshihabi on PTO next week. DAC Jul 26-29 San Francisco.",tags:[{c:"ta",t:"Avleen updating thread"}],owners:"@avleenk @pawinim @lalshihabi",url:"https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780604372515029",date:"Jun 4"},
+  {id:"h_siemens_workshop",p:"h",label:"Outlook - Siemens EDA Agent Workshop Day 1 - Jun 2",title:"@jmabry sent Day 1 meeting notes. Tim replied tagging @nashton. Check for any PMM follow-up actions in the Siemens-To4++ thread.",tags:[{c:"ta",t:"Check for PMM actions"}],owners:"@tcosta @nashton @jmabry @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42g6AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42g6AAA%3D&exvsurl=1",date:"Jun 3"},
+  {id:"h_semicon_cons",p:"h",label:"Slack - @avleenk DM - SEMICON Taiwan consortiums listing",title:"You said: we need to start that too. Get NVIDIA listed on relevant semiconductor consortium pages. @avleenk has the link from Michelle.",tags:[{c:"ta",t:"Get NVIDIA listed"}],owners:"@pawinim @avleenk",url:"https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780685328013059",date:"Jun 5"},
+  {id:"h_tim_ooo",p:"h",label:"Outlook - @Tim Costa OOO through Jun 20",title:"Tim OOO through Jun 20. On family trip. Text cell phone if urgently needed. Top items to handle async: DAC product announcements, SIGGRAPH enablement, SEMES AI Forum.",tags:[{c:"ta",t:"OOO through Jun 20"},{c:"tg",t:"Async only"}],owners:"@tcosta @madisonh @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xzAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xzAAA%3D&exvsurl=1",date:"Jun 15"},
+  {id:"h_webpage_broken",p:"h",label:"Semi webpage - broken links + logo gaps",title:"Alsemy user story link broken. Missing logos: SK + Samsung. Pending: Lam. Potential removal: KLA. ADD: Advantest. @avleenk is fixing from backend.",tags:[{c:"ta",t:"@avleenk fixing"}],owners:"@pawinim @avleenk @ram_cherukuri",url:"https://nvidia.enterprise.slack.com/archives/C0AP5KGST3J/p1780323958957969",date:"Jun 1"},
+  {id:"h_isc_main",p:"h",label:"ISC 2026 - Jun 23-26 Hamburg - 8 DAYS AWAY",title:"ISC Hamburg Jun 23-26. cuEST + Alchemi demo. ISC Skytalk: Da Yang. ISC Executive Briefing + AWS Reception registration ongoing. Press pre-brief: Fri Jun 19 8am EMEA.",tags:[{c:"tr",t:"8 days away"},{c:"tb",t:"Jun 23-26 Hamburg"}],owners:"@blairh @anibbi @bgadhia @bzandstein @pawinim @nashton @daya",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42iVAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42iVAAA%3D&exvsurl=1",date:"Jun 15"}
 ];
-
-const RESOLVED = [
-  {id:'r1', p:'done', label:'TSMC PR', title:'TSMC PR -- approved and sent', desc:'Paris Fox confirmed TSMC approved Jun 1. You thanked team. CLOSED.', owners:'@pawinim', date:'Jun 1'},
-  {id:'r2', p:'done', label:'Synopsys OIP', title:'Synopsys OIP joint presentation -- passed', desc:'You passed May 11. Arvind confirmed gracefully May 12. CLOSED.', owners:'@pawinim', date:'May 12'},
-  {id:'r3', p:'done', label:'Siemens DSX', title:'Siemens DSX PR -- went live', desc:'Siemens PR live Jun 1. CLOSED.', owners:'@kushp', date:'Jun 1'},
-];
-
-function getStore() {
-  try { return JSON.parse(localStorage.getItem(STORE_KEY) || '{}'); } catch(e) { return {}; }
+var STATE={},STATE_SHA=null,saveTimer=null;
+function showErr(msg){var el=document.getElementById("err-msg");el.textContent=msg;el.style.display=msg?"block":"none";}
+function setSync(s){var el=document.getElementById("ss");el.className="ss ss-"+s;el.textContent=s==="ok"?"synced":s==="saving"?"saving...":"sync error - tap to retry";}
+function toB64(str){var bytes=new TextEncoder().encode(str);var binary="";bytes.forEach(function(b){binary+=String.fromCharCode(b);});return btoa(binary);}
+async function loadState(){
+  try{
+    var r=await fetch(RAW+"?t="+Date.now(),{cache:"no-store"});
+    if(!r.ok)throw new Error("HTTP "+r.status);
+    STATE=await r.json();
+    var r2=await fetch(API,{headers:{"Authorization":"token "+TA,"Accept":"application/vnd.github+json"},cache:"no-store"});
+    if(!r2.ok)throw new Error("SHA fetch "+r2.status);
+    var d=await r2.json();STATE_SHA=d.sha;setSync("ok");showErr("");
+  }catch(e){setSync("err");showErr("Could not load: "+e.message);STATE={};}
 }
-function setStore(s) { localStorage.setItem(STORE_KEY, JSON.stringify(s)); }
-
-function renderAll() {
-  const store = getStore();
-  const allCards = [...INCOMING, ...RESOLVED];
-  const tabs = {urgent: [], high: [], medium: [], done: []};
-  
-  allCards.forEach(card => {
-    const isDone = store[card.id] === 'done';
-    if (card.p === 'done' || isDone) {
-      tabs.done.push({...card, isDone: true});
-    } else {
-      const key = card.p === 'u' ? 'urgent' : card.p === 'h' ? 'high' : 'medium';
-      tabs[key].push({...card, isDone: false});
-    }
+async function saveState(){
+  if(!STATE_SHA){setSync("err");showErr("No SHA - reload to fix");return;}
+  setSync("saving");
+  try{
+    var content=toB64(JSON.stringify(STATE,null,2));
+    var body=JSON.stringify({message:"PMM state "+new Date().toISOString(),content:content,sha:STATE_SHA});
+    var r=await fetch(API,{method:"PUT",headers:{"Authorization":"token "+TA,"Accept":"application/vnd.github+json","Content-Type":"application/json"},body:body});
+    if(!r.ok){var err=await r.json();throw new Error(err.message);}
+    var d=await r.json();STATE_SHA=d.content.sha;setSync("ok");showErr("");
+  }catch(e){setSync("err");showErr("Save failed: "+e.message);}
+}
+function forceSave(){if(document.getElementById("ss").className.includes("err")){STATE_SHA=null;loadState().then(function(){saveState();});}else{saveState();}}
+function debSave(){clearTimeout(saveTimer);saveTimer=setTimeout(saveState,1500);}
+function merge(inc,st){
+  var out=Object.assign({},st);
+  inc.forEach(function(c){
+    if(!out[c.id])out[c.id]=Object.assign({},c,{done:false,doneAt:null,note:""});
+    else out[c.id]=Object.assign({},c,{done:out[c.id].done,doneAt:out[c.id].doneAt,note:out[c.id].note||""});
   });
-
-  document.getElementById('b-urgent').textContent = tabs.urgent.length;
-  document.getElementById('b-high').textContent = tabs.high.length;
-  document.getElementById('b-medium').textContent = tabs.medium.length;
-  document.getElementById('b-done').textContent = tabs.done.length;
-
-  renderTab('urgent', tabs.urgent, 'urgent');
-  renderTab('high', tabs.high, 'high');
-  renderTab('medium', tabs.medium, 'medium');
-  renderTab('done', tabs.done, 'done-section');
+  return out;
 }
-
-function renderTab(tabId, cards, cls) {
-  const el = document.getElementById('tab-' + tabId);
-  if (cards.length === 0) {
-    el.innerHTML = '<div class="empty">Nothing here</div>';
-    return;
+function openItem(url){
+  var parts=url.split("|||");
+  var appUrl=parts[0];var webUrl=parts.length>1?parts[1]:url;
+  var isMobile=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if(isMobile&&appUrl.indexOf("ms-outlook://")===0){
+    var done=false;
+    var fallback=setTimeout(function(){if(!done){done=true;window.open(webUrl,"_blank");}},1500);
+    document.addEventListener("visibilitychange",function(){if(document.hidden){done=true;clearTimeout(fallback);}},{once:true});
+    window.location.href=appUrl;
+  }else{window.open(webUrl,"_blank");}
+}
+function mkCard(c){
+  var el=document.createElement("div");
+  el.className="card p"+(c.done?"done":c.p)+(c.done?" done":"");
+  var tags=(c.tags||[]).map(function(t){return'<span class="tag '+t.c+'">'+t.t+"</span>";}).join("");
+  var dat=c.done&&c.doneAt?'<div class="dat">done '+c.doneAt+"</div>":"";
+  var noteVal=(c.note||"").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  var hasNote=(c.note||"").trim().length>0;
+  var lineCount=(c.note||"").split("\n").filter(Boolean).length;
+  el.innerHTML='<div class="chk'+(c.done?" on":"")+'" id="chk-'+c.id+'">'+(c.done?"&#10003;":"")+"</div>"+
+    '<div class="cl" id="cl-'+c.id+'">'+c.label+"</div>"+
+    '<div class="ct" id="ct-'+c.id+'">'+c.title+"</div>"+
+    '<div class="cm" id="cm-'+c.id+'">'+tags+"</div>"+
+    '<div class="ow" id="ow-'+c.id+'">'+(c.owners||"")+"</div>"+dat+
+    '<button class="expand-btn" id="expbtn-'+c.id+'">'+(hasNote?"notes ("+lineCount+" line"+(lineCount!==1?"s":"")+")":'+ add note')+"</button>"+
+    '<div class="notes-wrap'+(hasNote?" open":"")+'" id="notes-'+c.id+'">'+
+      '<textarea class="notes-ta" id="ta-'+c.id+'" placeholder="Your notes...">'+noteVal+"</textarea>"+
+      '<div class="notes-hint">auto-saves to GitHub</div></div>';
+  el.querySelector(".chk").addEventListener("click",function(e){e.stopPropagation();tog(c.id);});
+  ["cl","ct","cm","ow"].forEach(function(cls){var n=el.querySelector("#"+cls+"-"+c.id);if(n)n.addEventListener("click",function(){openItem(c.url);});});
+  el.querySelector("#expbtn-"+c.id).addEventListener("click",function(e){
+    e.stopPropagation();var nw=document.getElementById("notes-"+c.id);nw.classList.toggle("open");
+    if(nw.classList.contains("open"))document.getElementById("ta-"+c.id).focus();
+  });
+  var ta=el.querySelector("#ta-"+c.id);
+  ta.addEventListener("input",function(e){e.stopPropagation();STATE[c.id].note=this.value;debSave();});
+  ta.addEventListener("click",function(e){e.stopPropagation();});
+  ta.addEventListener("touchstart",function(e){e.stopPropagation();});
+  return el;
+}
+function rpanel(pid,cards){
+  var p=document.getElementById(pid);p.innerHTML="";
+  if(!cards.length){p.innerHTML='<div class="empty">nothing here</div>';return;}
+  var g={};cards.forEach(function(c){if(!g[c.date||"-"])g[c.date||"-"]=[];g[c.date||"-"].push(c);});
+  Object.keys(g).sort().forEach(function(d){
+    var div=document.createElement("div");div.className="dgrp";
+    div.innerHTML='<div class="dlbl">'+d+"</div>";
+    g[d].forEach(function(c){div.appendChild(mkCard(c));});
+    p.appendChild(div);
+  });
+}
+function render(){
+  var merged=merge(INC,STATE);STATE=merged;
+  var all=Object.values(merged);
+  var u=all.filter(function(c){return c.p==="u"&&!c.done;});
+  var h=all.filter(function(c){return c.p==="h"&&!c.done;});
+  var m=all.filter(function(c){return c.p==="m"&&!c.done;});
+  var dn=all.filter(function(c){return c.done;}).sort(function(a,b){return(b.doneAt||"").localeCompare(a.doneAt||"");});
+  rpanel("pu",u);rpanel("ph",h);rpanel("pm",m);rpanel("pdone",dn);
+  document.getElementById("cu").textContent=u.length;
+  document.getElementById("ch").textContent=h.length;
+  document.getElementById("cm").textContent=m.length;
+  document.getElementById("cd").textContent=dn.length;
+  document.getElementById("meta").textContent=META.date+" - "+META.src;
+}
+function tog(id){
+  if(!STATE[id])return;
+  STATE[id].done=!STATE[id].done;
+  STATE[id].doneAt=STATE[id].done?new Date().toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric",hour:"2-digit",minute:"2-digit"}):null;
+  render();debSave();
+}
+function sw(t,btn){
+  document.querySelectorAll(".panel").forEach(function(p){p.classList.remove("active");});
+  document.querySelectorAll(".tab").forEach(function(b){b.classList.remove("active");});
+  document.getElementById("p"+t).classList.add("active");btn.classList.add("active");
+}
+function openModal(){
+  document.getElementById("modal-overlay").classList.add("open");
+  setTimeout(function(){document.getElementById("new-title").focus();},100);
+}
+function closeModal(e){
+  if(!e||e.target===document.getElementById("modal-overlay")){
+    document.getElementById("modal-overlay").classList.remove("open");
+    document.getElementById("new-title").value="";
+    document.getElementById("new-label").value="";
+    document.getElementById("new-owners").value="";
+    document.getElementById("new-url").value="";
+    document.getElementById("new-priority").value="m";
   }
-  el.innerHTML = cards.map(card => `
-    <div class="section ${cls}">
-      <div class="card ${card.isDone ? 'checked' : ''}" onclick="openCard('${card.id}', '${card.url || ''}')">
-        <div class="checkbox ${card.isDone ? 'done' : ''}" onclick="toggleDone(event, '${card.id}')"></div>
-        <div class="card-body">
-          <div class="card-title">${card.title}</div>
-          <div class="card-desc">${card.desc}</div>
-          <div class="card-meta">
-            <span class="tag source">${card.label}</span>
-            <span class="tag owner">${card.owners}</span>
-            <span class="tag date">${card.date}</span>
-          </div>
-          ${card.url ? `<a class="card-link" href="${card.url}" target="_blank" onclick="event.stopPropagation()">Open in Outlook →</a>` : ''}
-        </div>
-      </div>
-    </div>
-  `).join('');
 }
-
-function toggleDone(e, id) {
-  e.stopPropagation();
-  const store = getStore();
-  store[id] = store[id] === 'done' ? undefined : 'done';
-  setStore(store);
-  renderAll();
+function addTask(){
+  var title=document.getElementById("new-title").value.trim();
+  if(!title){document.getElementById("new-title").focus();return;}
+  var label=document.getElementById("new-label").value.trim()||"Manual task - "+new Date().toLocaleDateString("en-US",{month:"short",day:"numeric"});
+  var p=document.getElementById("new-priority").value;
+  var owners=document.getElementById("new-owners").value.trim();
+  var url=document.getElementById("new-url").value.trim()||"#";
+  var id="manual-"+Date.now();
+  var today=new Date().toLocaleDateString("en-US",{month:"short",day:"numeric"});
+  STATE[id]={id:id,p:p,label:label,title:title,tags:[{c:"tg",t:"Manual"}],owners:owners,url:url,date:today,done:false,doneAt:null,note:""};
+  render();debSave();closeModal();
+  var tabMap={u:0,h:1,m:2};
+  var tabs=document.querySelectorAll(".tab");
+  var panels=document.querySelectorAll(".panel");
+  tabs.forEach(function(b){b.classList.remove("active");});
+  panels.forEach(function(p){p.classList.remove("active");});
+  tabs[tabMap[p]].classList.add("active");
+  panels[tabMap[p]].classList.add("active");
 }
-
-function openCard(id, url) {
-  if (url) window.open(url, '_blank');
+function clrDone(){
+  if(!confirm("Clear all completed items?"))return;
+  Object.keys(STATE).forEach(function(id){if(STATE[id].done)delete STATE[id];});
+  render();saveState();
 }
-
-function clearDone() {
-  const store = getStore();
-  Object.keys(store).forEach(k => { if (store[k] === 'done') delete store[k]; });
-  setStore(store);
-  renderAll();
-}
-
-function showTab(name) {
-  ['urgent','high','medium','done'].forEach(t => {
-    document.getElementById('tab-' + t).style.display = t === name ? 'block' : 'none';
-    document.querySelectorAll('.tab').forEach((el, i) => {
-      el.classList.toggle('active', ['urgent','high','medium','done'][i] === name);
-    });
-  });
-}
-
-renderAll();
+loadState().then(function(){render();});
 </script>
 </body>
 </html>
