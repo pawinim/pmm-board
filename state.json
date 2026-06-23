@@ -2419,8 +2419,8 @@
     "owners": "@madisonh @pawinim",
     "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xqAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xqAAA%3D&exvsurl=1",
     "date": "Jun 15",
-    "done": false,
-    "doneAt": null,
+    "done": true,
+    "doneAt": "Jun 23, 2026 at 10:43 AM",
     "note": ""
   },
   "u_siggraph": {
@@ -2673,6 +2673,182 @@
     "owners": "@blairh @anibbi @bgadhia @bzandstein @pawinim @nashton @daya",
     "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42iVAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42iVAAA%3D&exvsurl=1",
     "date": "Jun 15",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_chengcheng": {
+    "id": "u_chengcheng",
+    "p": "u",
+    "label": "Slack - @jmabry DM - TODAY - Reach out to Chengcheng for DAC",
+    "title": "@jmabry asked if you reached out to Chengcheng (Siemens) for DAC Fuse Studio session on AI. You said: I haven't - let me start a thread and cc you. You also added @jmabry to the DAC tracker. DO THIS NOW.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "You said will do it"
+      },
+      {
+        "c": "tn",
+        "t": "New today"
+      }
+    ],
+    "owners": "@pawinim @jmabry",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0AT16PAZC4/p1781643391499499",
+    "date": "Jun 16",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_japan_sync": {
+    "id": "u_japan_sync",
+    "p": "u",
+    "label": "Slack - @paris_fox Group DM - TONIGHT - Japan sync",
+    "title": "@paris_fox added you + @bgadhia @slevay to Japan sync TONIGHT. Madison asking Japan team what is real vs not for announcements. Tim already on invite. Paris: please try to join.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Tonight - please join"
+      },
+      {
+        "c": "tr",
+        "t": "Madison + Japan announcements"
+      }
+    ],
+    "owners": "@paris_fox @pawinim @bgadhia @slevay @madisonh",
+    "url": "https://nvidia.enterprise.slack.com/archives/C0B3DRD8JJV/p1781647857407859",
+    "date": "Jun 16",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_dac_hotel": {
+    "id": "u_dac_hotel",
+    "p": "u",
+    "label": "Slack - @paris_fox DM - TODAY - Book DAC hotel NOW",
+    "title": "@paris_fox: did you book your hotel? Hotels mostly sold out. You said: will book right after DAC call. Book ASAP. Advance registration deadline June 30 - code NVIDIA26ET (Engineering Track $269) or NVIDIA26FC (Full Conference). Free I LOVE DAC - no code, deadline July 12.",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "Book hotel NOW"
+      },
+      {
+        "c": "tr",
+        "t": "Advance reg ends Jun 30"
+      }
+    ],
+    "owners": "@pawinim @paris_fox",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0A92P4UM6G/p1782162160991009",
+    "date": "Jun 22",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "u_slevay_jhh_email": {
+    "id": "u_slevay_jhh_email",
+    "p": "u",
+    "label": "Slack - @slevay DM - TODAY - JHH email library details",
+    "title": "@slevay working on JHH email draft. He needs more details on the libraries. You said: I'll get to it right after the DAC call. GDoc: docs.google.com/document/d/1sG99-5CJfjhXIfYc3Ukm2KCgqvJcBfx2Yim_wypnYr4",
+    "tags": [
+      {
+        "c": "tr",
+        "t": "You said after DAC call"
+      },
+      {
+        "c": "tr",
+        "t": "Library details needed"
+      }
+    ],
+    "owners": "@pawinim @slevay",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0AF9PPHBG8/p1782162143122789",
+    "date": "Jun 22",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h_tim_top5_reply": {
+    "id": "h_tim_top5_reply",
+    "p": "h",
+    "label": "Outlook - @Tim Costa - TODAY UNREAD - Top5 AI Physics EMEA reply",
+    "title": "Tim replied to Top5 AI Physics EMEA SA: Enjoyed the top5. Great to see all activity on agentic engineering. Board-approved Agentic Engineering platform requested our autonomous-engineer reference code directly.",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "Tim replied - UNREAD"
+      },
+      {
+        "c": "ta",
+        "t": "Agentic Engineering traction"
+      }
+    ],
+    "owners": "@tcosta @pawinim",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwAOSxSUXXV5QbTVwcytwnGBAAANgF0gAAAOSxSUXXV5QbTVwcytwnGBAAJAtKmvAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwAOSxSUXXV5QbTVwcytwnGBAAANgF0gAAAOSxSUXXV5QbTVwcytwnGBAAJAtKmvAAA%3D&exvsurl=1",
+    "date": "Jun 22",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h_dac_socials_tim": {
+    "id": "h_dac_socials_tim",
+    "p": "h",
+    "label": "Slack - @paris_fox DM - TODAY - Socials for Tim ISC address",
+    "title": "@paris_fox: did socials go out for Tim's ISC address yet? You said: from DAC but not us. @paris_fox confused. Still open - confirm whether NVIDIA social team posted about Tim's ISC address.",
+    "tags": [
+      {
+        "c": "ta",
+        "t": "Confirm social status"
+      },
+      {
+        "c": "tg",
+        "t": "ISC address"
+      }
+    ],
+    "owners": "@pawinim @paris_fox @meaghanf",
+    "url": "https://nvidia.enterprise.slack.com/archives/D0A92P4UM6G/p1782163738461469",
+    "date": "Jun 22",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h_dac_meaty": {
+    "id": "h_dac_meaty",
+    "p": "h",
+    "label": "Outlook - DAC Announcements - Tim sent full slate - Madison: AWESOME",
+    "title": "Tim sent a meaty product/library/model announcement slate for DAC last night. Madison: This is awesome! Super meaty. Get into this thread to understand your PMM execution role for DAC.",
+    "tags": [
+      {
+        "c": "tn",
+        "t": "Madison: awesome"
+      },
+      {
+        "c": "ta",
+        "t": "Get into thread"
+      }
+    ],
+    "owners": "@tcosta @madisonh @pawinim @daya @bzandstein @nashton @jlinford",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3ygAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3ygAAA%3D&exvsurl=1",
+    "date": "Jun 16",
+    "done": false,
+    "doneAt": null,
+    "note": ""
+  },
+  "h_berlin_asml": {
+    "id": "h_berlin_asml",
+    "p": "h",
+    "label": "Outlook - GTC Berlin - @Madison - ASML concern",
+    "title": "Madison: concerned about ASML at Berlin - will attract low audience. Can we do ASML at DAC instead? Then add automotive/robotaxi session at Berlin. EDA/Semi content shifting from Berlin to DAC.",
+    "tags": [
+      {
+        "c": "ta",
+        "t": "Berlin/DAC content shift"
+      },
+      {
+        "c": "tg",
+        "t": "GTC Berlin"
+      }
+    ],
+    "owners": "@madisonh @pawinim @slevay @tcosta",
+    "url": "ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3zXAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3zXAAA%3D&exvsurl=1",
+    "date": "Jun 16",
     "done": false,
     "doneAt": null,
     "note": ""
