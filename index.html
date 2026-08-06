@@ -2,306 +2,320 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PMM Board - Pawini</title>
+<title>Pawini PMM Board — Aug 6, 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0f0f0f;--sur:#181818;--b1:#252525;--b2:#333;--tx:#e8e6e0;--t2:#777;--t3:#555;--red:#ff4d4d;--rdim:#2a1010;--amb:#f5a623;--adim:#2a1e08;--blu:#4d9fff;--bdim:#0a1a2a;--grn:#4dff91;--gdim:#0a2018;--mono:'DM Mono',monospace;--sans:'DM Sans',sans-serif;}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:var(--sans);background:var(--bg);color:var(--tx);min-height:100vh;padding:16px 12px 80px;max-width:640px;margin:0 auto;}
-.hdr{margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--b1);}
-.hdr h1{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;}
-.hdr-row{display:flex;justify-content:space-between;align-items:center;margin-top:4px;}
-.hdr p{font-size:10px;color:var(--t3);font-family:var(--mono);}
-.ss{font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:3px;cursor:pointer;}
-.ss-ok{background:var(--gdim);color:var(--grn);}
-.ss-saving{background:var(--adim);color:var(--amb);}
-.ss-err{background:var(--rdim);color:var(--red);}
-.tabs{display:flex;gap:2px;margin-bottom:12px;background:var(--sur);border:1px solid var(--b1);border-radius:8px;padding:3px;}
-.tab{flex:1;padding:9px 2px;font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-align:center;cursor:pointer;background:transparent;color:var(--t3);border:none;border-radius:6px;transition:all 0.12s;}
-.tab.active{background:var(--b2);color:var(--tx);}
-.tab .cnt{display:inline-block;font-size:9px;padding:1px 5px;border-radius:3px;margin-left:3px;vertical-align:middle;}
-.tu .cnt{background:var(--rdim);color:var(--red);}
-.th .cnt{background:var(--adim);color:var(--amb);}
-.tm .cnt{background:var(--bdim);color:var(--blu);}
-.td .cnt{background:var(--gdim);color:var(--grn);}
-.panel{display:none;}.panel.active{display:block;}
-.dgrp{margin-bottom:16px;}
-.dlbl{font-family:var(--mono);font-size:9px;color:var(--t3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;padding-left:2px;}
-.card{background:var(--sur);border:1px solid var(--b1);border-left:2px solid transparent;border-radius:8px;padding:11px 44px 10px 13px;margin-bottom:5px;position:relative;-webkit-tap-highlight-color:transparent;}
-.card.done{opacity:0.4;}.card.done .ct{text-decoration:line-through;text-decoration-color:var(--t3);}
-.pu{border-left-color:var(--red);}.ph{border-left-color:var(--amb);}.pm{border-left-color:var(--blu);}.pdone{border-left-color:var(--b2);}
-.cl{font-family:var(--mono);font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:var(--t3);margin-bottom:3px;cursor:pointer;}
-.ct{font-size:13px;font-weight:500;color:var(--tx);line-height:1.45;margin-bottom:4px;cursor:pointer;}
-.cm{display:flex;gap:4px;flex-wrap:wrap;margin-top:3px;cursor:pointer;}
-.tag{font-family:var(--mono);font-size:9px;padding:2px 6px;border-radius:3px;font-weight:500;}
-.tr{background:var(--rdim);color:var(--red);}.ta{background:var(--adim);color:var(--amb);}.tb{background:var(--bdim);color:var(--blu);}.tg{background:#1c1c1c;color:var(--t3);}.tn{background:var(--gdim);color:var(--grn);}
-.ow{font-family:var(--mono);font-size:10px;color:var(--t3);margin-top:4px;cursor:pointer;}
-.dat{font-family:var(--mono);font-size:9px;color:var(--grn);margin-top:3px;opacity:0.7;}
-.notes-wrap{margin-top:7px;display:none;}.notes-wrap.open{display:block;}
-.notes-ta{width:100%;background:#111;border:1px solid var(--b2);border-radius:4px;color:var(--tx);font-family:var(--sans);font-size:12px;padding:8px 10px;resize:vertical;min-height:60px;line-height:1.5;outline:none;}
-.notes-ta:focus{border-color:var(--t2);}
-.notes-ta::placeholder{color:var(--t3);}
-.notes-hint{font-family:var(--mono);font-size:9px;color:var(--t3);margin-top:3px;text-align:right;}
-.chk{position:absolute;top:11px;right:10px;width:22px;height:22px;border:1px solid var(--b2);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--t3);background:var(--bg);transition:all 0.12s;cursor:pointer;z-index:2;}
-.chk.on{background:var(--gdim);border-color:var(--grn);color:var(--grn);}
-.expand-btn{font-family:var(--mono);font-size:9px;color:var(--t3);background:transparent;border:none;cursor:pointer;padding:0;margin-top:5px;letter-spacing:0.04em;text-decoration:underline;display:block;}
-.empty{font-family:var(--mono);font-size:11px;color:var(--t3);text-align:center;padding:48px 0;letter-spacing:0.05em;}
-.loading{font-family:var(--mono);font-size:11px;color:var(--t3);text-align:center;padding:60px 0;letter-spacing:0.05em;}
-.foot{font-family:var(--mono);font-size:9px;color:var(--t3);text-align:center;margin-top:28px;line-height:1.8;letter-spacing:0.04em;}
-.clrbtn{background:transparent;border:none;color:var(--t3);font-family:var(--mono);font-size:9px;cursor:pointer;text-decoration:underline;letter-spacing:0.04em;}
-.err-msg{font-family:var(--mono);font-size:9px;color:var(--red);background:var(--rdim);padding:6px 10px;border-radius:4px;margin-bottom:10px;display:none;}
-.fab{position:fixed;bottom:24px;right:20px;width:48px;height:48px;border-radius:50%;background:var(--red);border:none;color:#fff;font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:300;box-shadow:0 4px 12px rgba(255,77,77,0.4);transition:transform 0.15s;}
-.fab:active{transform:scale(0.9);}
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:200;display:none;align-items:flex-end;justify-content:center;pointer-events:none;}
-.modal-overlay.open{display:flex;pointer-events:all;}
-.modal{background:var(--sur);border:1px solid var(--b2);border-radius:14px 14px 0 0;padding:20px 16px 32px;width:100%;max-width:640px;}
-.modal h2{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--tx);margin-bottom:16px;}
-.field{margin-bottom:12px;}
-.field label{font-family:var(--mono);font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:var(--t3);display:block;margin-bottom:5px;}
-.field input,.field textarea,.field select{width:100%;background:#111;border:1px solid var(--b2);border-radius:4px;color:var(--tx);font-family:var(--sans);font-size:13px;padding:8px 10px;outline:none;}
-.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--t2);}
-.field textarea{min-height:70px;resize:vertical;line-height:1.5;}
-.field select option{background:var(--sur);}
-.modal-btns{display:flex;gap:8px;margin-top:16px;}
-.btn-add{flex:1;background:var(--red);border:none;color:#fff;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:11px;border-radius:6px;cursor:pointer;}
-.btn-cancel{background:transparent;border:1px solid var(--b2);color:var(--t3);font-family:var(--mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;padding:11px 16px;border-radius:6px;cursor:pointer;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0f0f0f;color:#e8e8e8;font-family:'DM Sans',sans-serif;max-width:640px;margin:0 auto;padding:16px 12px 40px}
+  h1{font-family:'DM Mono',monospace;font-size:13px;color:#888;margin-bottom:4px;letter-spacing:.04em}
+  .meta{font-size:11px;color:#555;margin-bottom:20px;font-family:'DM Mono',monospace}
+  .tabs{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
+  .tab{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:1px solid #333;background:#1a1a1a;color:#888;transition:all .15s}
+  .tab.active{background:#222;color:#e8e8e8;border-color:#555}
+  .tab .count{display:inline-block;margin-left:5px;background:#333;border-radius:10px;padding:1px 6px;font-size:10px}
+  .tab.u.active{border-color:#ff4d4d;color:#ff4d4d}
+  .tab.h.active{border-color:#f5a623;color:#f5a623}
+  .tab.m.active{border-color:#4d9fff;color:#4d9fff}
+  .tab.d.active{border-color:#555;color:#888}
+  .pane{display:none}.pane.active{display:block}
+  .card{background:#161616;border-radius:8px;padding:12px 14px;margin-bottom:10px;border-left:3px solid #333;cursor:pointer;transition:background .1s;position:relative}
+  .card:hover{background:#1c1c1c}
+  .card.u{border-left-color:#ff4d4d}
+  .card.h{border-left-color:#f5a623}
+  .card.m{border-left-color:#4d9fff}
+  .card.done-card{opacity:.45}
+  .card-header{display:flex;align-items:flex-start;gap:10px}
+  .cb{width:16px;height:16px;border-radius:4px;border:1.5px solid #444;flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .15s}
+  .cb.checked{background:#3a3a3a;border-color:#666}
+  .cb.checked::after{content:'✓';font-size:10px;color:#888}
+  .card-body{flex:1;min-width:0}
+  .card-label{font-size:10px;font-family:'DM Mono',monospace;color:#666;margin-bottom:3px;text-transform:uppercase;letter-spacing:.06em}
+  .card-title{font-size:14px;font-weight:500;color:#e0e0e0;line-height:1.4;margin-bottom:6px}
+  .card-note{font-size:12px;color:#777;line-height:1.5;margin-bottom:6px}
+  .tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+  .tag{font-size:10px;padding:2px 7px;border-radius:10px;font-family:'DM Mono',monospace}
+  .tag.tr{background:#1a2a1a;color:#5a9a5a}
+  .tag.ta{background:#2a1a1a;color:#cc6644}
+  .tag.tb{background:#1a1a2a;color:#5588cc}
+  .tag.tg{background:#2a2a1a;color:#aaaa44}
+  .tag.tn{background:#1e1a2a;color:#9988cc}
+  .done-stamp{font-size:10px;font-family:'DM Mono',monospace;color:#555;margin-top:4px}
+  .section-date{font-size:10px;font-family:'DM Mono',monospace;color:#444;margin:14px 0 6px;padding-left:2px;text-transform:uppercase;letter-spacing:.08em}
+  .footer{margin-top:24px;display:flex;justify-content:space-between;align-items:center}
+  .clear-btn{font-size:11px;color:#555;background:none;border:1px solid #333;padding:5px 12px;border-radius:6px;cursor:pointer;font-family:'DM Sans',sans-serif}
+  .clear-btn:hover{color:#888;border-color:#555}
+  .scan-info{font-size:10px;font-family:'DM Mono',monospace;color:#3a3a3a}
 </style>
 </head>
 <body>
-<div class="hdr">
-  <h1>PMM Board - Pawini</h1>
-  <div class="hdr-row">
-    <p id="meta">Loading...</p>
-    <span id="ss" class="ss ss-ok" onclick="forceSave()">synced</span>
-  </div>
-</div>
-<div id="err-msg" class="err-msg"></div>
+
+<h1>PMM BOARD — PAWINI MAHAJAN</h1>
+<div class="meta">Scanned Thu Aug 6 2026 · Semi &amp; EDA · NVIDIA Industrial</div>
+
 <div class="tabs">
-  <button class="tab tu active" onclick="sw('u',this)">Urgent<span class="cnt" id="cu">-</span></button>
-  <button class="tab th" onclick="sw('h',this)">High<span class="cnt" id="ch">-</span></button>
-  <button class="tab tm" onclick="sw('m',this)">Med<span class="cnt" id="cm">-</span></button>
-  <button class="tab td" onclick="sw('done',this)">Done<span class="cnt" id="cd">-</span></button>
+  <div class="tab u active" onclick="switchTab('u')">Urgent <span class="count" id="cnt-u">0</span></div>
+  <div class="tab h" onclick="switchTab('h')">High <span class="count" id="cnt-h">0</span></div>
+  <div class="tab m" onclick="switchTab('m')">Medium <span class="count" id="cnt-m">0</span></div>
+  <div class="tab d" onclick="switchTab('d')">Done <span class="count" id="cnt-d">0</span></div>
 </div>
-<div id="pu" class="panel active"><div class="loading">loading board...</div></div>
-<div id="ph" class="panel"></div>
-<div id="pm" class="panel"></div>
-<div id="pdone" class="panel"></div>
-<button class="fab" onclick="openModal()" title="Add task">+</button>
-<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
-  <div class="modal">
-    <h2>Add Task</h2>
-    <div class="field"><label>Title</label><input type="text" id="new-title" placeholder="What needs to be done?" /></div>
-    <div class="field"><label>Source / Context</label><input type="text" id="new-label" placeholder="e.g. Slack - @tcosta - Jun 15" /></div>
-    <div class="field"><label>Priority</label><select id="new-priority"><option value="u">Urgent</option><option value="h">High</option><option value="m" selected>Medium</option></select></div>
-    <div class="field"><label>Owners (optional)</label><input type="text" id="new-owners" placeholder="@person @person2" /></div>
-    <div class="field"><label>Link (optional)</label><input type="text" id="new-url" placeholder="https://..." /></div>
-    <div class="modal-btns"><button class="btn-cancel" onclick="closeModal()">Cancel</button><button class="btn-add" onclick="addTask()">Add to Board</button></div>
-  </div>
+
+<div id="pane-u" class="pane active"></div>
+<div id="pane-h" class="pane"></div>
+<div id="pane-m" class="pane"></div>
+<div id="pane-d" class="pane"></div>
+
+<div class="footer">
+  <button class="clear-btn" onclick="clearDone()">Clear completed items</button>
+  <span class="scan-info">pawinim.github.io/pmm-board</span>
 </div>
-<div class="foot">Done + notes saved to GitHub forever<br>Tap "synced" to retry if error<br><br><button class="clrbtn" onclick="clrDone()">Clear completed items</button></div>
+
 <script>
-var TA=["ghp_rCrsVYitENJyFZ8Ga","bHXyuEyBYWVzN2CA3wN"].join("");
-var REPO="pawinim/pmm-board";
-var API="https://api.github.com/repos/"+REPO+"/contents/state.json";
-var RAW="https://raw.githubusercontent.com/"+REPO+"/main/state.json";
-var META={date:"Fri Jun 26, 2026",src:"DAC + SEMICON Taiwan + SEMICON West board update"};
-var INC=[
-  {id:"u_chengcheng",p:"u",label:"Slack - @jmabry DM - TODAY - Reach out to Chengcheng for DAC",title:"@jmabry asked if you reached out to Chengcheng (Siemens) for DAC Fuse Studio session on AI. You said: I haven't - let me start a thread and cc you. You also added @jmabry to the DAC tracker. DO THIS NOW.",tags:[{c:"tr",t:"You said will do it"},{c:"tn",t:"New today"}],owners:"@pawinim @jmabry",url:"https://nvidia.enterprise.slack.com/archives/D0AT16PAZC4/p1781643391499499",date:"Jun 16"},
-  {id:"u_japan_sync",p:"u",label:"Slack - @paris_fox Group DM - TONIGHT - Japan sync",title:"@paris_fox added you + @bgadhia @slevay to Japan sync TONIGHT. Madison asking Japan team what is real vs not for announcements. Tim already on invite. Paris: please try to join.",tags:[{c:"tr",t:"Tonight - please join"},{c:"tr",t:"Madison + Japan announcements"}],owners:"@paris_fox @pawinim @bgadhia @slevay @madisonh",url:"https://nvidia.enterprise.slack.com/archives/C0B3DRD8JJV/p1781647857407859",date:"Jun 16"},
-  {id:"u_dac_hotel",p:"u",label:"Slack - @paris_fox DM - TODAY - Book DAC hotel NOW",title:"@paris_fox: did you book your hotel? Hotels mostly sold out. You said: will book right after DAC call. Book ASAP. Advance registration deadline June 30 - code NVIDIA26ET (Engineering Track $269) or NVIDIA26FC (Full Conference). Free I LOVE DAC - no code, deadline July 12.",tags:[{c:"tr",t:"Book hotel NOW"},{c:"tr",t:"Advance reg ends Jun 30"}],owners:"@pawinim @paris_fox",url:"https://nvidia.enterprise.slack.com/archives/D0A92P4UM6G/p1782162160991009",date:"Jun 22"},
-  {id:"u_slevay_jhh_email",p:"u",label:"Slack - @slevay DM - TODAY - JHH email library details",title:"@slevay working on JHH email draft. He needs more details on the libraries. You said: I'll get to it right after the DAC call. GDoc: docs.google.com/document/d/1sG99-5CJfjhXIfYc3Ukm2KCgqvJcBfx2Yim_wypnYr4",tags:[{c:"tr",t:"You said after DAC call"},{c:"tr",t:"Library details needed"}],owners:"@pawinim @slevay",url:"https://nvidia.enterprise.slack.com/archives/D0AF9PPHBG8/p1782162143122789",date:"Jun 22"},
-  {id:"u_semicon_west_tim",p:"u",label:"Outlook - @Tim Costa - TODAY - SEMICON West CEO Summit keynote ACCEPTED",title:"Tim accepted keynote invitation for CEO Summit at SEMICON West 2026 from Agnes Cobar (SEMI.org). Joe Stockunas (Dion?) CC'd. Tim forwarded Jun 25: Will accept unless someone raises a flag. He accepted today. PMM: start planning SEMICON West support.",tags:[{c:"tr",t:"Tim accepted keynote"},{c:"tr",t:"Start planning PMM support"}],owners:"@tcosta @pawinim @yiyiw @dion_harris",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAJg31zUAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAJg31zUAAA%3D&exvsurl=1",date:"Jun 26"},
-  {id:"u_becca_tracker",p:"u",label:"Slack - @bzandstein DM - TODAY - Convert tracker to event-centric",title:"@bzandstein: each event needs its own tracker - stop handling in chaotic Slack/email. You said: I will convert it into more event-centric vs library-centric. Do this for DAC, ISC, SEMICON West, Berlin.",tags:[{c:"tr",t:"You said will convert tracker"},{c:"tn",t:"New today"}],owners:"@pawinim @bzandstein",url:"https://nvidia.enterprise.slack.com/archives/D0A7S94SJCQ/p1782491980682139",date:"Jun 26"},
-  {id:"u_dac_pr",p:"u",label:"DAC - PR Draft - @paris_fox - WIP",title:"First PR draft completed by @paris_fox. Partner priority list updated. Still needs: final review, NVIDIA library angle locked, partner approvals from Cadence/Synopsys/Siemens/AMAT.",tags:[{c:"tr",t:"PR in progress"},{c:"ta",t:"DAC Jul 26-29"}],owners:"@paris_fox @pawinim @avleenk @pochunl",url:"https://nvidia.enterprise.slack.com/archives/D0A92P4UM6G/p1782163738461469",date:"Jun 26"},
-  {id:"u_dac_tim_slides",p:"u",label:"DAC - Tim Welcome Address Slides - WIP",title:"Tim's welcome address slides are WIP. No owner or deadline confirmed yet. Demo for welcome address kicked off with video team — script aligned. Slides need owner + deadline.",tags:[{c:"tr",t:"No owner confirmed"},{c:"tr",t:"Deadline TBD"}],owners:"@pawinim @tcosta @nashton",url:"https://nvidia.enterprise.slack.com/archives/C0BBJLWE3UY/p1781544662221229",date:"Jun 26"},
-  {id:"u_dac_tracker",p:"u",label:"DAC - CUDA-X Partner Tracker - @bzandstein waiting",title:"@bzandstein: create event-centric tracker — stop the chaos across Slack/email. You started GSheet: docs.google.com/spreadsheets/d/1iOeq7LLrliM8cIgOVD4Ij1SBCEevbigZC4fABKke_dI. cuDSS: AMAT, Cadence (Celsius), Synopsys TCAD. cuEST: Synopsys, AMAT, TSMC, Samsung. Needs value props + status per partner.",tags:[{c:"tr",t:"Becca waiting"},{c:"tr",t:"Convert to event-centric"}],owners:"@pawinim @bzandstein",url:"https://docs.google.com/spreadsheets/d/1iOeq7LLrliM8cIgOVD4Ij1SBCEevbigZC4fABKke_dI",date:"Jun 25"},
-  {id:"u_dac_cooley",p:"u",label:"DAC - Cooley Panel Inclusion - @malbrecht to drive",title:"NVIDIA inclusion in Cooley panel (PAV105) — you flagged in DAC weekly update email. @malbrecht needs to continue driving this with Cooley. Confirm she is actively moving on it.",tags:[{c:"tr",t:"@malbrecht to drive"},{c:"ta",t:"Confirm status"}],owners:"@pawinim @malbrecht",url:"https://63dac.conference-program.com/presentation/?id=PAV105&sess=sess217",date:"Jun 26"},
-  {id:"u_dac_msft_flag",p:"u",label:"DAC - Microsoft competitor flag - @mhowell brief needed",title:"Microsoft is present at DAC alongside a competitor AND separately on Synopsys Exec Forum panel with Kari Briski. @mhowell needs to brief @madisonh and @tcosta before this surfaces as a surprise.",tags:[{c:"tr",t:"Brief Madison + Tim"},{c:"tr",t:"@mhowell to share details"}],owners:"@pawinim @mhowell @madisonh @tcosta",url:"https://nvidia.enterprise.slack.com/archives/D0A92P4UM6G/p1782163738461469",date:"Jun 26"},
-  {id:"u_dac_kari_panel",p:"u",label:"DAC - Synopsys Exec Forum Panel - Kari confirmed",title:"Kari Briski confirmed on Synopsys Exec Forum panel. Tim Costa opens/closes as honored guest. Panel also includes Qualcomm (Paul Penzes), Microsoft, Synopsys C-suite (Shankar/Ravi likely), TBD customer. Update tracker with confirmation.",tags:[{c:"tn",t:"Kari confirmed"},{c:"ta",t:"Update tracker"}],owners:"@pawinim @tcosta @kbriski",url:"https://nvidia.enterprise.slack.com/archives/D0BCR3KAKED/p1782337965865639",date:"Jun 24"},
-  {id:"u_dac_psg",p:"u",label:"DAC - PSG Activations - early work streams started",title:"Keysight (cuDSS), ChipAgents (Nemotron), Recursive, AMAT EDA team activated this week. Early work streams on booth demos/announcements started. Need to track status per partner and identify any blockers.",tags:[{c:"ta",t:"Track status per partner"},{c:"tn",t:"Activated this week"}],owners:"@pawinim @avleenk @kushp @lalshihabi",url:"https://nvidia.enterprise.slack.com/archives/C0BBJLWE3UY/p1781544662221229",date:"Jun 26"},
-  {id:"u_dac_abigail",p:"u",label:"DAC - TME / Abigail floor demo - loop in when ready",title:"@abreazeale asked about show floor demo at DAC. You told her: demos in partner booths, no NVIDIA booth, partner-led but her eyes help. Loop in @abreazeale once DAC demo scope is confirmed.",tags:[{c:"ta",t:"Loop in @abreazeale"},{c:"tg",t:"When scope confirmed"}],owners:"@pawinim @abreazeale",url:"https://nvidia.enterprise.slack.com/archives/D0APXDSQAHJ/p1782493335480139",date:"Jun 26"},
-  {id:"h_dac_hotel",p:"u",label:"DAC - BOOK HOTEL NOW - advance reg ends Jun 30",title:"Hotels mostly sold out. Advance registration ends June 30 — code NVIDIA26ET (Engineering Track $269) or NVIDIA26FC (Full Conference). Free I LOVE DAC until July 12. Book immediately.",tags:[{c:"tr",t:"Advance reg ends Jun 30"},{c:"tr",t:"Hotels selling out"}],owners:"@pawinim",url:"https://www.dac.com/Attend/Registration",date:"Jun 26"},
-  {id:"u_semicontw_keynote",p:"u",label:"SEMICON Taiwan - Michael keynote PMM coverage TBD",title:"@avleenk asked who supports Michael's SEMICON Taiwan keynote PPT. You said: I don't know, start thread with Tim. Semi event but not Tim as speaker. PMM coverage still unclear — resolve with Tim when he's back Jun 20+.",tags:[{c:"tr",t:"Coverage TBD"},{c:"ta",t:"Resolve with Tim"}],owners:"@pawinim @avleenk @tcosta",url:"https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780320104592139",date:"Jun 5"},
-  {id:"h_semicontw_consortiums",p:"h",label:"SEMICON Taiwan - Get NVIDIA on consortium listings",title:"You said: we need to start that too. @avleenk has the link from Michelle. Get NVIDIA listed on relevant semiconductor consortium pages ahead of SEMICON Taiwan.",tags:[{c:"ta",t:"You said need to start"},{c:"tg",t:"SEMICON Taiwan"}],owners:"@pawinim @avleenk",url:"https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780685328013059",date:"Jun 5"},
-  {id:"u_semiconw_tim_keynote",p:"u",label:"SEMICON West - Tim accepted CEO Summit keynote - start PMM planning",title:"Tim accepted CEO Summit keynote at SEMICON West 2026 from SEMI.org (Agnes Cobar). Joe Stockunas CC'd. Tim confirmed Jun 26. PMM support planning needs to start now — loop in @yiyiw and @dion_harris (SEMICON West PIC).",tags:[{c:"tr",t:"Tim accepted keynote"},{c:"tr",t:"Start PMM planning NOW"}],owners:"@pawinim @yiyiw @dion_harris @tcosta",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAJg31zUAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAJg31zUAAA%3D&exvsurl=1",date:"Jun 26"},
-  {id:"h_semiconw_dion",p:"h",label:"SEMICON West - Due diligence with Dion Harris on energy topics",title:"@yiyiw: Please do due-diligence with @dion_harris and list coverage of NVIDIA energy topics within Ian's team. You said yes. Still open.",tags:[{c:"tr",t:"You said will work with Dion"}],owners:"@pawinim @yiyiw @dion_harris",url:"https://nvidia.enterprise.slack.com/archives/C0AGJPPHLR2/p1780686259646009",date:"Jun 5"},
-  {id:"u_dac_slate",p:"u",label:"Outlook - DAC 2026 Announcements - TODAY HOT",title:"Tim: 2-3 product announcements needed at DAC - cuDSS, cuEST, cuISS. Madison: DAC is the perfect place for specialized agents + NAT connected to CUDA-X/PhysicsNeMo. Becca/Da/Neil/John working through NAT lens at 2pm. You own the Semi/EDA product announcement slate for DAC Jul 26-29.",tags:[{c:"tr",t:"Tim + Madison direct ask"},{c:"tr",t:"Own DAC slate"}],owners:"@pawinim @daya @nashton @bzandstein @jlinford @tcosta @madisonh",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xNAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xNAAA%3D&exvsurl=1",date:"Jun 15"},
-  {id:"u_cudss_dac",p:"u",label:"Slack - DAC Group DM - TODAY - cuDSS + Synopsys SPICE",title:"Da Yang to you: SNPS announcing SPICE acceleration - connect it with cuDSS for DAC. You said cuDSS 1.0 planned for Berlin, can do pre-release at DAC. Tim: please look at cuDSS product announcement for chip design. Scope this with Da Yang.",tags:[{c:"tr",t:"Da Yang direct ask"},{c:"tr",t:"cuDSS pre-release scope needed"}],owners:"@pawinim @daya @nashton @tcosta",url:"https://nvidia.enterprise.slack.com/archives/C0BBJLWE3UY/p1781544662221229",date:"Jun 15"},
-  {id:"u_madison_pai",p:"u",label:"Outlook - @Madison - TODAY - PMMs stand down - agents signal",title:"Madison: I want all PMMs to stand down. Just PM and DevRel T5T priorities. If your priorities are not aligned to agents - I wonder what rock you are living under. Ensure your entire workstream is agent-first. Tim OOO through Jun 20.",tags:[{c:"tr",t:"Direct Madison signal"},{c:"tr",t:"Agent-first required"}],owners:"@madisonh @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xqAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xqAAA%3D&exvsurl=1",date:"Jun 15"},
-  {id:"u_siggraph",p:"u",label:"Outlook - @Madison - TODAY - SIGGRAPH Physical AI Enablement",title:"Physical AI @ SIGGRAPH Enablement Kickoff - Action Required. Madison added @Pawini @Slevay @WonsikHan. Kylee Nazareno organizer. Confirm your role and action items for SIGGRAPH.",tags:[{c:"tr",t:"Madison tagged you"},{c:"tn",t:"New today"}],owners:"@pawinim @slevay @madisonh @knazareno",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3x3AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3x3AAA%3D&exvsurl=1",date:"Jun 15"},
-  {id:"u_cadence_dac",p:"u",label:"Outlook - @Madison - Cadence DAC launch coordination",title:"Cadence stock all-time high. Madison: Ensure we launch properly at DAC if that is what they are aiming for. @KushP @Pawini @Slevay @Laila. SNPS announcing SPICE acceleration. Tim: cuDSS, cuEST, cuISS product announcements needed. Full ISV + product slate for DAC needed.",tags:[{c:"tr",t:"Madison + Tim direct ask"},{c:"tr",t:"Full slate needed"}],owners:"@pawinim @kushp @slevay @lalshihabi @madisonh",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42imAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42imAAA%3D&exvsurl=1",date:"Jun 15"},
-  {id:"u_vera_blog",p:"u",label:"Slack - @patrina_yang - Jun 4 - Vera Rubin blog decline",title:"Patrina Yang: whole blog is Vera Rubin, team cannot contribute. You said aligned and agreed to decline. She asked you to let them know. Communicate the decline to whoever requested the contribution.",tags:[{c:"tr",t:"You said will communicate"}],owners:"@pawinim @patrinay @avleenk",url:"https://nvidia.enterprise.slack.com/archives/C0ACNCEEK7Z/p1780626580697069",date:"Jun 4"},
-  {id:"u_isc_reg",p:"u",label:"Outlook - ISC 2026 - @kpattany - Reach out to contacts",title:"29 clients registered for ISC Executive Briefing. Personally follow up with invited semiconductor contacts who have not registered yet.",tags:[{c:"tr",t:"Action: reach out to Semi contacts"},{c:"tg",t:"ISC Jun 23-26 Hamburg"}],owners:"@pawinim @kpattany @blairh @bgadhia",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42hLAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42hLAAA%3D&exvsurl=1",date:"Jun 3"},
-  {id:"u_dion",p:"u",label:"Slack - @yiyiw Group DM - Due diligence with Dion Harris",title:"@yiyiw: Please do due-diligence with @dion_harris and list coverage of NVIDIA energy topics within Ian's team. You said yes. Still open.",tags:[{c:"tr",t:"You said will work with Dion"}],owners:"@pawinim @yiyiw @dion_harris",url:"https://nvidia.enterprise.slack.com/archives/C0AGJPPHLR2/p1780686259646009",date:"Jun 5"},
-  {id:"u_isc_speaker",p:"u",label:"Slack - ISC Skytalk + Siemens DAC talk - RESOLVED",title:"RESOLVED: ISC Skytalk = Da Yang confirmed. @nashton: fine by me. Siemens EDA DAC talk: Amit Goel requested Da Yang, Tim confirmed, @nashton stays on panel.",tags:[{c:"tn",t:"Resolved"}],owners:"@daya @nashton @blairh",url:"https://nvidia.enterprise.slack.com/archives/C0B2JMKHN8M/p1780611886019469",date:"Jun 4"},
-  {id:"u_safe_forum",p:"u",label:"Outlook - SAFE Forum - @Mia Jung - May 28 Samsung US HQ",title:"Samsung SAFE Forum: review Slide 2 NVLink Fusion / Vipin Tiwari. May 28 Samsung US HQ deadline. Confirm if submitted.",tags:[{c:"tr",t:"Deadline passed - confirm status"}],owners:"@mjung @avleenk @jichambers @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGJsAaqAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAGJsAaqAAA%3D&exvsurl=1",date:"May 6"},
-  {id:"h_tim_top5_reply",p:"h",label:"Outlook - @Tim Costa - TODAY UNREAD - Top5 AI Physics EMEA reply",title:"Tim replied to Top5 AI Physics EMEA SA: Enjoyed the top5. Great to see all activity on agentic engineering. Board-approved Agentic Engineering platform requested our autonomous-engineer reference code directly.",tags:[{c:"tn",t:"Tim replied - UNREAD"},{c:"ta",t:"Agentic Engineering traction"}],owners:"@tcosta @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwAOSxSUXXV5QbTVwcytwnGBAAANgF0gAAAOSxSUXXV5QbTVwcytwnGBAAJAtKmvAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwAOSxSUXXV5QbTVwcytwnGBAAANgF0gAAAOSxSUXXV5QbTVwcytwnGBAAJAtKmvAAA%3D&exvsurl=1",date:"Jun 22"},
-  {id:"h_dac_socials_tim",p:"h",label:"Slack - @paris_fox DM - TODAY - Socials for Tim ISC address",title:"@paris_fox: did socials go out for Tim's ISC address yet? You said: from DAC but not us. @paris_fox confused. Still open - confirm whether NVIDIA social team posted about Tim's ISC address.",tags:[{c:"ta",t:"Confirm social status"},{c:"tg",t:"ISC address"}],owners:"@pawinim @paris_fox @meaghanf",url:"https://nvidia.enterprise.slack.com/archives/D0A92P4UM6G/p1782163738461469",date:"Jun 22"},
-  {id:"h_abigail_dac",p:"h",label:"Slack - @abreazeale DM - TODAY - DAC floor demo TME support",title:"@abreazeale asked: is there a show floor demo at DAC? You said: yes but in customer booths - no NVIDIA booth. You said: will loop you in - partner-led but your eyes help. Loop in @abreazeale when DAC demo scope is confirmed.",tags:[{c:"ta",t:"Loop in Abigail when ready"},{c:"tg",t:"DAC partner booths"}],owners:"@pawinim @abreazeale",url:"https://nvidia.enterprise.slack.com/archives/D0APXDSQAHJ/p1782493335480139",date:"Jun 26"},
-  {id:"h_tim_dac_havent_forgotten",p:"h",label:"Slack - Tim in DAC group DM - TODAY - High on his list",title:"Tim in the DAC Announcements group DM (Tim/John/Becca/Rishi/Azi/Neil/Steve/Pawini/Da): Haven't forgotten. High on the list. Context: Tim is still aligned on driving DAC product announcements. Keep pushing.",tags:[{c:"tn",t:"Tim still engaged"},{c:"ta",t:"Keep driving DAC slate"}],owners:"@tcosta @pawinim @bzandstein @daya @nashton @jlinford",url:"https://nvidia.enterprise.slack.com/archives/C0BAQUD3B9U/p1782490388569239",date:"Jun 26"},
-  {id:"h_dac_meaty",p:"h",label:"Outlook - DAC Announcements - Tim sent full slate - Madison: AWESOME",title:"Tim sent a meaty product/library/model announcement slate for DAC last night. Madison: This is awesome! Super meaty. Get into this thread to understand your PMM execution role for DAC.",tags:[{c:"tn",t:"Madison: awesome"},{c:"ta",t:"Get into thread"}],owners:"@tcosta @madisonh @pawinim @daya @bzandstein @nashton @jlinford",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3ygAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3ygAAA%3D&exvsurl=1",date:"Jun 16"},
-  {id:"h_berlin_asml",p:"h",label:"Outlook - GTC Berlin - @Madison - ASML concern",title:"Madison: concerned about ASML at Berlin - will attract low audience. Can we do ASML at DAC instead? Then add automotive/robotaxi session at Berlin. EDA/Semi content shifting from Berlin to DAC.",tags:[{c:"ta",t:"Berlin/DAC content shift"},{c:"tg",t:"GTC Berlin"}],owners:"@madisonh @pawinim @slevay @tcosta",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3zXAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3zXAAA%3D&exvsurl=1",date:"Jun 16"},
-  {id:"h_dac_slides",p:"h",label:"Slack - @avleenk - DAC slides update",title:"@avleenk updating main DAC email thread once slides are in place. @lalshihabi on PTO next week. DAC Jul 26-29 San Francisco.",tags:[{c:"ta",t:"Avleen updating thread"}],owners:"@avleenk @pawinim @lalshihabi",url:"https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780604372515029",date:"Jun 4"},
-  {id:"h_siemens_workshop",p:"h",label:"Outlook - Siemens EDA Agent Workshop Day 1 - Jun 2",title:"@jmabry sent Day 1 meeting notes. Tim replied tagging @nashton. Check for any PMM follow-up actions in the Siemens-To4++ thread.",tags:[{c:"ta",t:"Check for PMM actions"}],owners:"@tcosta @nashton @jmabry @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42g6AAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42g6AAA%3D&exvsurl=1",date:"Jun 3"},
-  {id:"h_semicon_cons",p:"h",label:"Slack - @avleenk DM - SEMICON Taiwan consortiums listing",title:"You said: we need to start that too. Get NVIDIA listed on relevant semiconductor consortium pages. @avleenk has the link from Michelle.",tags:[{c:"ta",t:"Get NVIDIA listed"}],owners:"@pawinim @avleenk",url:"https://nvidia.enterprise.slack.com/archives/D0A6H4QKVST/p1780685328013059",date:"Jun 5"},
-  {id:"h_tim_ooo",p:"h",label:"Outlook - @Tim Costa OOO through Jun 20",title:"Tim OOO through Jun 20. On family trip. Text cell phone if urgently needed. Top items to handle async: DAC product announcements, SIGGRAPH enablement, SEMES AI Forum.",tags:[{c:"ta",t:"OOO through Jun 20"},{c:"tg",t:"Async only"}],owners:"@tcosta @madisonh @pawinim",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xzAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAI-g3xzAAA%3D&exvsurl=1",date:"Jun 15"},
-  {id:"h_webpage_broken",p:"h",label:"Semi webpage - broken links + logo gaps",title:"Alsemy user story link broken. Missing logos: SK + Samsung. Pending: Lam. Potential removal: KLA. ADD: Advantest. @avleenk is fixing from backend.",tags:[{c:"ta",t:"@avleenk fixing"}],owners:"@pawinim @avleenk @ram_cherukuri",url:"https://nvidia.enterprise.slack.com/archives/C0AP5KGST3J/p1780323958957969",date:"Jun 1"},
-  {id:"h_isc_main",p:"h",label:"ISC 2026 - Jun 23-26 Hamburg - 8 DAYS AWAY",title:"ISC Hamburg Jun 23-26. cuEST + Alchemi demo. ISC Skytalk: Da Yang. ISC Executive Briefing + AWS Reception registration ongoing. Press pre-brief: Fri Jun 19 8am EMEA.",tags:[{c:"tr",t:"8 days away"},{c:"tb",t:"Jun 23-26 Hamburg"}],owners:"@blairh @anibbi @bgadhia @bzandstein @pawinim @nashton @daya",url:"ms-outlook://emails/message/open?restID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42iVAAA%3D|||https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAIG42iVAAA%3D&exvsurl=1",date:"Jun 15"}
+const STORE_KEY = 'pmm-board-v2';
+const META = { scanned: 'Thu Aug 6 2026, ~11:30am PT', source: 'Outlook 72h + Slack to:U0A6VJM0B0W' };
+
+const INCOMING = [
+  // ── URGENT ────────────────────────────────────────────────────────────
+  {
+    id:'u1', p:'u',
+    label:'EMAIL · Tim Costa · Aug 6',
+    title:'Invite / travel tracking — Tim wants a tracking sheet for speaker invites & commitments',
+    note:'Tim: "Invites are piling up, which is great. Would be good to have a sheet to keep track of invites and commitments. Is there a best practice from someone else to borrow?" — no assignee named but Pawini owns speaker logistics for Semi/EDA.',
+    tags:[{c:'ta',t:'@tcosta'},{c:'tg',t:'action: build tracker'}],
+    owners:'@Pawini Mahajan',
+    url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAMyD_CvAAA%3D&exvsurl=1&viewmodel=ReadMessageItem',
+    date:'2026-08-06'
+  },
+  {
+    id:'u2', p:'u',
+    label:'EMAIL · Siemens EDA · Aug 6',
+    title:'Siemens blog — Kush sent edits; are YOU done with your review? Pixie asking via Slack.',
+    note:'Pixie Bitner (Slack, 7:57am): "Hi Kush, Pawini, Steve — are you done with edits in the Samsung blog?" — Kush sent Siemens edits at 5:43pm Aug 6. Status unclear whether Pawini\'s review pass is complete.',
+    tags:[{c:'tr',t:'Siemens EDA'},{c:'tb',t:'@kushp'},{c:'tb',t:'@pbitner'},{c:'tg',t:'review pass needed'}],
+    owners:'@Pawini Mahajan @Kush Patel',
+    url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAMyD_DMAAA%3D&exvsurl=1&viewmodel=ReadMessageItem',
+    date:'2026-08-06'
+  },
+  {
+    id:'u3', p:'u',
+    label:'EMAIL · SEMICON West · Aug 5',
+    title:'Madison\'s "how are we measuring impact?" question needs a structured answer',
+    note:'Madison (Aug 5): "We are investing a lot in Semicon — not in money but in effort and humans. How are we measuring impact over time based on our objectives? What are we trying to prove and are we doing it?" Pawini replied with qualitative rationale (Aug 5 10:34pm). Madison has not responded — thread still open. A follow-up with concrete metrics/KPIs likely needed.',
+    tags:[{c:'ta',t:'@madisonh tagged'},{c:'tg',t:'metrics response pending'}],
+    owners:'@Pawini Mahajan @Steve Levay @Laila Al-Shihabi',
+    url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAMspYI_AAA%3D&exvsurl=1&viewmodel=ReadMessageItem',
+    date:'2026-08-05'
+  },
+  {
+    id:'u4', p:'u',
+    label:'SLACK · Nirmal Juluru · Aug 6',
+    title:'Slide update needed — Nirmal wants Artificial Analysis data swapped into NIM perf slide',
+    note:'Nirmal (DM, 11:14am): sent a slide link (JHH_CES2026_v12 JHH_infra.pptx), says Pawini needs to update the data using Artificial Analysis. Model launch on Aug 11 — creates real deadline pressure. Nirmal: "I thought I messaged you yesterday with the link." Status: Pawini has not confirmed receipt or completion.',
+    tags:[{c:'tg',t:'deadline: ~Aug 11'},{c:'tb',t:'@nirmal_juluru'}],
+    owners:'@Pawini Mahajan',
+    url:'https://nvidia.sharepoint.com/:p:/r/sites/TeslaBU/Shared%20Documents/Events/2026/CES/Keynote/Archive/JHH_CES2026_v12%20JHH_infra.pptx',
+    date:'2026-08-06'
+  },
+  {
+    id:'u5', p:'u',
+    label:'SLACK · Ashley Piersons · Aug 6',
+    title:'Slides for polishing — Ashley waiting on Pawini\'s slides to start creative polish',
+    note:'Ashley Piersons (group DM with Laura Spillman, Kristen Hill-Peterson, Pawini — 11:17am): "Hello Pawini let me know when you have slides ready and I can start on polishing." Creative Summit is next week — all of Creative in all-day workshops, progress will be limited after Monday.',
+    tags:[{c:'tg',t:'action: share slides'},{c:'tn',t:'deadline: before Mon Aug 10'}],
+    owners:'@Pawini Mahajan',
+    url:'',
+    date:'2026-08-06'
+  },
+
+  // ── HIGH ──────────────────────────────────────────────────────────────
+  {
+    id:'h1', p:'h',
+    label:'EMAIL · Synopsys ILC · Jul 29',
+    title:'Synopsys Innovation Leadership Conference (Sep 23, Santa Clara) — speaker not yet confirmed',
+    note:'Kush (Jul 29): Prith has 3 confirmed speakers; waiting on NVIDIA name. Pawini asked who besides Ralph Wittig is confirmed. @tcosta said "Sorry for delay, working through coverages, will respond by tomorrow latest" (Jul 23) — no follow-through visible. Tim needs to commit or decline. Pawini\'s action: confirm nomination and send name to @kushp to pass back to Synopsys.',
+    tags:[{c:'tr',t:'Synopsys'},{c:'tb',t:'@kushp'},{c:'ta',t:'@tcosta pending'}],
+    owners:'@Pawini Mahajan @Kush Patel',
+    url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAL85CVTAAA%3D&exvsurl=1&viewmodel=ReadMessageItem',
+    date:'2026-07-29'
+  },
+  {
+    id:'h2', p:'h',
+    label:'EMAIL · AIAA CTO Summit · Aug 5',
+    title:'AIAA CTO Summit 2026 — Tim accepted; logistics and PMM action unknown',
+    note:'Tim forwarded AIAA CTO Summit invite (Aug 5) and confirmed "Will accept." Also forwarded 2027 AIAA SciTech Forum invite (Aug 6). Both CCing Bhoomi Gadhia and Steve Levay. Pawini needs to check if there are PMM deliverables (bio, abstract, prep deck) for the 2026 event.',
+    tags:[{c:'ta',t:'@tcosta accepted'},{c:'tb',t:'@bgadhia CC\'d'}],
+    owners:'@Pawini Mahajan @Steve Levay',
+    url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAMspYIsAAA%3D&exvsurl=1&viewmodel=ReadMessageItem',
+    date:'2026-08-05'
+  },
+  {
+    id:'h3', p:'h',
+    label:'EMAIL · TSMC IC Design Summit · Aug 6',
+    title:'TSMC Next Gen IC Design Summit (Sep 3, Semicon Taiwan) — Da Yang confirmed; prep needed',
+    note:'Da Yang confirmed availability for Sep 3 morning panel (Aug 6). Jo-Ann Su from SEMI.org sent agenda/details with attachments. Pawini clarified this is Semicon Taiwan, not the TSMC OIP thread. Prep support (bio, talking points, slide review) likely needed for Da.',
+    tags:[{c:'tr',t:'TSMC'},{c:'tg',t:'speaker prep: Da Yang'},{c:'tn',t:'Sep 3 panel'}],
+    owners:'@Pawini Mahajan @Da Yang',
+    url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAMyD_DHAAA%3D&exvsurl=1&viewmodel=ReadMessageItem',
+    date:'2026-08-06'
+  },
+  {
+    id:'h4', p:'h',
+    label:'SLACK · Tim DM · Aug 5',
+    title:'DAC/SIGGRAPH recap stats — Tim gave specific editorial notes on Pawini\'s write-up',
+    note:'Tim (DM, 3:52pm): "SIGGRAPH is 7M and we\'re tiny and first read doesn\'t make it clear why. Would be good for the stat about attendance to call out standing room only." Likely feedback on the Aug Top5 draft or recap doc. Update needed before Tim reviews again.',
+    tags:[{c:'ta',t:'@tcosta feedback'},{c:'tg',t:'edit: standing room only stat'}],
+    owners:'@Pawini Mahajan',
+    url:'',
+    date:'2026-08-05'
+  },
+  {
+    id:'h5', p:'h',
+    label:'EMAIL · Global Semi Hub 2027 · Aug 3',
+    title:'Global Semiconductor Hub 2027 (Apr 6–8, Phoenix) — Tim tagged Steve to vet speakers',
+    note:'Tim forwarded invite (Aug 3): "Seems like a good list of execs if accurate. Worth confirming actual speakers. @Steve Levay." Pawini should track whether this becomes a commitment and flag any PMM deliverable once Steve vets.',
+    tags:[{c:'ta',t:'@tcosta FYI'},{c:'tb',t:'@slevay action'}],
+    owners:'@Steve Levay @Pawini Mahajan',
+    url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAMfJe8rAAA%3D&exvsurl=1&viewmodel=ReadMessageItem',
+    date:'2026-08-03'
+  },
+  {
+    id:'h6', p:'h',
+    label:'EMAIL · EYL Fireside Chat · Aug 6',
+    title:'EYL Fireside Chat (Sep 23, Seattle) — Tim confirmed; PMM support TBD',
+    note:'Tim replied "Yes I can do that." (Aug 6, 1:33pm) to Laila\'s ask about the EYL Fireside Chat on Sep 23. Pawini was not directly tagged but is likely on the thread. Check if prep support (bio, briefing doc) is needed.',
+    tags:[{c:'ta',t:'@tcosta confirmed'},{c:'tb',t:'@lalshihabi org'}],
+    owners:'@Pawini Mahajan @Laila Al-Shihabi',
+    url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAMyD_CuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem',
+    date:'2026-08-06'
+  },
+
+  // ── MEDIUM ────────────────────────────────────────────────────────────
+  {
+    id:'m1', p:'m',
+    label:'EMAIL · Siemens EDA podcast · Aug 5–6',
+    title:'Siemens DAC podcast transcript — Emma-Jane made minor edits; needs final sign-off',
+    note:'Emma-Jane Crozier (Siemens, Aug 5): minor transcript edits for the EE Times podcast landing page. Kush sent further edits (Aug 6). Pawini CC\'d. Status: appears close to resolution — verify Pawini has no outstanding action.',
+    tags:[{c:'tr',t:'Siemens EDA'},{c:'tb',t:'@kushp'}],
+    owners:'@Kush Patel',
+    url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAAMyD_DMAAA%3D&exvsurl=1&viewmodel=ReadMessageItem',
+    date:'2026-08-06'
+  },
+  {
+    id:'m2', p:'m',
+    label:'SLACK · Kush Patel DM · Aug 6',
+    title:'Playbook access — Kush requested access, confirmed "can be moved to playbook"',
+    note:'Kush (DM, 11:06am): "Thanks, requested access, can be moved to playbook." Likely post-DAC playbook or SEMICON West playbook. Low action needed from Pawini — confirm access granted.',
+    tags:[{c:'tb',t:'@kushp'}],
+    owners:'@Pawini Mahajan',
+    url:'',
+    date:'2026-08-06'
+  },
+  {
+    id:'m3', p:'m',
+    label:'EMAIL · Samsung blog 3PR · Aug 5',
+    title:'Samsung blog 3PR — Pawini reflected edits; additional NVLink-C2C accuracy flag open',
+    note:'Pawini reflected edits (Aug 5, 5:55pm). Ashish Karandikar flagged NVLink-C2C port on Samsung 2nm language as inaccurate — "We have not agreed to it." Pixie asked for suggested edits to return to partner. Status: check if Pawini needs to follow up with Ashish / Pixie to close the NVLink-C2C language gap.',
+    tags:[{c:'tr',t:'Samsung'},{c:'tb',t:'@pbitner'},{c:'tg',t:'NVLink accuracy flag'}],
+    owners:'@Pawini Mahajan @Pixie Bitner',
+    url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEJAAAOSxSUXXV5QbTVwcytwnGBAAMufoiqAAA%3D&exvsurl=1&viewmodel=ReadMessageItem',
+    date:'2026-08-05'
+  },
+  {
+    id:'m4', p:'m',
+    label:'EMAIL · Semi/EDA priority partners list · Aug 5',
+    title:'Semi supply chain accounts list — Avleen shared; review against PSG tab for gaps',
+    note:'Avleen (group DM with Claire Chen and Pawini, Aug 5 5:54pm): sent global Semi Supply Chain Accounts list (TSMC, Samsung, SK Hynix, Micron, Synopsys, Cadence, Siemens AG, AMAT, ASML, Advantest, Teradyne, etc.) — "Priority partners. Pls use this list to see if any are missing in PSG tab." Action: verify PSG tab coverage vs. list.',
+    tags:[{c:'tb',t:'@avleenk'},{c:'tg',t:'PSG tab review'}],
+    owners:'@Pawini Mahajan',
+    url:'',
+    date:'2026-08-05'
+  },
+  {
+    id:'m5', p:'m',
+    label:'EMAIL · DAC slide task · Jul 23',
+    title:'Tim assigned slide task in DAC2026 Special Address v13 — "Is this slide still being worked?"',
+    note:'Tim assigned Pawini a task in the DAC deck (Jul 23). Post-DAC (Jul 26–29) — this is likely resolved but not formally closed. Confirm slide was finalized/presented and close the task.',
+    tags:[{c:'ta',t:'@tcosta assigned'},{c:'tg',t:'verify: post-DAC close'}],
+    owners:'@Pawini Mahajan',
+    url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAALmwSUFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem',
+    date:'2026-07-23'
+  },
+  {
+    id:'m6', p:'m',
+    label:'EMAIL · Siemens acquires Precision Innovations · Jul 21',
+    title:'Siemens EDA acquires Precision Innovations — Tim tagged @Karthik; PMM awareness needed',
+    note:'Tim (Jul 21): "Let\'s make sure we\'re engaged with PI. @Karthik Chandrasekaran." Pawini should track whether this creates a new ecosystem story or event opportunity (e.g., CadenceLIVE, DAC 2027 narrative).',
+    tags:[{c:'tr',t:'Siemens EDA'},{c:'ta',t:'@tcosta FYI'}],
+    owners:'@Karthik Chandrasekaran @Pawini Mahajan',
+    url:'https://outlook.office365.com/owa/?ItemID=AAMkADA0YjE2ZTUwLTUwMjQtNDEwNi1hMDA2LTZhNTc3Mjc1ZDdkOABGAAAAAADVhAR2YesWTpdSdpY2O4i_BwD3T94OaGwfRY4qvDHvLuynAAAAAAEMAAAOSxSUXXV5QbTVwcytwnGBAALdB9dKAAA%3D&exvsurl=1&viewmodel=ReadMessageItem',
+    date:'2026-07-21'
+  },
 ];
-var STATE={},STATE_SHA=null,saveTimer=null;
-function showErr(msg){var el=document.getElementById("err-msg");el.textContent=msg;el.style.display=msg?"block":"none";}
-function setSync(s){var el=document.getElementById("ss");el.className="ss ss-"+s;el.textContent=s==="ok"?"synced":s==="saving"?"saving...":"sync error - tap to retry";}
-function toB64(str){var bytes=new TextEncoder().encode(str);var binary="";bytes.forEach(function(b){binary+=String.fromCharCode(b);});return btoa(binary);}
-async function loadState(){
-  try{
-    var r=await fetch(RAW+"?t="+Date.now(),{cache:"no-store"});
-    if(!r.ok)throw new Error("HTTP "+r.status);
-    STATE=await r.json();
-    var r2=await fetch(API,{headers:{"Authorization":"token "+TA,"Accept":"application/vnd.github+json"},cache:"no-store"});
-    if(!r2.ok)throw new Error("SHA fetch "+r2.status);
-    var d=await r2.json();STATE_SHA=d.sha;setSync("ok");showErr("");
-  }catch(e){setSync("err");showErr("Could not load: "+e.message);STATE={};}
-}
-async function saveState(){
-  if(!STATE_SHA){setSync("err");showErr("No SHA - reload to fix");return;}
-  setSync("saving");
-  try{
-    var content=toB64(JSON.stringify(STATE,null,2));
-    var body=JSON.stringify({message:"PMM state "+new Date().toISOString(),content:content,sha:STATE_SHA});
-    var r=await fetch(API,{method:"PUT",headers:{"Authorization":"token "+TA,"Accept":"application/vnd.github+json","Content-Type":"application/json"},body:body});
-    if(!r.ok){var err=await r.json();throw new Error(err.message);}
-    var d=await r.json();STATE_SHA=d.content.sha;setSync("ok");showErr("");
-  }catch(e){setSync("err");showErr("Save failed: "+e.message);}
-}
-function forceSave(){if(document.getElementById("ss").className.includes("err")){STATE_SHA=null;loadState().then(function(){saveState();});}else{saveState();}}
-function debSave(){clearTimeout(saveTimer);saveTimer=setTimeout(saveState,1500);}
-function merge(inc,st){
-  var out=Object.assign({},st);
-  inc.forEach(function(c){
-    if(!out[c.id])out[c.id]=Object.assign({},c,{done:false,doneAt:null,note:""});
-    else out[c.id]=Object.assign({},c,{done:out[c.id].done,doneAt:out[c.id].doneAt,note:out[c.id].note||""});
-  });
-  return out;
-}
-function openItem(url){
-  var parts=url.split("|||");
-  var appUrl=parts[0];var webUrl=parts.length>1?parts[1]:url;
-  var isMobile=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if(isMobile&&appUrl.indexOf("ms-outlook://")===0){
-    var done=false;
-    var fallback=setTimeout(function(){if(!done){done=true;window.open(webUrl,"_blank");}},1500);
-    document.addEventListener("visibilitychange",function(){if(document.hidden){done=true;clearTimeout(fallback);}},{once:true});
-    window.location.href=appUrl;
-  }else{window.open(webUrl,"_blank");}
-}
-function mkCard(c){
-  var el=document.createElement("div");
-  el.className="card p"+(c.done?"done":c.p)+(c.done?" done":"");
-  var tags=(c.tags||[]).map(function(t){return'<span class="tag '+t.c+'">'+t.t+"</span>";}).join("");
-  var dat=c.done&&c.doneAt?'<div class="dat">done '+c.doneAt+"</div>":"";
-  var noteVal=(c.note||"").replace(/</g,"&lt;").replace(/>/g,"&gt;");
-  var hasNote=(c.note||"").trim().length>0;
-  var lineCount=(c.note||"").split("\n").filter(Boolean).length;
-  el.innerHTML='<div class="chk'+(c.done?" on":"")+'" id="chk-'+c.id+'">'+(c.done?"&#10003;":"")+"</div>"+
-    '<div class="cl" id="cl-'+c.id+'">'+c.label+"</div>"+
-    '<div class="ct" id="ct-'+c.id+'">'+c.title+"</div>"+
-    '<div class="cm" id="cm-'+c.id+'">'+tags+"</div>"+
-    '<div class="ow" id="ow-'+c.id+'">'+(c.owners||"")+"</div>"+dat+
-    '<button class="expand-btn" id="expbtn-'+c.id+'">'+(hasNote?"notes ("+lineCount+" line"+(lineCount!==1?"s":"")+")":'+ add note')+"</button>"+
-    '<div class="notes-wrap'+(hasNote?" open":"")+'" id="notes-'+c.id+'">'+
-      '<textarea class="notes-ta" id="ta-'+c.id+'" placeholder="Your notes...">'+noteVal+"</textarea>"+
-      '<div class="notes-hint">auto-saves to GitHub</div></div>';
-  el.querySelector(".chk").addEventListener("click",function(e){e.stopPropagation();tog(c.id);});
-  ["cl","ct","cm","ow"].forEach(function(cls){var n=el.querySelector("#"+cls+"-"+c.id);if(n)n.addEventListener("click",function(){openItem(c.url);});});
-  el.querySelector("#expbtn-"+c.id).addEventListener("click",function(e){
-    e.stopPropagation();var nw=document.getElementById("notes-"+c.id);nw.classList.toggle("open");
-    if(nw.classList.contains("open"))document.getElementById("ta-"+c.id).focus();
-  });
-  var ta=el.querySelector("#ta-"+c.id);
-  ta.addEventListener("input",function(e){e.stopPropagation();STATE[c.id].note=this.value;debSave();});
-  ta.addEventListener("click",function(e){e.stopPropagation();});
-  ta.addEventListener("touchstart",function(e){e.stopPropagation();});
-  return el;
-}
-function rpanel(pid,cards){
-  var p=document.getElementById(pid);p.innerHTML="";
-  if(!cards.length){p.innerHTML='<div class="empty">nothing here</div>';return;}
-  var g={};cards.forEach(function(c){if(!g[c.date||"-"])g[c.date||"-"]=[];g[c.date||"-"].push(c);});
-  Object.keys(g).sort().forEach(function(d){
-    var div=document.createElement("div");div.className="dgrp";
-    div.innerHTML='<div class="dlbl">'+d+"</div>";
-    g[d].forEach(function(c){div.appendChild(mkCard(c));});
-    p.appendChild(div);
-  });
-}
+
+// ── Storage + render ──────────────────────────────────────────────────
+function load(){try{return JSON.parse(localStorage.getItem(STORE_KEY)||'{}')}catch{return{}}}
+function save(s){try{localStorage.setItem(STORE_KEY,JSON.stringify(s))}catch{}}
+
+function ts(){return new Date().toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}
+
 function render(){
-  var merged=merge(INC,STATE);STATE=merged;
-  var all=Object.values(merged);
-  var u=all.filter(function(c){return c.p==="u"&&!c.done;});
-  var h=all.filter(function(c){return c.p==="h"&&!c.done;});
-  var m=all.filter(function(c){return c.p==="m"&&!c.done;});
-  var dn=all.filter(function(c){return c.done;}).sort(function(a,b){return(b.doneAt||"").localeCompare(a.doneAt||"");});
-  rpanel("pu",u);rpanel("ph",h);rpanel("pm",m);rpanel("pdone",dn);
-  document.getElementById("cu").textContent=u.length;
-  document.getElementById("ch").textContent=h.length;
-  document.getElementById("cm").textContent=m.length;
-  document.getElementById("cd").textContent=dn.length;
-  document.getElementById("meta").textContent=META.date+" - "+META.src;
+  const state=load();
+  const panes={u:[],h:[],m:[],d:[]};
+  INCOMING.forEach(card=>{
+    const done=state[card.id];
+    const c=document.createElement('div');
+    c.className='card '+card.p+(done?' done-card':'');
+    c.innerHTML=`
+      <div class="card-header">
+        <div class="cb ${done?'checked':''}" onclick="toggle('${card.id}',event)"></div>
+        <div class="card-body">
+          <div class="card-label">${card.label}</div>
+          <div class="card-title">${card.title}</div>
+          <div class="card-note">${card.note}</div>
+          <div class="tags">${(card.tags||[]).map(t=>`<span class="tag ${t.c}">${t.t}</span>`).join('')}
+            ${card.owners?`<span class="tag tn">${card.owners}</span>`:''}
+          </div>
+          ${done?`<div class="done-stamp">✓ done ${state[card.id+'_ts']||''}</div>`:''}
+        </div>
+      </div>`;
+    if(card.url) c.addEventListener('click',e=>{if(!e.target.classList.contains('cb'))window.open(card.url,'_blank')});
+    if(done) panes.d.push(c); else panes[card.p].push(c);
+  });
+  ['u','h','m','d'].forEach(p=>{
+    const el=document.getElementById('pane-'+p);
+    el.innerHTML='';
+    if(panes[p].length===0){
+      el.innerHTML=`<div style="color:#444;font-size:13px;padding:20px 0;font-family:'DM Mono',monospace">Nothing here.</div>`;
+    } else {
+      panes[p].forEach(c=>el.appendChild(c));
+    }
+    document.getElementById('cnt-'+p).textContent=panes[p].length;
+  });
 }
-function tog(id){
-  if(!STATE[id])return;
-  STATE[id].done=!STATE[id].done;
-  STATE[id].doneAt=STATE[id].done?new Date().toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric",hour:"2-digit",minute:"2-digit"}):null;
-  render();debSave();
+
+function toggle(id,e){
+  e.stopPropagation();
+  const state=load();
+  if(state[id]){delete state[id];delete state[id+'_ts'];}
+  else{state[id]=true;state[id+'_ts']=ts();}
+  save(state);render();
 }
-function sw(t,btn){
-  document.querySelectorAll(".panel").forEach(function(p){p.classList.remove("active");});
-  document.querySelectorAll(".tab").forEach(function(b){b.classList.remove("active");});
-  document.getElementById("p"+t).classList.add("active");btn.classList.add("active");
+
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach(el=>el.classList.remove('active'));
+  document.querySelectorAll('.pane').forEach(el=>el.classList.remove('active'));
+  document.querySelector('.tab.'+t).classList.add('active');
+  document.getElementById('pane-'+t).classList.add('active');
 }
-function openModal(){
-  document.getElementById("modal-overlay").classList.add("open");
-  setTimeout(function(){document.getElementById("new-title").focus();},100);
+
+function clearDone(){
+  if(!confirm('Clear all completed items?'))return;
+  const state=load();
+  INCOMING.forEach(c=>{delete state[c.id];delete state[c.id+'_ts'];});
+  save(state);render();
 }
-function closeModal(e){
-  if(!e||e.target===document.getElementById("modal-overlay")){
-    document.getElementById("modal-overlay").classList.remove("open");
-    document.getElementById("new-title").value="";
-    document.getElementById("new-label").value="";
-    document.getElementById("new-owners").value="";
-    document.getElementById("new-url").value="";
-    document.getElementById("new-priority").value="m";
-  }
-}
-function addTask(){
-  var title=document.getElementById("new-title").value.trim();
-  if(!title){document.getElementById("new-title").focus();return;}
-  var label=document.getElementById("new-label").value.trim()||"Manual task - "+new Date().toLocaleDateString("en-US",{month:"short",day:"numeric"});
-  var p=document.getElementById("new-priority").value;
-  var owners=document.getElementById("new-owners").value.trim();
-  var url=document.getElementById("new-url").value.trim()||"#";
-  var id="manual-"+Date.now();
-  var today=new Date().toLocaleDateString("en-US",{month:"short",day:"numeric"});
-  STATE[id]={id:id,p:p,label:label,title:title,tags:[{c:"tg",t:"Manual"}],owners:owners,url:url,date:today,done:false,doneAt:null,note:""};
-  render();debSave();closeModal();
-  var tabMap={u:0,h:1,m:2};
-  var tabs=document.querySelectorAll(".tab");
-  var panels=document.querySelectorAll(".panel");
-  tabs.forEach(function(b){b.classList.remove("active");});
-  panels.forEach(function(p){p.classList.remove("active");});
-  tabs[tabMap[p]].classList.add("active");
-  panels[tabMap[p]].classList.add("active");
-}
-function clrDone(){
-  if(!confirm("Clear all completed items?"))return;
-  Object.keys(STATE).forEach(function(id){if(STATE[id].done)delete STATE[id];});
-  render();saveState();
-}
-loadState().then(function(){render();});
+
+render();
 </script>
 </body>
 </html>
